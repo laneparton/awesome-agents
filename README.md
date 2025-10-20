@@ -49,7 +49,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### 🛠️ Development & Engineering
 
-*Examples coming soon - [contribute yours!](CONTRIBUTING.md)*
+**Problem: Teams across Boeing independently building AI chatbots, duplicating 512 hours of work per agent**
+→ [Unified Chatbot Framework at Jeppesen](examples/development/jeppesen-unified-chatbot-framework.md) by Jeppesen AI Team
+*Reduced agent development time by 87% (512 to 64 hours), saving ~2,000 engineering hours with a shared framework powered by LlamaIndex*
+
 ---
 
 ### 🔬 Research & Analysis
