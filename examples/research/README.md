@@ -17,6 +17,7 @@ Examples in this category should focus on:
 ## Examples
 
 - [Multi-Agent Content Discovery at Bertelsmann](bertelsmann-content-search.md) - Reduced content discovery from hours to seconds with intelligent multi-agent orchestration
+- [Tender RFP Analysis Agent for Construction](softiq-tender-rfp-agent.md) - Reduced tender analysis time to <10 minutes, 6-10x productivity gain
 
 ---
 
