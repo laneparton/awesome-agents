@@ -63,6 +63,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Unified Chatbot Framework at Jeppesen](examples/development/jeppesen-unified-chatbot-framework.md) by Jeppesen AI Team
 *Reduced agent development time by 87% (512 to 64 hours), saving ~2,000 engineering hours with a shared framework powered by LlamaIndex*
 
+**Problem: Developers spending excessive time searching across fragmented documentation for Adobe-specific guidelines**
+→ [Adobe Unified Support Knowledge Retrieval Agent](examples/development/adobe-unified-support-retrieval-agent.md) by Adobe Developer Platform Team
+*20% accuracy increase with semantic search and metadata filtering, serving thousands of developers with immediate answers and reduced support costs*
+
 ---
 
 ### 🔬 Research & Analysis
