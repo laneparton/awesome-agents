@@ -43,7 +43,9 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### 📧 Productivity & Automation
 
-*Examples coming soon - [contribute yours!](CONTRIBUTING.md)*
+**Problem: E-commerce support teams manually handling repetitive customer tickets and order management**
+→ [Minimal Multi-Agent Customer Support System](examples/productivity/minimal-multi-agent-customer-support.md) by Titus Ex and Niek Hogenboom
+*Multi-agent system achieving 80%+ efficiency gains, autonomously handling 90% of support tickets with integrated order management*
 
 ---
 
