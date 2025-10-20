@@ -1,0 +1,36 @@
+Add: [Company/Project Name] [Short Description] example
+
+Added [description of what this example demonstrates] from [Company Name]
+[one sentence about the domain/use case].
+
+Key metrics:
+- [Metric 1 - e.g., "Reduced processing time from X to Y"]
+- [Metric 2 - e.g., "Increased productivity by X%"]
+- [Metric 3 - e.g., "Handles X scale/volume"]
+- [Metric 4 - any other notable quantifiable impact]
+
+Technical highlights:
+- [Technical detail 1 - key capability or approach]
+- [Technical detail 2 - architecture decision]
+- [Technical detail 3 - what made it work]
+- [Technical detail 4 - notable implementation detail]
+
+---
+
+EXAMPLE COMMIT MESSAGE:
+
+Add: SoftIQ Tender RFP Analysis Agent example
+
+Added case study of SoftIQ's construction tender analysis agent that
+processes 100+ page RFP documents in Poland's $7B public sector market.
+
+Key metrics:
+- Reduced analysis time from hours/days to <10 minutes
+- 6-10x productivity increase (3 to 20-30 tenders per day per employee)
+- Handles tens of thousands of documents across millions of pages
+
+Technical highlights:
+- Semantic chunking preserving hierarchical document structure
+- Multimodal parsing for blueprints and technical diagrams
+- Chain of thought reasoning following industry workflows
+- Workflow-based agent design encoding domain expertise

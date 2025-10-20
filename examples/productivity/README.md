@@ -15,7 +15,7 @@ Examples in this category should focus on:
 
 ## Examples
 
-*No examples yet - [be the first to contribute!](../../CONTRIBUTING.md)*
+- [Minimal Multi-Agent Customer Support System](minimal-multi-agent-customer-support.md) - Automates e-commerce customer support with 80%+ efficiency gains using specialized multi-agent architecture
 
 ---
 
