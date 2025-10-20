@@ -57,6 +57,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### 🔬 Research & Analysis
 
+**Problem: Media company creatives searching for content across dozens of isolated systems, spending hours instead of creating**
+→ [Multi-Agent Content Discovery at Bertelsmann](examples/research/bertelsmann-content-search.md) by Bertelsmann AI Hub
+*Reduced content discovery from hours to seconds with intelligent multi-agent orchestration across books, TV/film, news, and web sources*
+
 **Problem: Construction companies manually analyzing 100+ page tender documents, taking hours to days per tender**
 → [Tender RFP Analysis Agent for Construction](examples/research/softiq-tender-rfp-agent.md) by SoftIQ
 *Reduced tender analysis from hours/days to <10 minutes, enabling 6-10x productivity increase with semantic chunking and workflow-based reasoning*
