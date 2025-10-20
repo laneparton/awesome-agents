@@ -16,7 +16,7 @@ Examples in this category should focus on:
 
 ## Examples
 
-*No examples yet - [be the first to contribute!](../../CONTRIBUTING.md)*
+- [Tender RFP Analysis Agent for Construction](softiq-tender-rfp-agent.md) - Reduced tender analysis time to <10 minutes, 6-10x productivity gain
 
 ---
 
