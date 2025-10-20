@@ -16,7 +16,7 @@ Examples in this category should focus on:
 
 ## Examples
 
-*No examples yet - [be the first to contribute!](../../CONTRIBUTING.md)*
+- [Unified Chatbot Framework at Jeppesen (Boeing)](jeppesen-unified-chatbot-framework.md) - Reduced agent development time by 87%, saving ~2,000 engineering hours
 
 ---
 
