@@ -56,7 +56,9 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### 🔬 Research & Analysis
 
-*Examples coming soon - [contribute yours!](CONTRIBUTING.md)*
+**Problem: Complex web research requiring parallel investigation across multiple dimensions**
+→ [Exa Deep Research Multi-Agent System](examples/research/exa-deep-research-agent.md) by Exa
+*Production multi-agent system processing hundreds of daily queries, delivering structured research results in 15 seconds to 3 minutes with dynamic task scaling*
 
 ---
 

@@ -16,7 +16,7 @@ Examples in this category should focus on:
 
 ## Examples
 
-*No examples yet - [be the first to contribute!](../../CONTRIBUTING.md)*
+- [Exa Deep Research Multi-Agent System](exa-deep-research-agent.md) - Production system processing hundreds of daily research queries with dynamic task scaling and structured output
 
 ---
 
