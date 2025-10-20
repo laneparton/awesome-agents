@@ -16,7 +16,7 @@ Examples in this category should focus on:
 
 ## Examples
 
-*No examples yet - [be the first to contribute!](../../CONTRIBUTING.md)*
+- [Cisco Outshift JARVIS - Agentic AI Platform Engineer](cisco-outshift-jarvis-platform-engineer.md) - 10x productivity boost automating platform engineering tasks, reducing CI/CD setup from a week to under an hour
 
 ---
 

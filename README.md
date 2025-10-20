@@ -51,7 +51,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### 🛠️ Development & Engineering
 
-*Examples coming soon - [contribute yours!](CONTRIBUTING.md)*
+**Problem: Platform engineers overwhelmed by routine developer requests while trying to build new features**
+→ [Cisco Outshift JARVIS - Agentic AI Platform Engineer](examples/development/cisco-outshift-jarvis-platform-engineer.md) by Outshift by Cisco
+*10x productivity boost through distributed multi-agent system - CI/CD setup from 1 week to <1 hour, resource provisioning from half-day to seconds*
+
 ---
 
 ### 🔬 Research & Analysis
