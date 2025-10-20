@@ -59,6 +59,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### 🔬 Research & Analysis
 
+**Problem: Complex web research requiring parallel investigation across multiple dimensions**
+→ [Exa Deep Research Multi-Agent System](examples/research/exa-deep-research-agent.md) by Exa
+*Production multi-agent system processing hundreds of daily queries, delivering structured research results in 15 seconds to 3 minutes with dynamic task scaling*
+
 **Problem: Media company creatives searching for content across dozens of isolated systems, spending hours instead of creating**
 → [Multi-Agent Content Discovery at Bertelsmann](examples/research/bertelsmann-content-search.md) by Bertelsmann AI Hub
 *Reduced content discovery from hours to seconds with intelligent multi-agent orchestration across books, TV/film, news, and web sources*
