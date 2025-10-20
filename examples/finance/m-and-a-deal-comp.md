@@ -1,12 +1,9 @@
 # M&A Deal Comp Generator
 
-**Author**: Jerry Liu
-
-**Source**: [Twitter/X Post](https://x.com/jerryjliu0/status/1980021068158099634)
-
-**Date**: January 2025
-
-**Tags**: `finance` `m&a` `pdf-parsing` `excel-automation` `claude` `llamacloud` `semtools`
+**Author**: Jerry Liu\
+**Source**: [Twitter/X Post](https://x.com/jerryjliu0/status/1980021068158099634)\
+**Date**: January 2025\
+**Tags**: `finance` `m&a` `pdf-parsing` `excel-automation` `claude` `llamacloud` `semtools`\
 
 ## The Problem
 
