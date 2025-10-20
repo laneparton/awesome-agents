@@ -2,7 +2,7 @@
 
 **Real-world problems solved with AI agents**
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/awesome-agent-examples?style=social)](https://github.com/yourusername/awesome-agent-examples/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/laneparton/awesome-agents?style=social)](https://github.com/laneparton/awesome-agents/stargazers)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -99,10 +99,6 @@ We're actively looking for real-world agent examples! Have you built an agent th
 2. **Submit via Pull Request** - Follow the guidelines in [CONTRIBUTING.md](CONTRIBUTING.md)
 
 All contributions must link to original sources and focus on real-world problems and solutions.
-
-## Star History
-
-If you find this repository useful, please consider giving it a star! It helps others discover practical agent implementations.
 
 ---
 
