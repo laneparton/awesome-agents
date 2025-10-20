@@ -6,19 +6,18 @@ labels: 'new-example'
 assignees: ''
 ---
 
-## Source Link
-<!-- Link to the original tweet, blog post, video, GitHub repo, etc. -->
+## Metadata
 
-[Paste link here]
+**Author**: [Name or handle of the person who created this]
 
-## Author
-<!-- Name or handle of the person who created/shared this example -->
+**Source**: [Full URL to original tweet, blog post, video, GitHub repo, etc.]
 
-[Author name]
+**Date**: [Month Year]
 
-## Category
+**Tags**: [e.g., `finance` `m&a` `pdf-parsing` `automation`]
+
+**Category**:
 <!-- Check one primary category -->
-
 - [ ] 💼 Finance & Investment
 - [ ] 📧 Productivity & Automation
 - [ ] 🛠️ Development & Engineering
@@ -28,52 +27,71 @@ assignees: ''
 
 ## The Problem
 
-**What was the manual process before this agent?**
-<!-- Describe the specific task that was done manually -->
+<!-- Provide a narrative description (2-4 sentences) of the problem this agent solves -->
+<!-- Example: "Investment analysts need to create comparable deal analyses by manually processing SEC filings..." -->
 
+[Describe the problem here]
 
-**How long did it take? What was the scale?**
-<!-- e.g., "Processing 20-50 documents, 30-45 minutes each" -->
+**The Manual Process:**
+<!-- Bulleted list of what had to be done manually -->
+- [Step 1, with time/scale details]
+- [Step 2]
+- [etc.]
 
-
-**What made it frustrating, inefficient, or error-prone?**
-<!-- e.g., "Complex tables, inconsistent formatting, high risk of human error" -->
+**Key Pain Points:**
+<!-- What made this frustrating or error-prone? -->
+- [Pain point 1]
+- [Pain point 2]
 
 
 ## The Solution
 
-**What does the agent do?**
-<!-- Describe the agent's functionality -->
+<!-- Brief description (1-2 sentences) of what the agent does -->
 
+[Describe what the agent does]
 
-**What's the measurable impact?**
-<!-- e.g., "Reduced processing time from 20 hours to 5 minutes with 95% accuracy" -->
+**Impact**: [Quantifiable results - time saved, accuracy gained, etc.]
+<!-- Example: "Reduced processing time from 20-50 hours to 5 minutes, with 95% extraction accuracy" -->
 
 
 ## How It Works
 
-**Key technologies/tools used:**
-<!-- e.g., Claude Code Skills, LlamaCloud, specific APIs, frameworks -->
+**Key Technologies:**
+<!-- List the main tools/technologies with brief descriptions -->
+- **[Tool Name]** - [What it does]
+- **[Tool Name]** - [What it does]
+
+**Process Flow:**
+<!-- Numbered list of how the agent works -->
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+4. [etc.]
+
+**Setup Time:** [How long it took to set up, if mentioned]
 
 
-**Brief description of the approach:**
-<!-- High-level explanation of how the solution works -->
+## Key Insight
+
+<!-- What was the key breakthrough or lesson learned? What made this work particularly well? -->
+<!-- Can include "Why This Matters" bullet points explaining the significance -->
+
+[Main insight here]
+
+**Why This Matters:**
+- [Reason 1]
+- [Reason 2]
+
+**Known Issues:** [Any limitations or quirks, if applicable]
 
 
-## Key Insight or Lesson Learned
+## Links
 
-**What made this solution work particularly well?**
-<!-- e.g., "Switching from pypdf to LlamaCloud improved accuracy from 60% to 95%" -->
-
-
-## Additional Context
-
-**Are there any demos, videos, or code repositories available?**
-<!-- Paste any additional links -->
-
-
-**Any other relevant information:**
-<!-- Optional: Add anything else that would help understand this example -->
+<!-- Provide all relevant links -->
+- [Original Source](URL) - Description
+- [Additional Demo/Video](URL) - Description (if available)
+- [GitHub/Code](URL) - Description (if available)
+- [Related Documentation](URL) - Description (if available)
 
 
 ---
