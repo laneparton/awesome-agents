@@ -51,7 +51,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### 🛠️ Development & Engineering
 
-*Examples coming soon - [contribute yours!](CONTRIBUTING.md)*
+**Problem: Teams across Boeing independently building AI chatbots, duplicating 512 hours of work per agent**
+→ [Unified Chatbot Framework at Jeppesen](examples/development/jeppesen-unified-chatbot-framework.md) by Jeppesen AI Team
+*Reduced agent development time by 87% (512 to 64 hours), saving ~2,000 engineering hours with a shared framework powered by LlamaIndex*
+
 ---
 
 ### 🔬 Research & Analysis
@@ -59,6 +62,14 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 **Problem: Complex web research requiring parallel investigation across multiple dimensions**
 → [Exa Deep Research Multi-Agent System](examples/research/exa-deep-research-agent.md) by Exa
 *Production multi-agent system processing hundreds of daily queries, delivering structured research results in 15 seconds to 3 minutes with dynamic task scaling*
+
+**Problem: Media company creatives searching for content across dozens of isolated systems, spending hours instead of creating**
+→ [Multi-Agent Content Discovery at Bertelsmann](examples/research/bertelsmann-content-search.md) by Bertelsmann AI Hub
+*Reduced content discovery from hours to seconds with intelligent multi-agent orchestration across books, TV/film, news, and web sources*
+
+**Problem: Construction companies manually analyzing 100+ page tender documents, taking hours to days per tender**
+→ [Tender RFP Analysis Agent for Construction](examples/research/softiq-tender-rfp-agent.md) by SoftIQ
+*Reduced tender analysis from hours/days to <10 minutes, enabling 6-10x productivity increase with semantic chunking and workflow-based reasoning*
 
 ---
 
