@@ -16,6 +16,7 @@ Examples in this category should focus on:
 ## Examples
 
 - [Minimal Multi-Agent Customer Support System](minimal-multi-agent-customer-support.md) - Automates e-commerce customer support with 80%+ efficiency gains using specialized multi-agent architecture
+- [Fullscript Automated Security Investigation Agent](fullscript-security-investigation-agent.md) - Healthcare security workflow built in 2 days reducing investigations by 97% and saving 3,600+ hours annually
 
 ---
 
