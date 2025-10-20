@@ -16,7 +16,7 @@ Examples in this category should focus on:
 
 ## Examples
 
-*No examples yet - [be the first to contribute!](../../CONTRIBUTING.md)*
+- [Multi-Agent Content Discovery at Bertelsmann](bertelsmann-content-search.md) - Reduced content discovery from hours to seconds with intelligent multi-agent orchestration
 
 ---
 

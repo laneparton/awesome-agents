@@ -54,7 +54,9 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### 🔬 Research & Analysis
 
-*Examples coming soon - [contribute yours!](CONTRIBUTING.md)*
+**Problem: Media company creatives searching for content across dozens of isolated systems, spending hours instead of creating**
+→ [Multi-Agent Content Discovery at Bertelsmann](examples/research/bertelsmann-content-search.md) by Bertelsmann AI Hub
+*Reduced content discovery from hours to seconds with intelligent multi-agent orchestration across books, TV/film, news, and web sources*
 
 ---
 
