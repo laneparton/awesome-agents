@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import '../../styles/global.css';
+import Header from '../../components/Header.astro';
 
 export async function getStaticPaths() {
   const examples = await getCollection('examples');
@@ -23,55 +24,56 @@ const { data } = entry;
     <meta name="generator" content={Astro.generator} />
     <title>{data.title} | Awesome Agent Examples</title>
   </head>
-  <body class="bg-gray-50 min-h-screen">
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
+  <body class="min-h-screen bg-midnightBlue">
+    <Header />
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
       <!-- Back button -->
       <a
         href="/"
-        class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6"
+        class="inline-flex items-center gap-2 mb-8 text-white hover:text-lightOrange font-medium transition-colors"
       >
         ← Back to examples
       </a>
 
       <!-- Article header -->
-      <article class="bg-white rounded-lg shadow-sm p-8">
-        <header class="mb-8 border-b pb-6">
-          <div class="mb-4">
-            <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 capitalize">
-              {data.category}
-            </span>
-          </div>
-
-          <h1 class="text-4xl font-bold text-gray-900 mb-4">{data.title}</h1>
-
-          <div class="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
+      <article class="bg-navyBlue rounded-lg border border-slateBlue p-10">
+        <header class="mb-8 pb-8 border-b border-slateBlue">
+          <!-- Category & Company -->
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-xs font-semibold text-lightOrange capitalize">{data.category}</span>
             {data.company && (
-              <div>
-                <span class="font-semibold">Company:</span> {data.company}
-              </div>
-            )}
-            {data.author && (
-              <div>
-                <span class="font-semibold">Author:</span> {data.author}
-              </div>
-            )}
-            {data.date && (
-              <div>
-                <span class="font-semibold">Date:</span> {data.date}
-              </div>
+              <>
+                <span class="text-lightBlue">•</span>
+                <span class="text-sm font-semibold text-lightBlue">{data.company}</span>
+              </>
             )}
           </div>
+
+          <h1 class="text-4xl font-bold text-white mb-4 leading-tight">{data.title}</h1>
 
           {data.description && (
-            <p class="text-lg text-gray-700 italic border-l-4 border-blue-500 pl-4">
+            <p class="text-lg mb-6 border-l-4 border-lightOrange pl-4">
               {data.description}
             </p>
           )}
 
+          <div class="flex flex-wrap gap-6 text-sm text-lightBlue mb-6">
+            {data.author && (
+              <div>
+                <span class="font-semibold text-white">Author:</span> {data.author}
+              </div>
+            )}
+            {data.date && (
+              <div>
+                <span class="font-semibold text-white">Date:</span> {data.date}
+              </div>
+            )}
+          </div>
+
           {data.tags && data.tags.length > 0 && (
-            <div class="flex flex-wrap gap-2 mt-4">
+            <div class="flex flex-wrap gap-2 mb-6">
               {data.tags.map(tag => (
-                <span class="inline-block px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600">
+                <span class="text-xs px-2.5 py-1 rounded-full bg-faintBlue text-lightBlue border border-slateBlue">
                   {tag}
                 </span>
               ))}
@@ -79,21 +81,19 @@ const { data } = entry;
           )}
 
           {data.source && (
-            <div class="mt-4">
-              <a
-                href={data.source}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-              >
-                View Original Source →
-              </a>
-            </div>
+            <a
+              href={data.source}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-white hover:text-lightOrange font-medium transition-colors"
+            >
+              View Original Source →
+            </a>
           )}
         </header>
 
         <!-- Content -->
-        <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-a:text-blue-600 prose-strong:text-gray-900">
+        <div class="prose prose-lg max-w-none prose-headings:text-white prose-a:text-lightOrange prose-a:hover:text-darkerOrange prose-strong:text-white prose-p:text-[#C2D1E5] prose-li:text-[#C2D1E5] prose-code:text-lightBlue prose-pre:bg-faintBlue">
           <Content />
         </div>
       </article>
@@ -102,7 +102,7 @@ const { data } = entry;
       <div class="mt-8">
         <a
           href="/"
-          class="inline-flex items-center text-blue-600 hover:text-blue-800"
+          class="inline-flex items-center gap-2 text-white hover:text-lightOrange transition-colors"
         >
           ← Back to examples
         </a>
