@@ -97,6 +97,13 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ---
 
+### 💡 Uncategorized
+
+**Additional Resources:**
+→ [Real-World Gen AI Use Cases with Technical Blueprints](https://cloud.google.com/blog/products/ai-machine-learning/real-world-gen-ai-use-cases-with-technical-blueprints) by Google Cloud
+
+---
+
 ## How to Contribute
 
 We're actively looking for real-world agent examples! Have you built an agent that solves a specific problem? Know of an impressive implementation shared online?
