@@ -1,12 +1,15 @@
+---
+title: "Exa Deep Research Multi-Agent System"
+company: "Exa"
+author: "Exa"
+source: "https://blog.langchain.com/exa/"
+date: "2025-06"
+category: "research"
+tags: ["multi-agent", "web-research", "structured-output", "langgraph", "production"]
+description: "Processing hundreds of daily queries with structured research results in 15 seconds to 3 minutes"
+---
+
 # Exa Deep Research Multi-Agent System
-
-**Author**: Exa
-
-**Source**: [How Exa built a Web Research Multi-Agent System with LangGraph and LangSmith](https://blog.langchain.com/exa/)
-
-**Date**: June 2025
-
-**Tags**: `multi-agent` `web-research` `structured-output` `langgraph` `production`
 
 ## The Problem
 

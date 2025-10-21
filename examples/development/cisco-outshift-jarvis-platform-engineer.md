@@ -1,12 +1,15 @@
+---
+title: "Cisco Outshift JARVIS - Agentic AI Platform Engineer"
+company: "Cisco Outshift"
+author: "Outshift by Cisco"
+source: "https://blog.langchain.com/cisco-outshift/"
+date: "2025-05"
+category: "development"
+tags: ["platform-engineering", "multi-agent", "devops", "infrastructure", "production"]
+description: "10x productivity boost - CI/CD setup from 1 week to <1 hour, resource provisioning from half-day to seconds"
+---
+
 # Cisco Outshift JARVIS - Agentic AI Platform Engineer
-
-**Author**: Outshift by Cisco
-
-**Source**: [How Outshift by Cisco achieved a 10x productivity boost with their Agentic AI Platform Engineer](https://blog.langchain.com/cisco-outshift/)
-
-**Date**: May 2025
-
-**Tags**: `platform-engineering` `multi-agent` `devops` `infrastructure` `production`
 
 ## The Problem
 

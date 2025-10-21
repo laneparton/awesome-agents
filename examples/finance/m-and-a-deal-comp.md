@@ -1,9 +1,15 @@
-# M&A Deal Comp Generator
+---
+title: "M&A Deal Comp Generator"
+company: "LlamaIndex"
+author: "Jerry Liu"
+source: "https://x.com/jerryjliu0/status/1980021068158099634"
+date: "2025-01"
+category: "finance"
+tags: ["finance", "m&a", "pdf-parsing", "excel-automation", "claude", "llamacloud", "semtools"]
+description: "Reduced processing time from 20-50 hours to 5 minutes with 95% accuracy for M&A deal comparables"
+---
 
-**Author**: Jerry Liu\
-**Source**: [Twitter/X Post](https://x.com/jerryjliu0/status/1980021068158099634)\
-**Date**: January 2025\
-**Tags**: `finance` `m&a` `pdf-parsing` `excel-automation` `claude` `llamacloud` `semtools`
+# M&A Deal Comp Generator
 
 ## The Problem
 

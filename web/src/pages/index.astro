@@ -1,0 +1,198 @@
+---
+import { getCollection } from 'astro:content';
+import '../styles/global.css';
+
+const allExamples = await getCollection('examples');
+
+// Extract unique categories and tags
+const categories = [...new Set(allExamples.map(e => e.data.category))].filter(Boolean).sort();
+const allTags = [...new Set(allExamples.flatMap(e => e.data.tags || []))].sort();
+
+// Pass examples to the client
+const examples = allExamples.map(entry => ({
+  id: entry.id,
+  title: entry.data.title,
+  company: entry.data.company,
+  category: entry.data.category,
+  tags: entry.data.tags || [],
+  description: entry.data.description,
+  date: entry.data.date,
+  source: entry.data.source,
+}));
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Awesome Agent Examples</title>
+    <script>
+      import Alpine from 'alpinejs'
+      window.Alpine = Alpine
+      Alpine.start()
+    </script>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+      <!-- Header -->
+      <header class="mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Awesome Agent Examples</h1>
+        <p class="text-xl text-gray-600">Real-world problems solved with AI agents</p>
+      </header>
+
+      <!-- Alpine.js app -->
+      <div
+        x-data=`{
+          examples: ${JSON.stringify(examples)},
+          selectedCategory: 'all',
+          selectedTags: [],
+          searchQuery: '',
+          get filteredExamples() {
+            return this.examples.filter(example => {
+              // Category filter
+              if (this.selectedCategory !== 'all' && example.category !== this.selectedCategory) {
+                return false;
+              }
+
+              // Tag filter
+              if (this.selectedTags.length > 0) {
+                const hasAllTags = this.selectedTags.every(tag =>
+                  example.tags.includes(tag)
+                );
+                if (!hasAllTags) return false;
+              }
+
+              // Search filter
+              if (this.searchQuery) {
+                const query = this.searchQuery.toLowerCase();
+                const searchableText = [
+                  example.title,
+                  example.company,
+                  example.description,
+                  ...example.tags
+                ].join(' ').toLowerCase();
+
+                if (!searchableText.includes(query)) {
+                  return false;
+                }
+              }
+
+              return true;
+            });
+          },
+          toggleTag(tag) {
+            const index = this.selectedTags.indexOf(tag);
+            if (index > -1) {
+              this.selectedTags.splice(index, 1);
+            } else {
+              this.selectedTags.push(tag);
+            }
+          }
+        }`
+      >
+        <!-- Filters -->
+        <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+          <div class="space-y-6">
+            <!-- Search -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Search</label>
+              <input
+                type="text"
+                x-model="searchQuery"
+                placeholder="Search examples..."
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+
+            <!-- Category Filter -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Category</label>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  @click="selectedCategory = 'all'"
+                  :class="selectedCategory === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'"
+                  class="px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition-colors"
+                >
+                  All
+                </button>
+                {categories.map(category => (
+                  <button
+                    @click={`selectedCategory = '${category}'`}
+                    :class={`selectedCategory === '${category}' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'`}
+                    class="px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition-colors capitalize"
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <!-- Tag Filter -->
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Tags (click to filter)</label>
+              <div class="flex flex-wrap gap-2">
+                {allTags.map(tag => (
+                  <button
+                    @click={`toggleTag('${tag}')`}
+                    :class={`selectedTags.includes('${tag}') ? 'bg-green-600 text-white' : 'bg-gray-200 text-gray-700'`}
+                    class="px-3 py-1 text-sm rounded-full hover:bg-green-500 hover:text-white transition-colors"
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results count -->
+        <div class="mb-4 text-gray-600">
+          <span x-text="filteredExamples.length"></span> examples found
+        </div>
+
+        <!-- Examples Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <template x-for="example in filteredExamples" :key="example.id">
+            <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
+              <div class="mb-4">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 capitalize"
+                  x-text="example.category"
+                ></span>
+              </div>
+
+              <h2 class="text-xl font-bold text-gray-900 mb-2" x-text="example.title"></h2>
+
+              <p class="text-sm text-gray-500 mb-3" x-text="example.company"></p>
+
+              <p class="text-gray-700 mb-4 line-clamp-3" x-text="example.description"></p>
+
+              <div class="flex flex-wrap gap-2 mb-4">
+                <template x-for="tag in example.tags.slice(0, 3)" :key="tag">
+                  <span class="inline-block px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-600" x-text="tag"></span>
+                </template>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-gray-500" x-text="example.date"></span>
+                <a
+                  :href="`/examples/${example.id.replace('.md', '')}`"
+                  class="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                >
+                  Read more →
+                </a>
+              </div>
+            </article>
+          </template>
+        </div>
+
+        <!-- No results message -->
+        <div x-show="filteredExamples.length === 0" class="text-center py-12">
+          <p class="text-gray-500 text-lg">No examples match your filters. Try adjusting your search criteria.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

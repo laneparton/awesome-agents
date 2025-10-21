@@ -1,12 +1,15 @@
+---
+title: "Tender RFP Analysis Agent for Construction Sector"
+company: "SoftIQ"
+author: "Adam Marszowski and team"
+source: "https://www.llamaindex.ai/blog/case-study-tender-rfp-agent-for-construction-sector-with-softiq"
+date: "2025-01"
+category: "research"
+tags: ["research", "document-analysis", "construction", "rfp", "automation", "multimodal", "report-generation"]
+description: "Reduced tender analysis from hours/days to <10 minutes, enabling 6-10x productivity increase"
+---
+
 # Tender RFP Analysis Agent for Construction Sector
-
-**Author**: SoftIQ (Adam Marszowski and team)
-
-**Source**: [LlamaIndex Case Study](https://www.llamaindex.ai/blog/case-study-tender-rfp-agent-for-construction-sector-with-softiq)
-
-**Date**: January 2025
-
-**Tags**: `research` `document-analysis` `construction` `rfp` `automation` `multimodal` `report-generation`
 
 ## The Problem
 

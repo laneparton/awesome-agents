@@ -1,12 +1,15 @@
+---
+title: "Minimal Multi-Agent Customer Support System"
+company: "Minimal"
+author: "Titus Ex and Niek Hogenboom"
+source: "https://blog.langchain.com/how-minimal-built-a-multi-agent-customer-support-system-with-langgraph-langsmith/"
+date: "2025-01"
+category: "productivity"
+tags: ["customer-support", "e-commerce", "multi-agent", "automation", "langgraph", "langsmith"]
+description: "80%+ efficiency gains with multi-agent system autonomously handling 90% of support tickets"
+---
+
 # Minimal Multi-Agent Customer Support System
-
-**Author**: Titus Ex and Niek Hogenboom (Minimal)
-
-**Source**: [LangChain Blog](https://blog.langchain.com/how-minimal-built-a-multi-agent-customer-support-system-with-langgraph-langsmith/)
-
-**Date**: January 2025
-
-**Tags**: `customer-support` `e-commerce` `multi-agent` `automation` `langgraph` `langsmith`
 
 ## The Problem
 
