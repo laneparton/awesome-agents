@@ -59,6 +59,8 @@ const examples = allExamples.map(entry => ({
           selectedCategory: 'all',
           selectedTags: [],
           searchQuery: '',
+          currentPage: 1,
+          itemsPerPage: 12,
           get filteredExamples() {
             return this.examples.filter(example => {
               // Category filter
@@ -92,6 +94,36 @@ const examples = allExamples.map(entry => ({
               return true;
             });
           },
+          get paginatedExamples() {
+            const start = (this.currentPage - 1) * this.itemsPerPage;
+            const end = start + this.itemsPerPage;
+            return this.filteredExamples.slice(start, end);
+          },
+          get totalPages() {
+            return Math.ceil(this.filteredExamples.length / this.itemsPerPage);
+          },
+          get hasMultiplePages() {
+            return this.totalPages > 1;
+          },
+          nextPage() {
+            if (this.currentPage < this.totalPages) {
+              this.currentPage++;
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          },
+          prevPage() {
+            if (this.currentPage > 1) {
+              this.currentPage--;
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          },
+          goToPage(page) {
+            this.currentPage = page;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          },
+          resetPagination() {
+            this.currentPage = 1;
+          },
           toggleTag(tag) {
             const index = this.selectedTags.indexOf(tag);
             if (index > -1) {
@@ -99,6 +131,7 @@ const examples = allExamples.map(entry => ({
             } else {
               this.selectedTags.push(tag);
             }
+            this.resetPagination();
           }
         }`
       >
@@ -108,6 +141,7 @@ const examples = allExamples.map(entry => ({
           <input
             type="text"
             x-model="searchQuery"
+            @input="resetPagination()"
             placeholder="Search examples..."
             class="w-full px-4 py-2.5 bg-[#243142] border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#f7961c] focus:border-[#f7961c] transition-all text-sm text-white placeholder:text-gray-400"
           />
@@ -115,7 +149,7 @@ const examples = allExamples.map(entry => ({
           <!-- Category Filter -->
           <div class="flex flex-wrap gap-2">
             <button
-              @click="selectedCategory = 'all'"
+              @click="selectedCategory = 'all'; resetPagination()"
               :class="selectedCategory === 'all' ? 'bg-white text-[#1a2533]' : 'bg-gray-700 hover:bg-gray-600'"
               class="px-3 py-1 text-sm rounded-full transition-colors"
             >
@@ -123,7 +157,7 @@ const examples = allExamples.map(entry => ({
             </button>
             {categories.map(category => (
               <button
-                @click={`selectedCategory = '${category}'`}
+                @click={`selectedCategory = '${category}'; resetPagination()`}
                 :class={`selectedCategory === '${category}' ? 'bg-white text-[#1a2533]' : 'bg-gray-700 hover:bg-gray-600'`}
                 class="px-3 py-1 text-sm rounded-full capitalize transition-colors"
               >
@@ -146,14 +180,25 @@ const examples = allExamples.map(entry => ({
           </div>
         </div>
 
-        <!-- Results count -->
-        <div class="mb-4 text-sm text-lightBlue">
-          <span x-text="filteredExamples.length"></span> examples
+        <!-- Results count and pagination info -->
+        <div class="mb-4 flex items-center justify-between">
+          <div class="text-sm text-gray-400">
+            <span x-text="filteredExamples.length"></span> examples
+            <template x-if="hasMultiplePages">
+              <span>
+                · Showing
+                <span x-text="((currentPage - 1) * itemsPerPage) + 1"></span>-<span x-text="Math.min(currentPage * itemsPerPage, filteredExamples.length)"></span>
+              </span>
+            </template>
+          </div>
+          <div class="text-sm text-gray-400" x-show="hasMultiplePages">
+            Page <span x-text="currentPage"></span> of <span x-text="totalPages"></span>
+          </div>
         </div>
 
         <!-- Examples Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <template x-for="example in filteredExamples" :key="example.id">
+          <template x-for="example in paginatedExamples" :key="example.id">
             <article class="group flex flex-col bg-[#243142] rounded-lg overflow-hidden hover:bg-[#2a3a4d] transition-colors border border-gray-700">
               <div class="p-6 flex flex-col flex-grow">
                 <!-- Category & Company -->
@@ -193,6 +238,39 @@ const examples = allExamples.map(entry => ({
         <!-- No results message -->
         <div x-show="filteredExamples.length === 0" class="text-center py-12">
           <p class="text-gray-500 text-lg">No examples match your filters. Try adjusting your search criteria.</p>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div x-show="hasMultiplePages" class="mt-8 flex items-center justify-center gap-2">
+          <!-- Previous Button -->
+          <button
+            @click="prevPage()"
+            :disabled="currentPage === 1"
+            :class="currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-600'"
+            class="px-4 py-2 bg-[#243142] text-white rounded-lg transition-colors border border-gray-700"
+          >
+            ← Previous
+          </button>
+
+          <!-- Page Numbers -->
+          <template x-for="page in totalPages" :key="page">
+            <button
+              @click="goToPage(page)"
+              :class="page === currentPage ? 'bg-[#f7961c] text-white' : 'bg-[#243142] text-gray-300 hover:bg-gray-600'"
+              class="px-4 py-2 rounded-lg transition-colors border border-gray-700"
+              x-text="page"
+            ></button>
+          </template>
+
+          <!-- Next Button -->
+          <button
+            @click="nextPage()"
+            :disabled="currentPage === totalPages"
+            :class="currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-600'"
+            class="px-4 py-2 bg-[#243142] text-white rounded-lg transition-colors border border-gray-700"
+          >
+            Next →
+          </button>
         </div>
       </div>
     </div>

@@ -7,6 +7,41 @@ date: "2025-01"
 category: "productivity"
 tags: ["security", "workflow-automation"]
 description: "Reduced security investigations by 97% (weeks to 30 minutes), saving 3,600+ hours/year"
+
+# Problem Classification
+problemPattern: "workflow-automation"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "workflow-based"
+  rationale: "Slack-based orchestration was critical - investigations became 'just a Slack message' instead of weeks of coordination, with AI handling analysis while maintaining human oversight"
+  components: ["slack-bot-orchestration", "ai-analysis", "automated-reporting", "multi-system-data-collection"]
+
+# What Made It Work
+breakthroughInsight: "Complex, regulation-heavy workflows automated in 2 days during hackathon using low-code orchestration - Slack interface made weeks-long investigations become 'just a Slack message'"
+
+criticalConstraints:
+  - "healthcare-compliance"
+  - "multi-system-data-aggregation"
+  - "audit-trail-required"
+  - "highly-regulated-industry"
+
+antiPatterns:
+  - "traditional-development: would have taken months vs 2-day hackathon build"
+
+# Tech Stack
+techStack:
+  framework: "n8n"
+  llmProvider: "OpenAI"
+  knowledgeRetrieval: "workflow-automation"
+  otherTools: ["Slack", "Google Docs"]
+
+# Scale
+scale:
+  volume: "3,600+ hours saved annually"
+  latency: "weeks to 30 minutes"
 ---
 
 # Fullscript Automated Security Investigation Agent

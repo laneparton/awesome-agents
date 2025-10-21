@@ -7,6 +7,42 @@ date: "2025-06"
 category: "research"
 tags: ["multi-agent", "web-research", "structured-output", "production"]
 description: "Processing hundreds of daily queries with structured research results in 15 seconds to 3 minutes"
+
+# Problem Classification
+problemPattern: "multi-source-research"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "multi-agent"
+  pattern: "coordinator-workers"
+  rationale: "Dynamic task scaling handles both simple single-task queries and complex multi-faceted research without rigid workflow constraints, critical for production API"
+  components: ["planner", "observer", "parallel-task-workers", "context-engineer"]
+
+# What Made It Work
+breakthroughInsight: "Search snippets first, full content only when necessary - this context engineering decision significantly reduced token costs while preserving research quality"
+
+criticalConstraints:
+  - "token-cost-control"
+  - "api-consumption-not-end-users"
+  - "production-scale-hundreds-daily"
+  - "structured-json-output-required"
+
+antiPatterns:
+  - "always-loading-full-content: caused token costs to spiral without visibility"
+
+# Tech Stack
+techStack:
+  framework: "LangGraph"
+  llmProvider: "OpenAI"
+  knowledgeRetrieval: "hybrid"
+  otherTools: ["LangSmith", "Exa Search API"]
+
+# Scale
+scale:
+  users: 100
+  volume: "hundreds of research queries daily"
+  latency: "15 seconds to 3 minutes"
 ---
 
 # Exa Deep Research Multi-Agent System

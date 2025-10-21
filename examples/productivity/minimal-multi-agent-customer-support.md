@@ -7,6 +7,42 @@ date: "2025-01"
 category: "productivity"
 tags: ["multi-agent", "customer-support", "workflow-automation"]
 description: "80%+ efficiency gains with multi-agent system autonomously handling 90% of support tickets"
+
+# Problem Classification
+problemPattern: "workflow-automation"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "multi-agent"
+  pattern: "coordinator-workers"
+  rationale: "Splitting tasks across specialized agents (planner, research, tool-calling) dramatically improved reliability and reduced costs vs monolithic prompt approach"
+  components: ["planner-agent", "research-agents", "tool-calling-agent", "knowledge-base-integration"]
+
+# What Made It Work
+breakthroughInsight: "Specialized agents instead of monolithic prompt dramatically improved reliability - separating planning, research, and tool execution created clear boundaries for validation and independent refinement"
+
+criticalConstraints:
+  - "multi-platform-integration"
+  - "policy-consistency-required"
+  - "order-management-actions"
+  - "production-e-commerce-reliability"
+
+antiPatterns:
+  - "monolithic-prompt: conflated tasks led to reasoning errors and expensive token usage"
+  - "single-agent-for-everything: struggled to maintain context across multiple reasoning tasks"
+
+# Tech Stack
+techStack:
+  framework: "LangGraph"
+  llmProvider: "OpenAI"
+  knowledgeRetrieval: "RAG"
+  otherTools: ["LangSmith", "Shopify", "Zendesk", "Front", "Gorgias"]
+
+# Scale
+scale:
+  volume: "90% of support tickets handled autonomously"
+  latency: "80%+ efficiency gains"
 ---
 
 # Minimal Multi-Agent Customer Support System

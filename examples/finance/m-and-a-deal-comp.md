@@ -7,6 +7,41 @@ date: "2025-01"
 category: "finance"
 tags: ["document-analysis", "structured-output"]
 description: "Reduced processing time from 20-50 hours to 5 minutes with 95% accuracy for M&A deal comparables"
+
+# Problem Classification
+problemPattern: "document-processing-at-scale"
+problemComplexity: "moderate"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "pipeline"
+  rationale: "Batch processing with advanced PDF parsing - Claude Code skills handle orchestration and Excel generation while LlamaCloud solves complex table extraction"
+  components: ["pdf-parser", "extraction-agent", "excel-generator"]
+
+# What Made It Work
+breakthroughInsight: "Native pypdf parsing wasn't sufficient for complex financial documents - swapping to LlamaCloud's advanced parsing was critical for handling nested tables and mixed content"
+
+criticalConstraints:
+  - "complex-pdf-tables"
+  - "nested-table-structures"
+  - "accuracy-non-negotiable"
+  - "batch-processing-required"
+
+antiPatterns:
+  - "pypdf-default-parser: struggles with deeply complex financial tables and nested structures"
+
+# Tech Stack
+techStack:
+  framework: "LlamaIndex"
+  llmProvider: "Anthropic"
+  knowledgeRetrieval: "document-parsing"
+  otherTools: ["LlamaCloud", "Claude Code Skills"]
+
+# Scale
+scale:
+  volume: "20-50 filings per project"
+  latency: "~5 minutes total"
 ---
 
 # M&A Deal Comp Generator

@@ -1,0 +1,325 @@
+---
+import { getCollection } from 'astro:content';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+
+const examples = await getCollection('examples');
+
+// Compute insights
+const totalExamples = examples.length;
+
+// Problem patterns
+const problemPatterns = examples
+  .filter(e => e.data.problemPattern)
+  .reduce((acc, e) => {
+    const pattern = e.data.problemPattern!;
+    if (!acc[pattern]) acc[pattern] = [];
+    acc[pattern].push(e);
+    return acc;
+  }, {} as Record<string, typeof examples>);
+
+// Architecture types
+const architectureTypes = examples
+  .filter(e => e.data.architecture)
+  .reduce((acc, e) => {
+    const type = e.data.architecture!.type;
+    if (!acc[type]) acc[type] = [];
+    acc[type].push(e);
+    return acc;
+  }, {} as Record<string, typeof examples>);
+
+// Top breakthrough insights (limit to 8)
+const breakthroughs = examples
+  .filter(e => e.data.breakthroughInsight)
+  .map(e => ({
+    title: e.data.title,
+    company: e.data.company,
+    insight: e.data.breakthroughInsight,
+    slug: e.id,
+    pattern: e.data.problemPattern,
+  }))
+  .slice(0, 8);
+
+// Critical constraints - top 8
+const allConstraints = examples
+  .filter(e => e.data.criticalConstraints)
+  .flatMap(e => e.data.criticalConstraints!);
+const constraintCounts = allConstraints.reduce((acc, c) => {
+  acc[c] = (acc[c] || 0) + 1;
+  return acc;
+}, {} as Record<string, number>);
+const topConstraints = Object.entries(constraintCounts)
+  .sort(([, a], [, b]) => b - a)
+  .slice(0, 8);
+
+// Top anti-patterns (aggregate similar ones)
+const allAntiPatterns = examples
+  .filter(e => e.data.antiPatterns && e.data.antiPatterns.length > 0)
+  .flatMap(e => e.data.antiPatterns!.map(ap => ({
+    pattern: ap,
+    company: e.data.company || e.data.title,
+    slug: e.id,
+  })));
+const topAntiPatterns = allAntiPatterns.slice(0, 6);
+
+// Stats for summary
+const totalWithInsights = examples.filter(e => e.data.breakthroughInsight).length;
+const totalWithArchitecture = examples.filter(e => e.data.architecture).length;
+const totalWithAntiPatterns = examples.filter(e => e.data.antiPatterns).length;
+
+// Tech stack - top 5 frameworks
+const frameworks = examples
+  .filter(e => e.data.techStack?.framework)
+  .map(e => ({
+    framework: Array.isArray(e.data.techStack!.framework)
+      ? e.data.techStack!.framework
+      : [e.data.techStack!.framework],
+  }))
+  .flatMap(e => e.framework);
+
+const frameworkCounts = frameworks.reduce((acc, framework) => {
+  acc[framework] = (acc[framework] || 0) + 1;
+  return acc;
+}, {} as Record<string, number>);
+
+const topFrameworks = Object.entries(frameworkCounts)
+  .sort(([, a], [, b]) => b - a)
+  .slice(0, 5);
+
+// Format problem pattern names
+function formatPattern(pattern: string): string {
+  return pattern.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+// Format architecture type names
+function formatArchType(type: string): string {
+  return type.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+// Format constraint names
+function formatConstraint(constraint: string): string {
+  return constraint.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content={Astro.generator} />
+  <title>Agent Insights - Awesome Agent Examples</title>
+</head>
+<body class="min-h-screen bg-midnightBlue">
+  <Header />
+  <div class="container mx-auto px-4 py-12 max-w-6xl">
+    <!-- Header -->
+    <header class="mb-12">
+      <h2 class="text-3xl font-bold tracking-tight text-white mb-2">Agent Implementation Insights</h2>
+      <p class="text-gray-400 mb-6">Distilled insights from {totalExamples} real-world implementations</p>
+
+      <!-- Description Box -->
+      <p class="text-gray-300 text-lg">
+        Instead of showcasing time saved or ROI metrics, these insights focus on what actually matters: problem patterns you can recognize, architecture decisions with rationale, breakthrough insights that made implementations successful, and anti-patterns to avoid.
+      </p>
+    </header>
+
+    <!-- Stats Dashboard -->
+    <section class="mb-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-[#243142] rounded-lg p-6 border border-gray-700 text-center">
+          <div class="text-4xl font-bold text-[#f7961c] mb-2">{Object.keys(problemPatterns).length}</div>
+          <div class="text-gray-400 text-sm">Problem Patterns</div>
+        </div>
+        <div class="bg-[#243142] rounded-lg p-6 border border-gray-700 text-center">
+          <div class="text-4xl font-bold text-[#f7961c] mb-2">{totalWithInsights}</div>
+          <div class="text-gray-400 text-sm">Breakthrough Insights</div>
+        </div>
+        <div class="bg-[#243142] rounded-lg p-6 border border-gray-700 text-center">
+          <div class="text-4xl font-bold text-[#f7961c] mb-2">{topConstraints.length}</div>
+          <div class="text-gray-400 text-sm">Common Constraints</div>
+        </div>
+        <div class="bg-[#243142] rounded-lg p-6 border border-gray-700 text-center">
+          <div class="text-4xl font-bold text-[#f7961c] mb-2">{totalWithAntiPatterns}</div>
+          <div class="text-gray-400 text-sm">Anti-Patterns</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Patterns -->
+    {Object.keys(problemPatterns).length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-3 text-white">Problem Patterns</h2>
+        <p class="text-gray-400 mb-8">
+          Does your problem look like any of these? Click to explore examples.
+        </p>
+        <div class="grid gap-4 md:grid-cols-3">
+          {Object.entries(problemPatterns).map(([pattern, exs]) => (
+            <a href={`/?category=all&tags=`} class="bg-[#243142] rounded-lg p-6 border border-gray-700 hover:border-[#f7961c] transition-colors group">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="text-lg font-semibold text-white group-hover:text-[#f7961c] transition-colors">
+                  {formatPattern(pattern)}
+                </h3>
+                <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm font-medium">
+                  {exs.length}
+                </span>
+              </div>
+              <p class="text-gray-400 text-sm mb-3">
+                {exs.slice(0, 3).map(e => e.data.company).join(', ')}
+                {exs.length > 3 && ` +${exs.length - 3} more`}
+              </p>
+              <div class="text-[#f7961c] text-sm group-hover:text-white transition-colors">
+                Explore examples →
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Key Architecture Themes -->
+    {Object.keys(architectureTypes).length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-3 text-white">Architecture Patterns</h2>
+        <p class="text-gray-400 mb-8">
+          How teams structured their agents—and why those choices mattered.
+        </p>
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {Object.entries(architectureTypes).map(([type, exs]) => (
+            <div class="bg-[#243142] rounded-lg p-5 border border-gray-700">
+              <h3 class="text-lg font-semibold text-white mb-2">{formatArchType(type)}</h3>
+              <p class="text-gray-400 text-sm mb-3">{exs.length} implementation{exs.length !== 1 ? 's' : ''}</p>
+              <div class="space-y-1">
+                {exs.slice(0, 3).map(e => (
+                  <a href={`/examples/${e.id}`} class="block text-[#f7961c] hover:text-white text-sm">
+                    {e.data.company}
+                  </a>
+                ))}
+                {exs.length > 3 && (
+                  <p class="text-gray-500 text-xs">+{exs.length - 3} more</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Breakthrough Insights -->
+    {breakthroughs.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-3 text-white">Top Breakthrough Insights</h2>
+        <p class="text-gray-400 mb-8">
+          The critical decisions that made implementations successful. Not time saved—what actually worked.
+        </p>
+        <div class="grid gap-4 md:grid-cols-2">
+          {breakthroughs.map(({ company, insight, slug }) => (
+            <div class="bg-[#243142] rounded-lg p-5 border-l-4 border-green-500 border border-gray-700 hover:border-green-500 transition-colors">
+              <a href={`/examples/${slug}`} class="font-semibold text-[#f7961c] hover:text-white mb-2 block text-sm">
+                {company}
+              </a>
+              <p class="text-gray-300 text-sm leading-relaxed">{insight}</p>
+            </div>
+          ))}
+        </div>
+        {totalWithInsights > breakthroughs.length && (
+          <p class="text-center text-gray-400 text-sm mt-6">
+            Showing top {breakthroughs.length} of {totalWithInsights} insights · <a href="/" class="text-[#f7961c] hover:text-white">Browse all examples</a>
+          </p>
+        )}
+      </section>
+    )}
+
+    <!-- Critical Constraints -->
+    {topConstraints.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-3 text-white">Most Common Constraints</h2>
+        <p class="text-gray-400 mb-8">
+          Real-world constraints that shaped how teams built their agents.
+        </p>
+        <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+          {topConstraints.map(([constraint, count]) => (
+            <div class="bg-[#243142] rounded-lg p-4 border border-gray-700 flex items-center justify-between">
+              <span class="text-gray-300 text-sm">{formatConstraint(constraint)}</span>
+              <span class="bg-[#f7961c] text-white px-2 py-1 rounded text-xs font-medium ml-2 flex-shrink-0">
+                {count}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Anti-Patterns -->
+    {topAntiPatterns.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-3 text-white">Common Anti-Patterns</h2>
+        <p class="text-gray-400 mb-8">
+          What teams tried that didn't work. Learn from these failures to avoid repeating them.
+        </p>
+        <div class="grid gap-4 md:grid-cols-2">
+          {topAntiPatterns.map(({ pattern, company }) => {
+            const [name, reason] = pattern.split(':').map(s => s.trim());
+            return (
+              <div class="bg-[#243142] rounded-lg p-5 border-l-4 border-red-500 border border-gray-700">
+                <div class="flex items-start mb-2">
+                  <span class="text-red-400 mr-2 mt-0.5">✗</span>
+                  <div class="flex-1">
+                    <div class="font-medium text-gray-200 mb-1">{name}</div>
+                    {reason && <p class="text-gray-400 text-sm">{reason}</p>}
+                    <p class="text-xs text-gray-500 mt-2">— {company}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        {totalWithAntiPatterns > 6 && (
+          <p class="text-center text-gray-400 text-sm mt-6">
+            Showing {topAntiPatterns.length} common failures · <a href="/" class="text-[#f7961c] hover:text-white">See all examples</a>
+          </p>
+        )}
+      </section>
+    )}
+
+    <!-- Tech Stack Trends -->
+    {topFrameworks.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-3 text-white">Popular Frameworks</h2>
+        <p class="text-gray-400 mb-8">
+          Most-used frameworks in these implementations. <span class="text-[#f7961c]">Note: Popularity ≠ right for your problem.</span>
+        </p>
+        <div class="bg-[#243142] rounded-lg shadow-md p-6 border border-gray-700">
+          <div class="space-y-4">
+            {topFrameworks.map(([framework, count]) => (
+              <div class="flex items-center">
+                <div class="w-32 text-gray-200 font-medium text-sm">{framework}</div>
+                <div class="flex-1 flex items-center">
+                  <div class="flex-1 bg-gray-700 rounded-full h-2 mr-3">
+                    <div
+                      class="bg-[#f7961c] h-2 rounded-full transition-all"
+                      style={`width: ${(count / topFrameworks[0][1]) * 100}%`}
+                    ></div>
+                  </div>
+                  <span class="text-gray-400 text-sm w-16 text-right">{count} {count === 1 ? 'case' : 'cases'}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Call to Action -->
+    <section class="bg-[#243142] rounded-lg p-8 border-2 border-[#f7961c]">
+      <h2 class="text-2xl font-bold mb-4 text-white">Is your problem a good fit for agents?</h2>
+      <p class="text-gray-300 mb-6">
+        Compare your requirements to these proven patterns. If you see similar problems, constraints,
+        and complexity, you've found a validated starting point.
+      </p>
+      <a href="/" class="inline-block bg-[#f7961c] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#e88a15] transition">
+        Browse All Examples →
+      </a>
+    </section>
+  </div>
+</body>
+</html>

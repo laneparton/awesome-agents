@@ -7,6 +7,42 @@ date: "2024-07"
 category: "research"
 tags: ["multi-agent", "content-discovery", "enterprise"]
 description: "Reduced content discovery from hours to seconds with multi-agent orchestration across books, TV/film, news, and web"
+
+# Problem Classification
+problemPattern: "content-discovery"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "multi-agent"
+  pattern: "domain-specialists"
+  rationale: "Intelligent multi-agent orchestration over data centralization - respecting existing systems while enabling unified search across fragmented ecosystem"
+  components: ["coordinator-router", "domain-agents", "synthesis-layer", "parallel-executor"]
+
+# What Made It Work
+breakthroughInsight: "Chose intelligent orchestration over data centralization - specialized agents live where data lives, coordinated by router that understands query intent, avoiding massive migration"
+
+criticalConstraints:
+  - "heterogeneous-systems"
+  - "no-data-migration-allowed"
+  - "cross-platform-search"
+  - "parallel-execution-required"
+
+antiPatterns:
+  - "data-centralization: too expensive and disruptive, orchestrated existing systems instead"
+  - "keyword-routing: coordinator needed to understand intent not just match keywords"
+
+# Tech Stack
+techStack:
+  framework: "LangGraph"
+  llmProvider: "OpenAI"
+  knowledgeRetrieval: "hybrid"
+  otherTools: ["vector-databases", "graph-databases"]
+
+# Scale
+scale:
+  volume: "books, TV/film, news archives, web"
+  latency: "hours to seconds"
 ---
 
 # Multi-Agent Content Discovery System at Bertelsmann
