@@ -101,6 +101,7 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 **Additional Resources:**
 → [Real-World Gen AI Use Cases with Technical Blueprints](https://cloud.google.com/blog/products/ai-machine-learning/real-world-gen-ai-use-cases-with-technical-blueprints) by Google Cloud
+→ [GenAI, LLM & ML Case Studies](https://github.com/themanojdesai/genai-llm-ml-case-studies) - A similar curated list of real-world AI implementations
 
 ---
 
