@@ -15,11 +15,21 @@ Use this checklist to ensure quality and completeness when adding a new example.
 
 ## Format Compliance
 
-- [ ] Metadata table includes all required fields:
-  - [ ] Author
-  - [ ] Source (with working link)
-  - [ ] Date (Month Year format)
-  - [ ] Tags (relevant keywords)
+- [ ] Frontmatter (YAML) includes all required fields:
+  - [ ] title
+  - [ ] company
+  - [ ] author
+  - [ ] source (with working link)
+  - [ ] date (YYYY-MM format)
+  - [ ] category
+  - [ ] tags (4-7 tags from tag-taxonomy.md)
+  - [ ] description (one-line impact summary)
+- [ ] Tags follow taxonomy guidelines:
+  - [ ] 4-7 tags selected from tag-taxonomy.md
+  - [ ] NO category name as tag
+  - [ ] NO tool/framework names as tags
+  - [ ] NO company names as tags
+  - [ ] Tags from multiple categories (architecture + capabilities + domain)
 - [ ] All required sections present:
   - [ ] Title
   - [ ] The Problem (with Manual Process and Key Pain Points)

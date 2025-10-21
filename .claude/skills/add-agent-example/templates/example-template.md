@@ -1,12 +1,23 @@
-# [Example Title - Descriptive Name]
+---
+title: "[Example Title - Descriptive Name]"
+company: "[Company Name]"
+author: "[Team/Author Name and details]"
+source: "[URL to original source]"
+date: "[YYYY-MM format - e.g., 2025-01]"
+category: "[category-slug: finance, development, research, productivity, content-creation, or data-analysis]"
+tags: ["tag1", "tag2", "tag3", "tag4"]
+description: "[One-line impact summary with key metrics]"
+---
 
-**Author**: [Name or Team Name]
+<!--
+TAGGING INSTRUCTIONS:
+- Select 4-7 tags from ../tag-taxonomy.md
+- Choose from multiple categories: architecture + capabilities + use cases
+- DO NOT include: category name, tool/framework names, company names
+- Focus on functional capabilities and patterns
+-->
 
-**Source**: [Link to original source](URL)
-
-**Date**: [Month Year - e.g., January 2025]
-
-**Tags**: `tag1` `tag2` `tag3` `tag4` `tag5`
+# [Example Title]
 
 ## The Problem
 

@@ -5,7 +5,7 @@ author: "Jerry Liu"
 source: "https://x.com/jerryjliu0/status/1980021068158099634"
 date: "2025-01"
 category: "finance"
-tags: ["finance", "m&a", "pdf-parsing", "excel-automation", "claude", "llamacloud", "semtools"]
+tags: ["document-analysis", "structured-output"]
 description: "Reduced processing time from 20-50 hours to 5 minutes with 95% accuracy for M&A deal comparables"
 ---
 

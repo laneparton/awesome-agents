@@ -5,7 +5,7 @@ author: "Exa"
 source: "https://blog.langchain.com/exa/"
 date: "2025-06"
 category: "research"
-tags: ["multi-agent", "web-research", "structured-output", "langgraph", "production"]
+tags: ["multi-agent", "web-research", "structured-output", "production"]
 description: "Processing hundreds of daily queries with structured research results in 15 seconds to 3 minutes"
 ---
 
