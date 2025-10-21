@@ -16,7 +16,7 @@ Examples in this category should focus on:
 
 ## Examples
 
-*No examples yet - [be the first to contribute!](../../CONTRIBUTING.md)*
+- [Delivery Hero Agentic Product Knowledge Base](delivery-hero-product-knowledge-base.md) - Automates extraction of 22 product attributes and title standardization using predefined agents with knowledge distillation
 
 ---
 

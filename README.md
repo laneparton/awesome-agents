@@ -93,7 +93,9 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### 📊 Data Analysis
 
-*Examples coming soon - [contribute yours!](CONTRIBUTING.md)*
+**Problem: Manual product catalog management across regions with inconsistent vendor data formats**
+→ [Delivery Hero Agentic Product Knowledge Base](examples/data-analysis/delivery-hero-product-knowledge-base.md) by Delivery Hero QC
+*Automates extraction of 22 product attributes and title standardization with predefined agents, improving efficiency and data quality through knowledge distillation*
 
 ---
 
