@@ -51,6 +51,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Fullscript Automated Security Investigation Agent](examples/productivity/fullscript-security-investigation-agent.md) by Fullscript Engineering Team
 *Built in 2 days at hackathon, reduced investigations by 97% (weeks to 30 minutes), saving 3,600+ hours/year with AI-powered workflow automation*
 
+**Problem: Early AI features couldn't reason dynamically or handle complex multi-step workflows**
+→ [Airtable Event-Driven Agentic Framework](examples/productivity/airtable-agentic-framework.md) by Airtable Engineering Team
+*Powers Omni app builder and Field Agents with event-driven state machine, achieving 15-30% cost reduction and enabling conversational workflows*
+
 ---
 
 ### 🛠️ Development & Engineering
