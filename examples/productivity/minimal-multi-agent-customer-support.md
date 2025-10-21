@@ -5,7 +5,7 @@ author: "Titus Ex and Niek Hogenboom"
 source: "https://blog.langchain.com/how-minimal-built-a-multi-agent-customer-support-system-with-langgraph-langsmith/"
 date: "2025-01"
 category: "productivity"
-tags: ["customer-support", "e-commerce", "multi-agent", "automation", "langgraph", "langsmith"]
+tags: ["multi-agent", "customer-support", "workflow-automation"]
 description: "80%+ efficiency gains with multi-agent system autonomously handling 90% of support tickets"
 ---
 

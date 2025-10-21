@@ -5,7 +5,7 @@ author: "Bertelsmann AI Hub Team (Moritz Glauner, Carsten Mönning, Lion Schulz)
 source: "https://blog.langchain.com/customer-bertelsmann/"
 date: "2024-07"
 category: "research"
-tags: ["research", "multi-agent", "content-discovery", "search", "enterprise", "media", "orchestration"]
+tags: ["multi-agent", "content-discovery", "enterprise"]
 description: "Reduced content discovery from hours to seconds with multi-agent orchestration across books, TV/film, news, and web"
 ---
 

@@ -5,7 +5,7 @@ author: "Fullscript Engineering Team, led by Sahar Rahmani"
 source: "https://n8n.io/case-studies/fullscript/"
 date: "2025-01"
 category: "productivity"
-tags: ["security", "compliance", "healthcare", "workflow-automation", "ai-agent"]
+tags: ["security", "workflow-automation"]
 description: "Reduced security investigations by 97% (weeks to 30 minutes), saving 3,600+ hours/year"
 ---
 

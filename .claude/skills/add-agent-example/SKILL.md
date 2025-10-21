@@ -75,13 +75,18 @@ Use the template in [templates/example-template.md](templates/example-template.m
 **File location**: `examples/{category}/{filename}.md`
 
 **Required sections** (see template):
-1. Title
-2. Metadata table (Author, Source, Date, Tags)
-3. The Problem (with Manual Process and Key Pain Points subsections)
-4. The Solution (with Impact callout)
-5. How It Works (with Key Technologies and Process Flow)
-6. Key Insight (with Why This Matters)
-7. Links
+1. Frontmatter (YAML metadata: title, company, author, source, date, category, tags, description)
+2. The Problem (with Manual Process and Key Pain Points subsections)
+3. The Solution (with Impact callout)
+4. How It Works (with Key Technologies and Process Flow)
+5. Key Insight (with Why This Matters)
+6. Links
+
+**Tagging Guidelines**:
+- **IMPORTANT**: Select 4-7 tags from [tag-taxonomy.md](tag-taxonomy.md)
+- Choose tags from multiple categories (architecture + capabilities + domain)
+- DO NOT include category name, tool/framework names, or company names as tags
+- Focus on functional capabilities and patterns
 
 **Writing guidelines**:
 - Focus on the **agentic solution**, not tool promotion

@@ -5,7 +5,7 @@ author: "Jeppesen AI Engineering Team (Divya Basu, Yamini Guhe, Karan Dodiya)"
 source: "https://www.llamaindex.ai/blog/jeppesen-a-boeing-company-saves-2-000-engineering-hours-with-unified-chat-framework-built-on"
 date: "2025-01"
 category: "development"
-tags: ["development", "enterprise", "agent-framework", "llamaindex", "boeing", "chatbots", "automation"]
+tags: ["agent-framework", "enterprise"]
 description: "87% reduction in agent development time (512 to 64 hours), saving ~2,000 engineering hours"
 ---
 
