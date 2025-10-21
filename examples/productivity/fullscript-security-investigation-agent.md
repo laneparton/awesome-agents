@@ -1,12 +1,15 @@
+---
+title: "Fullscript Automated Security Investigation Agent"
+company: "Fullscript"
+author: "Fullscript Engineering Team, led by Sahar Rahmani"
+source: "https://n8n.io/case-studies/fullscript/"
+date: "2025-01"
+category: "productivity"
+tags: ["security", "compliance", "healthcare", "workflow-automation", "ai-agent"]
+description: "Reduced security investigations by 97% (weeks to 30 minutes), saving 3,600+ hours/year"
+---
+
 # Fullscript Automated Security Investigation Agent
-
-**Author**: Fullscript Engineering Team, led by Sahar Rahmani (Director of Internal AI)
-
-**Source**: [n8n Case Study: Fullscript](https://n8n.io/case-studies/fullscript/)
-
-**Date**: January 2025
-
-**Tags**: `security` `compliance` `healthcare` `workflow-automation` `ai-agent`
 
 ## The Problem
 

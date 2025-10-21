@@ -1,12 +1,15 @@
+---
+title: "Adobe Unified Support Knowledge Retrieval Agent"
+company: "Adobe"
+author: "Adobe Developer Platform Team (Nay Doummar, Varsha Chandan Bellara, Jan Michael Ong) with AWS Generative AI Innovation Center"
+source: "https://aws.amazon.com/blogs/machine-learning/adobe-enhances-developer-productivity-using-amazon-bedrock-knowledge-bases/"
+date: "2025-06"
+category: "development"
+tags: ["developer-productivity", "knowledge-retrieval", "rag", "semantic-search", "enterprise"]
+description: "20% accuracy increase with semantic search and metadata filtering, serving thousands of developers with immediate answers"
+---
+
 # Adobe Unified Support Knowledge Retrieval Agent
-
-**Author**: Adobe Developer Platform Team (Nay Doummar, Varsha Chandan Bellara, Jan Michael Ong) with AWS Generative AI Innovation Center
-
-**Source**: [AWS ML Blog: Adobe enhances developer productivity](https://aws.amazon.com/blogs/machine-learning/adobe-enhances-developer-productivity-using-amazon-bedrock-knowledge-bases/)
-
-**Date**: June 2025
-
-**Tags**: `developer-productivity` `knowledge-retrieval` `rag` `semantic-search` `enterprise`
 
 ## The Problem
 

@@ -1,0 +1,200 @@
+---
+import { getCollection } from 'astro:content';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+
+const allExamples = await getCollection('examples');
+
+// Extract unique categories and tags
+const categories = [...new Set(allExamples.map(e => e.data.category))].filter(Boolean).sort();
+const allTags = [...new Set(allExamples.flatMap(e => e.data.tags || []))].sort();
+
+// Pass examples to the client
+const examples = allExamples.map(entry => ({
+  id: entry.id,
+  title: entry.data.title,
+  company: entry.data.company,
+  category: entry.data.category,
+  tags: entry.data.tags || [],
+  description: entry.data.description,
+  date: entry.data.date,
+  source: entry.data.source,
+}));
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Awesome Agent Examples</title>
+    <script>
+      import Alpine from 'alpinejs'
+      window.Alpine = Alpine
+      Alpine.start()
+    </script>
+  </head>
+  <body class="min-h-screen bg-midnightBlue">
+    <Header />
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+      <!-- Page Header -->
+      <header class="mb-12">
+        <h2 class="text-3xl font-bold tracking-tight text-white mb-2">Awesome Agent Examples</h2>
+        <p class="text-gray-400 mb-6">Real-world AI agent implementations with metrics and lessons learned</p>
+
+        <!-- Quote -->
+        <div class="bg-[#243142] border-l-4 border-[#f7961c] p-6 rounded-r-lg">
+          <p class="text-gray-300 text-lg">
+            I spent months wondering what the industry was actually shipping with AI agents. The hype was everywhere, but the real implementations were scattered across blog posts, tweets, and case studies. So I decided to build my own curated collection of what's actually working in production.<br />
+            - Lane
+          </p>
+        </div>
+      </header>
+
+      <!-- Alpine.js app -->
+      <div
+        x-data=`{
+          examples: ${JSON.stringify(examples)},
+          selectedCategory: 'all',
+          selectedTags: [],
+          searchQuery: '',
+          get filteredExamples() {
+            return this.examples.filter(example => {
+              // Category filter
+              if (this.selectedCategory !== 'all' && example.category !== this.selectedCategory) {
+                return false;
+              }
+
+              // Tag filter
+              if (this.selectedTags.length > 0) {
+                const hasAllTags = this.selectedTags.every(tag =>
+                  example.tags.includes(tag)
+                );
+                if (!hasAllTags) return false;
+              }
+
+              // Search filter
+              if (this.searchQuery) {
+                const query = this.searchQuery.toLowerCase();
+                const searchableText = [
+                  example.title,
+                  example.company,
+                  example.description,
+                  ...example.tags
+                ].join(' ').toLowerCase();
+
+                if (!searchableText.includes(query)) {
+                  return false;
+                }
+              }
+
+              return true;
+            });
+          },
+          toggleTag(tag) {
+            const index = this.selectedTags.indexOf(tag);
+            if (index > -1) {
+              this.selectedTags.splice(index, 1);
+            } else {
+              this.selectedTags.push(tag);
+            }
+          }
+        }`
+      >
+        <!-- Filters -->
+        <div class="mb-6 space-y-4">
+          <!-- Search -->
+          <input
+            type="text"
+            x-model="searchQuery"
+            placeholder="Search examples..."
+            class="w-full px-4 py-2.5 bg-[#243142] border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#f7961c] focus:border-[#f7961c] transition-all text-sm text-white placeholder:text-gray-400"
+          />
+
+          <!-- Category Filter -->
+          <div class="flex flex-wrap gap-2">
+            <button
+              @click="selectedCategory = 'all'"
+              :class="selectedCategory === 'all' ? 'bg-white text-[#1a2533]' : 'bg-gray-700 hover:bg-gray-600'"
+              class="px-3 py-1 text-sm rounded-full transition-colors"
+            >
+              All
+            </button>
+            {categories.map(category => (
+              <button
+                @click={`selectedCategory = '${category}'`}
+                :class={`selectedCategory === '${category}' ? 'bg-white text-[#1a2533]' : 'bg-gray-700 hover:bg-gray-600'`}
+                class="px-3 py-1 text-sm rounded-full capitalize transition-colors"
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          <!-- Tag Filter -->
+          <div class="flex flex-wrap gap-2">
+            {allTags.map(tag => (
+              <button
+                @click={`toggleTag('${tag}')`}
+                :class={`selectedTags.includes('${tag}') ? 'bg-white text-[#1a2533]' : 'bg-gray-700 hover:bg-gray-600'`}
+                class="px-3 py-1 text-sm rounded-full transition-colors"
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <!-- Results count -->
+        <div class="mb-4 text-sm text-lightBlue">
+          <span x-text="filteredExamples.length"></span> examples
+        </div>
+
+        <!-- Examples Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <template x-for="example in filteredExamples" :key="example.id">
+            <article class="group flex flex-col bg-[#243142] rounded-lg overflow-hidden hover:bg-[#2a3a4d] transition-colors border border-gray-700">
+              <div class="p-6 flex flex-col flex-grow">
+                <!-- Category & Company -->
+                <div class="flex items-center text-sm text-gray-400 mb-2">
+                  <span class="capitalize" x-text="example.category"></span>
+                  <span class="mx-2">•</span>
+                  <span x-text="example.company"></span>
+                </div>
+
+                <!-- Title -->
+                <h2 class="text-xl font-semibold mb-2 group-hover:text-white transition-colors" x-text="example.title"></h2>
+
+                <!-- Description -->
+                <p class="text-gray-400 text-sm mb-4 line-clamp-2" x-text="example.description"></p>
+
+                <!-- Tags -->
+                <div class="mt-auto pt-4 flex flex-wrap gap-2">
+                  <template x-for="tag in example.tags.slice(0, 3)" :key="tag">
+                    <span class="inline-flex items-center px-2 py-1 rounded-md text-xs bg-gray-700" x-text="tag"></span>
+                  </template>
+                </div>
+              </div>
+
+              <!-- Footer -->
+              <a :href="`/examples/${example.id.replace('.md', '')}`" class="px-6 py-3 border-t border-gray-700 flex justify-between items-center cursor-pointer">
+                <span class="text-sm font-medium text-white group-hover:text-[#f7961c] transition-colors">
+                  Read more
+                </span>
+                <svg class="h-4 w-4 text-gray-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+            </article>
+          </template>
+        </div>
+
+        <!-- No results message -->
+        <div x-show="filteredExamples.length === 0" class="text-center py-12">
+          <p class="text-gray-500 text-lg">No examples match your filters. Try adjusting your search criteria.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
