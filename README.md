@@ -71,6 +71,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### 🔬 Research & Analysis
 
+**Problem: Complex research tasks requiring days of manual sequential searching, synthesis, and source tracking**
+→ [Anthropic Multi-Agent Research System](examples/research/anthropic-multi-agent-research-system.md) by Anthropic
+*90% faster research through orchestrator-worker pattern with parallel subagents, saving users days of work with 90.2% performance improvement*
+
 **Problem: Complex web research requiring parallel investigation across multiple dimensions**
 → [Exa Deep Research Multi-Agent System](examples/research/exa-deep-research-agent.md) by Exa
 *Production multi-agent system processing hundreds of daily queries, delivering structured research results in 15 seconds to 3 minutes with dynamic task scaling*
