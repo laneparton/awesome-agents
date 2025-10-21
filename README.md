@@ -105,6 +105,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Delivery Hero Agentic Product Knowledge Base](examples/data-analysis/delivery-hero-product-knowledge-base.md) by Delivery Hero QC
 *Automates extraction of 22 product attributes and title standardization with predefined agents, improving efficiency and data quality through knowledge distillation*
 
+**Problem: Non-technical users can't access data insights without SQL expertise, creating engineer bottlenecks**
+→ [Text-to-SQL AI Agent](examples/data-analysis/salesforce-text-to-sql-agent.md) by Salesforce Engineering Team
+*Reduced data query time from days to minutes through Slack-integrated agent with RAG-powered SQL generation and consensus validation*
+
 ---
 
 ### 💡 Uncategorized
