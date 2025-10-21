@@ -12,11 +12,13 @@ Examples in this category should focus on:
 - Market research and due diligence
 - Deal analysis and comparables
 - Financial reporting and compliance
+- Financial data access and analytics
 - Expense management and policy automation
 
 ## Examples
 
 - [M&A Deal Comp Generator](m-and-a-deal-comp.md) - Batch processes SEC filings to generate Excel comparables
+- [Finch - Conversational Financial Data Agent](uber-finch-financial-data-agent.md) - Multi-agent system delivering real-time financial intelligence through Slack
 - [Expense Policy Agent](ramp-expense-approval-agent.md) - Autonomous expense approval with transparent policy-based reasoning
 
 ---
