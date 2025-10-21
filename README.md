@@ -39,6 +39,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [M&A Deal Comp Generator](examples/finance/m-and-a-deal-comp.md) by Jerry Liu
 *Batch processes SEC filings and generates Excel comparables, reducing 20-50 hours of work to minutes with 95% accuracy*
 
+**Problem: Finance teams facing fragmented data access across platforms with SQL complexity barriers**
+→ [Finch - Conversational Financial Data Agent](examples/finance/uber-finch-financial-data-agent.md) by Uber FinTech Team
+*Multi-agent system with semantic metadata layer eliminating analyst data request queues through Slack-native real-time financial intelligence*
+
 ---
 
 ### 📧 Productivity & Automation
