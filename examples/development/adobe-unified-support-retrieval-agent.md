@@ -7,6 +7,43 @@ date: "2025-06"
 category: "development"
 tags: ["developer-productivity", "knowledge-retrieval", "rag", "semantic-search", "enterprise"]
 description: "20% accuracy increase with semantic search and metadata filtering, serving thousands of developers with immediate answers"
+
+# Problem Classification
+problemPattern: "content-discovery"
+problemComplexity: "moderate"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "rag"
+  rationale: "Metadata filtering transforms generic semantic search into domain-aware retrieval - single knowledge base serves multiple teams with precision through metadata filtering"
+  components: ["vector-search", "metadata-filter", "chunking-strategy", "retrieval-api"]
+
+# What Made It Work
+breakthroughInsight: "Metadata filtering was the breakthrough - not just semantic search, but domain-aware retrieval that allowed single knowledge base to serve multiple teams with contextually relevant answers"
+
+criticalConstraints:
+  - "multi-domain-knowledge-base"
+  - "thousands-of-developers"
+  - "fragmented-documentation"
+  - "adobe-specific-context-required"
+
+antiPatterns:
+  - "generic-semantic-search-without-metadata: couldn't serve multiple teams from single knowledge base"
+  - "hierarchical-chunking: fixed-size 400-token chunks proved simplest and most effective"
+
+# Tech Stack
+techStack:
+  framework: "Amazon Bedrock"
+  llmProvider: "AWS"
+  knowledgeRetrieval: "RAG"
+  otherTools: ["Amazon Titan V2", "OpenSearch Serverless", "Ragas"]
+
+# Scale
+scale:
+  users: 1000
+  volume: "thousands of developers served"
+  latency: "immediate answers in seconds"
 ---
 
 # Adobe Unified Support Knowledge Retrieval Agent

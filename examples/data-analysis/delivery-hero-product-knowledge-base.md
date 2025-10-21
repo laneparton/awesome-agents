@@ -7,6 +7,41 @@ date: "2025-08"
 category: "data-analysis"
 tags: ["structured-data-extraction", "predefined-agents", "multimodal", "production"]
 description: "Automates extraction of 22 product attributes and title standardization using predefined agentic AI with knowledge distillation"
+
+# Problem Classification
+problemPattern: "structured-data-extraction"
+problemComplexity: "moderate"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "pipeline"
+  rationale: "Predefined sequential agents (extract → generate) prioritized efficiency, predictability, and debuggability over flexibility - critical for core cataloging process running at scale"
+  components: ["multimodal-extraction", "title-generation", "knowledge-distillation", "confidence-scoring", "human-in-loop"]
+
+# What Made It Work
+breakthroughInsight: "Knowledge distillation dramatically reduced costs while maintaining quality - teacher model (GPT-4o) trained smaller student (GPT-4o-mini) to achieve same quality with much shorter prompts"
+
+criticalConstraints:
+  - "production-scale-cataloging"
+  - "multimodal-text-and-images"
+  - "vendor-format-inconsistency"
+  - "cost-efficiency-required"
+
+antiPatterns:
+  - "dynamically-orchestrated-agents: too much flexibility for structured task requiring predictability"
+  - "lengthy-prompts-with-examples: knowledge distillation with fine-tuning enabled shorter, cheaper prompts"
+
+# Tech Stack
+techStack:
+  framework: "custom"
+  llmProvider: ["OpenAI"]
+  knowledgeRetrieval: "multimodal"
+
+# Scale
+scale:
+  volume: "vast product catalogs across regions"
+  latency: "production cataloging at scale"
 ---
 
 # Delivery Hero Agentic Product Knowledge Base

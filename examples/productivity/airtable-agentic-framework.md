@@ -7,6 +7,41 @@ date: "2025-08"
 category: "productivity"
 tags: ["workflow-automation", "event-driven", "production", "conversational-interface"]
 description: "Powers Omni app builder and Field Agents to automate thousands of hours with event-driven state machine architecture"
+
+# Problem Classification
+problemPattern: "framework-platform-building"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "event-driven"
+  pattern: "state-machine"
+  rationale: "Custom framework provided faster iteration than existing frameworks - avoiding over-abstraction, gaining finer control over prompts, and achieving greater observability"
+  components: ["context-manager", "tool-dispatcher", "decision-engine", "error-handler"]
+
+# What Made It Work
+breakthroughInsight: "Building a custom agentic framework wasn't difficult and delivered critical advantages over pre-built frameworks for production scale - finer control, better observability, and faster iteration"
+
+criticalConstraints:
+  - "production-scale-multiple-products"
+  - "large-context-windows"
+  - "token-cost-optimization"
+  - "conversational-interface-required"
+
+antiPatterns:
+  - "pre-built-frameworks: helpful for prototypes but limited control for production optimization"
+  - "loading-full-context: approaching context limits required smart trimming and filtering"
+
+# Tech Stack
+techStack:
+  framework: "custom"
+  llmProvider: ["OpenAI", "Anthropic"]
+  knowledgeRetrieval: "context-management"
+
+# Scale
+scale:
+  volume: "thousands of hours automated"
+  latency: "real-time conversational"
 ---
 
 # Airtable Event-Driven Agentic Framework

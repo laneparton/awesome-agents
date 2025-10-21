@@ -7,6 +7,41 @@ date: "2025-05"
 category: "development"
 tags: ["multi-agent", "platform-engineering", "workflow-automation", "production"]
 description: "10x productivity boost - CI/CD setup from 1 week to <1 hour, resource provisioning from half-day to seconds"
+
+# Problem Classification
+problemPattern: "workflow-automation"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "multi-agent"
+  pattern: "distributed-mas"
+  rationale: "Meeting developers where they work is critical for adoption - embedded in existing tools (Jira, Backstage, Webex, CLI) to eliminate friction and drive immediate use"
+  components: ["rag-knowledge", "graphrag-structured", "distributed-agents", "agent-connect-protocol"]
+
+# What Made It Work
+breakthroughInsight: "Meeting developers where they already work drove adoption - embedding agentic capabilities in existing tools (Jira, Backstage, Webex, CLI) eliminated friction of learning new interfaces"
+
+criticalConstraints:
+  - "heterogeneous-systems"
+  - "existing-developer-workflows"
+  - "small-team-high-volume"
+  - "enterprise-scale"
+
+antiPatterns:
+  - "new-standalone-interface: developers won't adopt if they have to learn new tools"
+
+# Tech Stack
+techStack:
+  framework: ["LangGraph", "AGNTCY"]
+  llmProvider: "OpenAI"
+  knowledgeRetrieval: "hybrid"
+  otherTools: ["LangSmith", "agentevals", "Agent Connect Protocol"]
+
+# Scale
+scale:
+  volume: "CI/CD, resource provisioning, environment setup across multiple projects"
+  latency: "1 week to <1 hour for CI/CD, half-day to seconds for provisioning"
 ---
 
 # Cisco Outshift JARVIS - Agentic AI Platform Engineer

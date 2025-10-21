@@ -7,6 +7,42 @@ date: "2025-01"
 category: "development"
 tags: ["agent-framework", "enterprise"]
 description: "87% reduction in agent development time (512 to 64 hours), saving ~2,000 engineering hours"
+
+# Problem Classification
+problemPattern: "framework-platform-building"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "hybrid"
+  pattern: "event-driven-workflows"
+  rationale: "Event-driven workflows with full control over state transitions vs rigid predefined flows - flexible enough to meet enterprise constraints that graph-based frameworks couldn't handle"
+  components: ["workflow-templates", "tool-connectors", "multi-llm-support", "conversation-memory"]
+
+# What Made It Work
+breakthroughInsight: "Evaluated several agent frameworks but chose LlamaIndex for flexibility over rigid graph-based options - event-driven workflows provided production-grade control that enterprise constraints demanded"
+
+criticalConstraints:
+  - "enterprise-compliance"
+  - "multiple-teams-building-agents"
+  - "governance-requirements"
+  - "shared-infrastructure-needed"
+
+antiPatterns:
+  - "rigid-graph-frameworks: couldn't meet enterprise constraints requiring flexible state control"
+  - "each-team-building-from-scratch: 512 hours duplicated effort per agent"
+
+# Tech Stack
+techStack:
+  framework: "LlamaIndex"
+  llmProvider: ["Azure", "AWS", "HuggingFace"]
+  knowledgeRetrieval: "RAG"
+  otherTools: ["Azure AI Search", "Qdrant", "CosmosDB", "Neo4j"]
+
+# Scale
+scale:
+  users: 11
+  volume: "10-11 production products"
 ---
 
 # Unified Chatbot Framework at Jeppesen (Boeing)

@@ -7,6 +7,43 @@ date: "2025-01"
 category: "research"
 tags: ["document-analysis", "multimodal", "web-research"]
 description: "Reduced tender analysis from hours/days to <10 minutes, enabling 6-10x productivity increase"
+
+# Problem Classification
+problemPattern: "document-processing-at-scale"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "workflow-based"
+  rationale: "Chain of thought reasoning following domain-specific workflows ensures outputs match industry expectations and encode expert knowledge"
+  components: ["semantic-chunker", "multimodal-parser", "workflow-engine"]
+
+# What Made It Work
+breakthroughInsight: "Semantic chunking that preserves hierarchical document structure was critical - simple text extraction lost essential context for nested tender requirements"
+
+criticalConstraints:
+  - "non-standardized-document-formats"
+  - "multimodal-content-blueprints-diagrams"
+  - "domain-workflow-compliance"
+  - "100-page-documents"
+
+antiPatterns:
+  - "flat-chunking: lost hierarchical relationships in nested tender documents"
+  - "text-only-parsing: missed critical information in blueprints and diagrams"
+  - "keyword-based-search: highly inaccurate for finding relevant tenders"
+
+# Tech Stack
+techStack:
+  framework: "LlamaIndex"
+  llmProvider: "OpenAI"
+  knowledgeRetrieval: "semantic-chunking"
+  otherTools: ["LlamaParse"]
+
+# Scale
+scale:
+  volume: "tens of thousands of documents, millions of pages"
+  latency: "< 10 minutes per tender"
 ---
 
 # Tender RFP Analysis Agent for Construction Sector

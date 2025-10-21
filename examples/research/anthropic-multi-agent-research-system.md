@@ -7,6 +7,42 @@ date: "2025-06"
 category: "research"
 tags: ["multi-agent", "web-research", "parallel-execution", "production"]
 description: "90% faster complex research through orchestrator-worker pattern with 3-5 parallel subagents, saving users days of work"
+
+# Problem Classification
+problemPattern: "multi-source-research"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "multi-agent"
+  pattern: "coordinator-workers"
+  rationale: "Orchestrator-worker pattern enables parallel execution (3-5 subagents simultaneously) with dynamic scaling based on query complexity - critical for reducing research time from days to minutes"
+  components: ["lead-researcher-orchestrator", "specialized-subagents", "citation-agent", "memory-persistence", "adaptive-planning"]
+
+# What Made It Work
+breakthroughInsight: "Token efficiency is 80% of performance variance - model selection (Sonnet 4 → Opus 4) yielded larger gains than doubling token budget, and parallel execution reduced research time by ~90%"
+
+criticalConstraints:
+  - "context-limits-200k-tokens"
+  - "production-scale"
+  - "complex-multi-faceted-queries"
+  - "citation-management-required"
+
+antiPatterns:
+  - "single-agent-sequential: couldn't handle parallel nature of deep research effectively"
+  - "fixed-workflows: needed dynamic scaling based on query complexity"
+
+# Tech Stack
+techStack:
+  framework: "custom"
+  llmProvider: "Anthropic"
+  knowledgeRetrieval: "multi-source-web"
+  otherTools: ["extended-thinking", "interleaved-thinking"]
+
+# Scale
+scale:
+  volume: "production Claude Research feature"
+  latency: "~90% reduction in research time for complex queries"
 ---
 
 # Anthropic Multi-Agent Research System
