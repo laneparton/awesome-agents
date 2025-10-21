@@ -43,6 +43,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Finch - Conversational Financial Data Agent](examples/finance/uber-finch-financial-data-agent.md) by Uber FinTech Team
 *Multi-agent system with semantic metadata layer eliminating analyst data request queues through Slack-native real-time financial intelligence*
 
+**Problem: Managers overwhelmed reviewing expense approvals against ambiguous policy documents**
+→ [Expense Policy Agent](examples/finance/ramp-expense-approval-agent.md) by Ramp Engineering Team
+*Autonomous expense approval agent handling 65% of approvals through transparent policy-based reasoning with categorical decision framework*
+
 ---
 
 ### 📧 Productivity & Automation
