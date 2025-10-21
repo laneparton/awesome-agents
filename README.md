@@ -39,6 +39,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [M&A Deal Comp Generator](examples/finance/m-and-a-deal-comp.md) by Jerry Liu
 *Batch processes SEC filings and generates Excel comparables, reducing 20-50 hours of work to minutes with 95% accuracy*
 
+**Problem: Managers overwhelmed reviewing expense approvals against ambiguous policy documents**
+→ [Expense Policy Agent](examples/finance/ramp-expense-approval-agent.md) by Ramp Engineering Team
+*Autonomous expense approval agent handling 65% of approvals through transparent policy-based reasoning with categorical decision framework*
+
 ---
 
 ### 📧 Productivity & Automation
