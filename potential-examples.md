@@ -2,26 +2,7 @@
 
 ### High Priority - Clear Agent Use Cases
 
-1. **Anthropic - Multi-agent Research System**
-   - Source: https://www.anthropic.com/engineering/multi-agent-research-system
-   - Tags: LLM, AI agents
-   - Description: How we built our multi-agent research system
-   - Category: Research & Analysis
-   - Year: 2025
-
-2. **Airtable - AI Agents**
-   - Source: https://medium.com/airtable-eng/how-we-built-ai-agents-at-airtable-70838d73cc43
-   - Tags: LLM, AI agents
-   - Description: How we built AI agents at Airtable
-   - Category: Content Creation / Productivity
-   - Year: 2025
-
-3. **Delivery Hero - Agentic AI for Product Knowledge Base**
-   - Source: https://tech.deliveryhero.com/blog/how-delivery-hero-uses-agentic-ai-for-building-a-product-knowledge-base/
-   - Tags: LLM, AI agents
-   - Description: How Delivery Hero Uses Agentic AI for Building a Product Knowledge Base
-   - Category: Data Analysis / Research
-   - Year: 2025
+1-3 were imported already
 
 4. **Ramp - Agents Users Can Trust**
    - Source: https://engineering.ramp.com/post/how-to-build-agents-users-can-trust
