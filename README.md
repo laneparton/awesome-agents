@@ -91,6 +91,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Tender RFP Analysis Agent for Construction](examples/research/softiq-tender-rfp-agent.md) by SoftIQ
 *Reduced tender analysis from hours/days to <10 minutes, enabling 6-10x productivity increase with semantic chunking and workflow-based reasoning*
 
+**Problem: Information scattered across multiple applications making document discovery tedious and time-consuming**
+→ [Dropbox Dash - RAG and Multi-Step AI Agents](examples/research/dropbox-dash-rag-multi-step-agents.md) by Dropbox Engineering
+*Multi-step AI agents using custom Python DSL achieve <2 second response time for 95% of queries, enabling autonomous task execution across fragmented business data*
+
 ---
 
 ### ✍️ Content Creation
