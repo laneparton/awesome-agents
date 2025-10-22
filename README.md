@@ -135,7 +135,9 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### ✍️ Content Creation
 
-*Examples coming soon - [contribute yours!](CONTRIBUTING.md)*
+**Problem: Labor-intensive audio content production limiting reach to small percentage of learners**
+→ [Duolingo DuoRadio - Scaling Content Generation](examples/content-creation/duolingo-duoradio-content-generation.md) by Duolingo Engineering Team
+*Scaled from 300 to 15,000+ episodes (2 to 25+ courses) in fewer than two quarters with 99% cost savings using curriculum-driven AI generation and comprehensive quality filtering*
 
 ---
 
