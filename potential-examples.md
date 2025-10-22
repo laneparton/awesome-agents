@@ -17,14 +17,35 @@
 
 ## Recently Processed (2025-10-22 Session 2)
 
-### ✅ Added to Repository
+### ✅ Added to Repository (Initial Pass)
 - **Item 42: Dropbox - AI-Powered File Summaries** → PR #38
 
-### ❌ Scanned but Not Added
-- **Item 38: Spotify - Content Annotations at Scale** - Platform infrastructure focus without sufficient LLM/agent architecture detail; mentioned "configurable, LLM-based system" but lacked concrete implementation specifics
-- **Item 39: Walmart - Product Categorization** - Described "Ghotok" ensemble AI system but lacked quantifiable metrics; mentioned lowering FPR to "satisfactory level" without actual numbers, accuracy improvements, or time savings
-- **Item 40: Vimeo - Video Knowledge Sharing with RAG** - Excellent technical depth on RAG architecture, bottom-up processing, and speaker detection, but missing concrete quantifiable metrics (no time savings, accuracy rates, user engagement numbers, or cost reductions)
-- **Item 41: Adyen - Unit Test Generation** - Exceptional technical detail on AST parsing and Knowledge Graphs, but focused on future vision rather than deployed results; described objectives like "significantly boost productivity" as goals, not achieved metrics
+### ❌ Initially Skipped (Too Strict on Metrics Requirement)
+- **Item 38: Spotify - Content Annotations at Scale** - Initially skipped for insufficient LLM architecture detail
+- **Item 39: Walmart - Product Categorization** - Initially skipped for lacking quantifiable metrics
+- **Item 40: Vimeo - Video Knowledge Sharing with RAG** - Initially skipped for missing concrete metrics
+- **Item 41: Adyen - Unit Test Generation** - Initially skipped as "future vision"
+
+---
+
+## Recently Processed (2025-10-22 Session 3 - After Criteria Update)
+
+### ✅ Added to Repository (After Relaxing Metrics Requirement)
+- **Item 39: Walmart - Product Categorization** → PR #39
+  - Production ensemble AI system (predictive + generative models) for 400M+ SKUs
+  - Real-world deployed system with chain-of-thought prompting and two-tier caching
+  - Focused on real implementation, not just metrics
+- **Item 40: Vimeo - Video Knowledge Sharing with RAG** → PR #40
+  - Production RAG system with bottom-up transcript processing
+  - Novel speaker detection without facial recognition
+  - Real deployed system on Vimeo platform
+- **Item 41: Adyen - Unit Test Generation** → PR #41
+  - AST parsing + Knowledge Graphs tested on open-source products
+  - Real implementation moving beyond vector embeddings
+  - Demonstrated approach with planned internal deployment
+
+### ❌ Scanned but Not Added (Final Decision)
+- **Item 38: Spotify - Content Annotations at Scale** - Platform infrastructure for human annotation workflow, not an agent/AI system doing the work; LLMs mentioned as part of infrastructure but without concrete agent implementation details
 
 ### High Priority - Clear Agent Use Cases
 
