@@ -13,11 +13,14 @@ Examples in this category should focus on:
 - Report generation
 - Anomaly detection
 - Trend analysis and forecasting
+- Text-to-SQL and natural language querying
 
 ## Examples
 
 - [Delivery Hero Agentic Product Knowledge Base](delivery-hero-product-knowledge-base.md) - Automates extraction of 22 product attributes and title standardization using predefined agents with knowledge distillation
 - [Delivery Hero QueryAnswerBird AI Data Analyst](delivery-hero-queryanswerbird-text-to-sql.md) - Multi-chain RAG architecture with Router Supervisor generating production-quality SQL queries in 30-60 seconds through 500+ A/B tested improvements
+- [eBay Mercury - Agentic AI Platform](ebay-mercury-agentic-platform.md) - Agentic framework serving hundreds of millions of customers across 2 billion+ listings with hundreds of ms latency through plug-and-play components
+- [Text-to-SQL AI Agent](salesforce-text-to-sql-agent.md) - Slack-integrated agent reducing query time from days to minutes with RAG-powered SQL generation
 
 ---
 
