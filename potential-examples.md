@@ -13,6 +13,19 @@
 - **Item 22: Uber DragonCrawl** - URL returned 404 error, content not found
 - **Item 23: Replit - Code Repair** - Focused on model development/benchmarks rather than deployed business impact
 
+---
+
+## Recently Processed (2025-10-22 Session 2)
+
+### ✅ Added to Repository
+- **Item 42: Dropbox - AI-Powered File Summaries** → PR #38
+
+### ❌ Scanned but Not Added
+- **Item 38: Spotify - Content Annotations at Scale** - Platform infrastructure focus without sufficient LLM/agent architecture detail; mentioned "configurable, LLM-based system" but lacked concrete implementation specifics
+- **Item 39: Walmart - Product Categorization** - Described "Ghotok" ensemble AI system but lacked quantifiable metrics; mentioned lowering FPR to "satisfactory level" without actual numbers, accuracy improvements, or time savings
+- **Item 40: Vimeo - Video Knowledge Sharing with RAG** - Excellent technical depth on RAG architecture, bottom-up processing, and speaker detection, but missing concrete quantifiable metrics (no time savings, accuracy rates, user engagement numbers, or cost reductions)
+- **Item 41: Adyen - Unit Test Generation** - Exceptional technical detail on AST parsing and Knowledge Graphs, but focused on future vision rather than deployed results; described objectives like "significantly boost productivity" as goals, not achieved metrics
+
 ### High Priority - Clear Agent Use Cases
 
 Items 1-12 were imported already
