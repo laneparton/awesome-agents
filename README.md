@@ -55,6 +55,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Minimal Multi-Agent Customer Support System](examples/productivity/minimal-multi-agent-customer-support.md) by Titus Ex and Niek Hogenboom
 *Multi-agent system achieving 80%+ efficiency gains, autonomously handling 90% of support tickets with integrated order management*
 
+**Problem: Dasher delivery support limited by flow-based systems, language barriers, and hard-to-find knowledge base articles**
+→ [DoorDash LLM-Based Dasher Support Automation](examples/productivity/doordash-llm-dasher-support-chatbot.md) by DoorDash Engineering Team
+*RAG-based chatbot assisting thousands of Dashers daily with 90% reduction in hallucinations and 99% reduction in compliance issues through two-tier guardrail system*
+
 **Problem: Healthcare security investigations taking weeks to verify practitioner identities and prevent account fraud**
 → [Fullscript Automated Security Investigation Agent](examples/productivity/fullscript-security-investigation-agent.md) by Fullscript Engineering Team
 *Built in 2 days at hackathon, reduced investigations by 97% (weeks to 30 minutes), saving 3,600+ hours/year with AI-powered workflow automation*

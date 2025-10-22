@@ -18,6 +18,7 @@ Examples in this category should focus on:
 ## Examples
 
 - [Minimal Multi-Agent Customer Support System](minimal-multi-agent-customer-support.md) - Automates e-commerce customer support with 80%+ efficiency gains using specialized multi-agent architecture
+- [DoorDash LLM-Based Dasher Support Automation](doordash-llm-dasher-support-chatbot.md) - RAG-based chatbot assisting thousands of Dashers daily with 90% reduction in hallucinations and 99% reduction in compliance issues
 - [Fullscript Automated Security Investigation Agent](fullscript-security-investigation-agent.md) - Healthcare security workflow built in 2 days reducing investigations by 97% and saving 3,600+ hours annually
 - [Airtable Event-Driven Agentic Framework](airtable-agentic-framework.md) - Powers Omni and Field Agents with event-driven state machine, 15-30% cost reduction through smart context management
 - [Airbnb Automation Platform v2](airbnb-automation-platform-v2.md) - LLM-powered conversational AI platform combining Chain of Thought reasoning with traditional workflows for customer support at scale
