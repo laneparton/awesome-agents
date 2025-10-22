@@ -145,6 +145,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Delivery Hero Agentic Product Knowledge Base](examples/data-analysis/delivery-hero-product-knowledge-base.md) by Delivery Hero QC
 *Automates extraction of 22 product attributes and title standardization with predefined agents, improving efficiency and data quality through knowledge distillation*
 
+**Problem: Data analysts overwhelmed with repetitive queries and time-consuming fraud investigations**
+→ [Grab RAG-Powered LLM for Analytics](examples/data-analysis/grab-rag-analytics.md) by Grab Integrity Analytics Team
+*RAG-powered system with Data-Arks API middleware saving 3-4 hours per report and reducing fraud investigations to minutes through automated query execution and LLM summarization*
+
 **Problem: Data-driven decisions requiring specific numbers from SQL queries, with users lacking table knowledge, access, or SQL skills**
 → [Swiggy Hermes - Charter-Based Text-to-SQL](examples/data-analysis/swiggy-hermes-text-to-sql.md) by Swiggy Data Science Team
 *Charter-based multi-stage RAG system delivering SQL queries in <2 minutes via Slack, serving hundreds of users across product, DS, and analyst teams*
