@@ -105,6 +105,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Delivery Hero Agentic Product Knowledge Base](examples/data-analysis/delivery-hero-product-knowledge-base.md) by Delivery Hero QC
 *Automates extraction of 22 product attributes and title standardization with predefined agents, improving efficiency and data quality through knowledge distillation*
 
+**Problem: 1.2M monthly SQL queries requiring deep knowledge of complex internal data models**
+→ [Uber QueryGPT Multi-Agent Text-to-SQL](examples/data-analysis/uber-querygpt-text-to-sql.md) by Uber Data Platform Team
+*Multi-agent decomposition (Intent, Table, Column Prune agents) reducing query authoring 10min→3min with 78% satisfaction, proving LLMs excel as specialized classifiers*
+
 ---
 
 ### 💡 Uncategorized
