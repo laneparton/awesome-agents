@@ -17,6 +17,7 @@ Examples in this category should focus on:
 ## Examples
 
 - [Delivery Hero Agentic Product Knowledge Base](delivery-hero-product-knowledge-base.md) - Automates extraction of 22 product attributes and title standardization using predefined agents with knowledge distillation
+- [Delivery Hero QueryAnswerBird AI Data Analyst](delivery-hero-queryanswerbird-text-to-sql.md) - Multi-chain RAG architecture with Router Supervisor generating production-quality SQL queries in 30-60 seconds through 500+ A/B tested improvements
 
 ---
 
