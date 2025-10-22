@@ -145,6 +145,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Delivery Hero Agentic Product Knowledge Base](examples/data-analysis/delivery-hero-product-knowledge-base.md) by Delivery Hero QC
 *Automates extraction of 22 product attributes and title standardization with predefined agents, improving efficiency and data quality through knowledge distillation*
 
+**Problem: Data analysts struggling to find correct tables among hundreds of thousands and write efficient SQL**
+→ [Pinterest Text-to-SQL in Querybook](examples/data-analysis/pinterest-text-to-sql-querybook.md) by Pinterest Data Platform Team
+*RAG-enhanced Text-to-SQL with 40%+ first-shot acceptance and 35% speed improvement, proving table documentation quality drives performance (90% vs 40% hit rate)*
+
 **Problem: 95% of employees using data but >50% unable to write SQL or validate query reliability**
 → [Delivery Hero QueryAnswerBird AI Data Analyst](examples/data-analysis/delivery-hero-queryanswerbird-text-to-sql.md) by BADA Team (Woowa Brothers)
 *Multi-chain RAG with Router Supervisor generating production-quality SQL in 30-60s through domain-enriched metadata, ReAct prompting, and 500+ A/B tests*
