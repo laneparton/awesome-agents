@@ -13,6 +13,7 @@ Examples in this category should focus on:
 - Hypothesis testing
 - Patent and publication research
 - Research paper writing assistance
+- Cross-application knowledge retrieval
 
 ## Examples
 
@@ -20,6 +21,7 @@ Examples in this category should focus on:
 - [Exa Deep Research Multi-Agent System](exa-deep-research-agent.md) - Production system processing hundreds of daily research queries with dynamic task scaling and structured output
 - [Multi-Agent Content Discovery at Bertelsmann](bertelsmann-content-search.md) - Reduced content discovery from hours to seconds with intelligent multi-agent orchestration
 - [Tender RFP Analysis Agent for Construction](softiq-tender-rfp-agent.md) - Reduced tender analysis time to <10 minutes, 6-10x productivity gain
+- [Dropbox Dash - RAG and Multi-Step AI Agents](dropbox-dash-rag-multi-step-agent.md) - Hybrid RAG + agent system achieving sub-2-second responses for 95%+ of queries across fragmented data sources
 
 ---
 
