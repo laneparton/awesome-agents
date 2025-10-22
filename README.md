@@ -83,6 +83,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Omega - AI Sales Agent](examples/productivity/netguru-omega-sales-agent.md) by Netguru Team
 *Multi-agent system automating sales workflows in Slack with analyze-execute-review pattern, eliminating context-switching across HubSpot, Salesforce, and Drive*
 
+**Problem: Support agents overwhelmed navigating hundreds of thousands of knowledge base articles with fragmented information**
+→ [Thomson Reuters Customer Support RAG](examples/productivity/thomson-reuters-customer-support-rag.md) by Thomson Reuters Labs
+*GPT-4 powered RAG system reducing resolution times by grounding responses in actual knowledge base, eliminating hallucinations with provenance-backed answers*
+
 ---
 
 ### 🛠️ Development & Engineering

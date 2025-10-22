@@ -25,6 +25,7 @@ Examples in this category should focus on:
 - [Moveworks Brief Me Agentic System](moveworks-brief-me-agent.md) - Two-stage document intelligence system with custom MPNet embedding model achieving 97.24% action accuracy for employee productivity
 - [Uber Enhanced Agentic-RAG - Genie On-Call Copilot](uber-enhanced-agentic-rag.md) - Enhanced agentic RAG achieving 27% increase in acceptable answers and 60% reduction in incorrect advice through enriched document processing
 - [Omega - AI Sales Agent](netguru-omega-sales-agent.md) - Multi-agent system automating sales workflows in Slack with analyze-execute-review pattern
+- [Thomson Reuters Customer Support RAG](thomson-reuters-customer-support-rag.md) - GPT-4 powered RAG system reducing resolution times with provenance-backed answers from knowledge base
 
 ---
 
