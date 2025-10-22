@@ -23,6 +23,7 @@ Examples in this category should focus on:
 - [Adobe Unified Support Knowledge Retrieval Agent](adobe-unified-support-retrieval-agent.md) - 20% accuracy increase serving thousands of developers with AI-powered semantic search across fragmented documentation
 - [Plaid AI Agents for Product Operations](plaid-ai-agents-product-ops.md) - Two specialized agents: data labeling achieving 95%+ human alignment, connection maintenance reducing fix time by 90%
 - [Manus - Context Engineering for Production AI Agents](manus-context-engineering-agent.md) - 10x cost savings through KV-cache optimization with context engineering patterns tested across millions of users
+- [Adyen AST-Based Unit Test Generation](adyen-ast-unit-test-generation.md) - AST parsing and Knowledge Graphs capture code structure and semantics, moving beyond vector embeddings for context-aware test generation
 
 ---
 
