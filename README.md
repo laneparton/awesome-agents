@@ -63,6 +63,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Airtable Event-Driven Agentic Framework](examples/productivity/airtable-agentic-framework.md) by Airtable Engineering Team
 *Powers Omni app builder and Field Agents with event-driven state machine, achieving 15-30% cost reduction and enabling conversational workflows*
 
+**Problem: On-call support copilot providing incomplete, inaccurate responses failing to meet SME quality standards**
+→ [Uber Enhanced Agentic-RAG - Genie On-Call Copilot](examples/productivity/uber-enhanced-agentic-rag.md) by Uber Engineering Security and AI Teams
+*Enhanced agentic RAG achieving 27% relative increase in acceptable answers and 60% reduction in incorrect advice through enriched document processing and LLM-powered agents*
+
 **Problem: Sales reps spending significant time on routine tasks across disconnected systems**
 → [Omega - AI Sales Agent](examples/productivity/netguru-omega-sales-agent.md) by Netguru Team
 *Multi-agent system automating sales workflows in Slack with analyze-execute-review pattern, eliminating context-switching across HubSpot, Salesforce, and Drive*
