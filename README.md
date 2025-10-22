@@ -39,6 +39,14 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [M&A Deal Comp Generator](examples/finance/m-and-a-deal-comp.md) by Jerry Liu
 *Batch processes SEC filings and generates Excel comparables, reducing 20-50 hours of work to minutes with 95% accuracy*
 
+**Problem: Finance teams facing fragmented data access across platforms with SQL complexity barriers**
+→ [Finch - Conversational Financial Data Agent](examples/finance/uber-finch-financial-data-agent.md) by Uber FinTech Team
+*Multi-agent system with semantic metadata layer eliminating analyst data request queues through Slack-native real-time financial intelligence*
+
+**Problem: Managers overwhelmed reviewing expense approvals against ambiguous policy documents**
+→ [Expense Policy Agent](examples/finance/ramp-expense-approval-agent.md) by Ramp Engineering Team
+*Autonomous expense approval agent handling 65% of approvals through transparent policy-based reasoning with categorical decision framework*
+
 ---
 
 ### 📧 Productivity & Automation
@@ -55,6 +63,26 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Airtable Event-Driven Agentic Framework](examples/productivity/airtable-agentic-framework.md) by Airtable Engineering Team
 *Powers Omni app builder and Field Agents with event-driven state machine, achieving 15-30% cost reduction and enabling conversational workflows*
 
+**Problem: Rapid migration of event app agent to enterprise platform before major conference in 5 days**
+→ [Ask Astro - Dreamforce Event Agent](examples/productivity/salesforce-dreamforce-event-agent.md) by Salesforce Events Team
+*Built in 5 days with MVP in 1 day using hybrid search combining semantic awareness with keyword precision and streaming ingestion for near real-time updates*
+
+**Problem: Recruiters navigating multiple tools for job descriptions, candidate sourcing, and interview coordination**
+→ [Hiring Assistant Agent](examples/productivity/linkedin-hiring-assistant-agent.md) by LinkedIn Engineering Team
+*First LinkedIn AI agent with experiential memory learning recruiter preferences, automating workflows with iterative collaborative design at enterprise scale*
+
+**Problem: Enterprise employees spending hours manually searching across fragmented systems to stay informed**
+→ [Moveworks Brief Me Agentic System](examples/productivity/moveworks-brief-me-agent.md) by Moveworks Engineering Team
+*Two-stage document intelligence with custom MPNet model achieving 97.24% action accuracy, delivering personalized summaries with <10s P90 latency*
+
+**Problem: On-call support copilot providing incomplete, inaccurate responses failing to meet SME quality standards**
+→ [Uber Enhanced Agentic-RAG - Genie On-Call Copilot](examples/productivity/uber-enhanced-agentic-rag.md) by Uber Engineering Security and AI Teams
+*Enhanced agentic RAG achieving 27% relative increase in acceptable answers and 60% reduction in incorrect advice through enriched document processing and LLM-powered agents*
+
+**Problem: Sales reps spending significant time on routine tasks across disconnected systems**
+→ [Omega - AI Sales Agent](examples/productivity/netguru-omega-sales-agent.md) by Netguru Team
+*Multi-agent system automating sales workflows in Slack with analyze-execute-review pattern, eliminating context-switching across HubSpot, Salesforce, and Drive*
+
 ---
 
 ### 🛠️ Development & Engineering
@@ -70,6 +98,14 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 **Problem: Developers spending excessive time searching across fragmented documentation for Adobe-specific guidelines**
 → [Adobe Unified Support Knowledge Retrieval Agent](examples/development/adobe-unified-support-retrieval-agent.md) by Adobe Developer Platform Team
 *20% accuracy increase with semantic search and metadata filtering, serving thousands of developers with immediate answers and reduced support costs*
+
+**Problem: Manual data labeling bottleneck and costly reactive maintenance across thousands of financial institution integrations**
+→ [Plaid AI Agents for Product Operations](examples/development/plaid-ai-agents-product-ops.md) by Plaid Engineering Team
+*Two specialized agents: AI Annotator achieving 95%+ human alignment for data labeling, Fix My Connection reducing repair time by 90% enabling 2M+ successful logins*
+
+**Problem: Building production AI agents requires choosing between slow fine-tuning or rapid in-context learning**
+→ [Manus - Context Engineering for Production AI Agents](examples/development/manus-context-engineering-agent.md) by Manus Engineering Team
+*10x cost savings through KV-cache optimization and context engineering patterns, enabling rapid iteration (hours vs weeks) tested across millions of users*
 
 ---
 
@@ -91,6 +127,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Tender RFP Analysis Agent for Construction](examples/research/softiq-tender-rfp-agent.md) by SoftIQ
 *Reduced tender analysis from hours/days to <10 minutes, enabling 6-10x productivity increase with semantic chunking and workflow-based reasoning*
 
+**Problem: Knowledge workers managing scattered data across disconnected apps with constant context-switching**
+→ [Dropbox Dash - RAG and Multi-Step AI Agents](examples/research/dropbox-dash-rag-multi-step-agent.md) by Dropbox ML Team
+*Hybrid RAG + multi-step agent system achieving sub-2-second responses for 95%+ of queries with custom DSL interpreter for secure task orchestration*
+
 ---
 
 ### ✍️ Content Creation
@@ -108,6 +148,22 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 **Problem: 1.2M monthly SQL queries requiring deep knowledge of complex internal data models**
 → [Uber QueryGPT Multi-Agent Text-to-SQL](examples/data-analysis/uber-querygpt-text-to-sql.md) by Uber Data Platform Team
 *Multi-agent decomposition (Intent, Table, Column Prune agents) reducing query authoring 10min→3min with 78% satisfaction, proving LLMs excel as specialized classifiers*
+
+**Problem: Data analysts struggling to find correct tables among hundreds of thousands and write efficient SQL**
+→ [Pinterest Text-to-SQL in Querybook](examples/data-analysis/pinterest-text-to-sql-querybook.md) by Pinterest Data Platform Team
+*RAG-enhanced Text-to-SQL with 40%+ first-shot acceptance and 35% speed improvement, proving table documentation quality drives performance (90% vs 40% hit rate)*
+
+**Problem: 95% of employees using data but >50% unable to write SQL or validate query reliability**
+→ [Delivery Hero QueryAnswerBird AI Data Analyst](examples/data-analysis/delivery-hero-queryanswerbird-text-to-sql.md) by BADA Team (Woowa Brothers)
+*Multi-chain RAG with Router Supervisor generating production-quality SQL in 30-60s through domain-enriched metadata, ReAct prompting, and 500+ A/B tests*
+
+**Problem: Scaling LLM applications to serve hundreds of millions of customers across billions of item listings cost-effectively**
+→ [eBay Mercury - Agentic AI Platform](examples/data-analysis/ebay-mercury-agentic-platform.md) by eBay Recommendations Team
+*Agentic framework serving hundreds of millions of customers across 2 billion+ listings with hundreds of ms latency through plug-and-play agent components*
+
+**Problem: Non-technical users can't access data insights without SQL expertise, creating engineer bottlenecks**
+→ [Text-to-SQL AI Agent](examples/data-analysis/salesforce-text-to-sql-agent.md) by Salesforce Engineering Team
+*Reduced data query time from days to minutes through Slack-integrated agent with RAG-powered SQL generation and consensus validation*
 
 ---
 
