@@ -20,6 +20,7 @@ Examples in this category should focus on:
 - [Minimal Multi-Agent Customer Support System](minimal-multi-agent-customer-support.md) - Automates e-commerce customer support with 80%+ efficiency gains using specialized multi-agent architecture
 - [Fullscript Automated Security Investigation Agent](fullscript-security-investigation-agent.md) - Healthcare security workflow built in 2 days reducing investigations by 97% and saving 3,600+ hours annually
 - [Airtable Event-Driven Agentic Framework](airtable-agentic-framework.md) - Powers Omni and Field Agents with event-driven state machine, 15-30% cost reduction through smart context management
+- [Airbnb Automation Platform v2](airbnb-automation-platform-v2.md) - LLM-powered conversational AI platform combining Chain of Thought reasoning with traditional workflows for customer support at scale
 - [Ask Astro - Dreamforce Event Agent](salesforce-dreamforce-event-agent.md) - Built in 5 days with hybrid search and RAG handling event queries with near real-time index updates
 - [Hiring Assistant Agent](linkedin-hiring-assistant-agent.md) - LinkedIn's first AI agent with experiential memory learning recruiter preferences for personalized workflow automation
 - [Moveworks Brief Me Agentic System](moveworks-brief-me-agent.md) - Two-stage document intelligence system with custom MPNet embedding model achieving 97.24% action accuracy for employee productivity

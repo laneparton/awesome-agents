@@ -63,6 +63,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Airtable Event-Driven Agentic Framework](examples/productivity/airtable-agentic-framework.md) by Airtable Engineering Team
 *Powers Omni app builder and Field Agents with event-driven state machine, achieving 15-30% cost reduction and enabling conversational workflows*
 
+**Problem: Traditional conversational AI systems too rigid with predefined workflows, hard to scale for new use cases**
+→ [Airbnb Automation Platform v2](examples/productivity/airbnb-automation-platform-v2.md) by Airbnb Engineering Team
+*LLM-powered conversational AI platform combining Chain of Thought reasoning with traditional workflows, helping customer support agents work more efficiently at scale*
+
 **Problem: Rapid migration of event app agent to enterprise platform before major conference in 5 days**
 → [Ask Astro - Dreamforce Event Agent](examples/productivity/salesforce-dreamforce-event-agent.md) by Salesforce Events Team
 *Built in 5 days with MVP in 1 day using hybrid search combining semantic awareness with keyword precision and streaming ingestion for near real-time updates*
