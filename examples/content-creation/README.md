@@ -16,7 +16,7 @@ Examples in this category should focus on:
 
 ## Examples
 
-*No examples yet - [be the first to contribute!](../../CONTRIBUTING.md)*
+- [Duolingo DuoRadio - Scaling Content Generation](duolingo-duoradio-content-generation.md) - Scaled from 300 to 15,000+ episodes across 25+ courses in fewer than two quarters with 99% cost savings using curriculum-driven AI generation
 
 ---
 
