@@ -17,6 +17,7 @@ Examples in this category should focus on:
 ## Examples
 
 - [Delivery Hero Agentic Product Knowledge Base](delivery-hero-product-knowledge-base.md) - Automates extraction of 22 product attributes and title standardization using predefined agents with knowledge distillation
+- [Pinterest Text-to-SQL in Querybook](pinterest-text-to-sql-querybook.md) - RAG-enhanced Text-to-SQL achieving 40%+ first-shot acceptance and 35% task speed improvement by weighting table documentation (90% vs 40% hit rate)
 
 ---
 
