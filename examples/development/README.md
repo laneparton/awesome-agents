@@ -24,6 +24,7 @@ Examples in this category should focus on:
 - [Adobe Unified Support Knowledge Retrieval Agent](adobe-unified-support-retrieval-agent.md) - 20% accuracy increase serving thousands of developers with AI-powered semantic search across fragmented documentation
 - [Plaid AI Agents for Product Operations](plaid-ai-agents-product-ops.md) - Two specialized agents: data labeling achieving 95%+ human alignment, connection maintenance reducing fix time by 90%
 - [Manus - Context Engineering for Production AI Agents](manus-context-engineering-agent.md) - 10x cost savings through KV-cache optimization with context engineering patterns tested across millions of users
+- [NVIDIA Agent Morpheus - CVE Analysis at Enterprise Scale](nvidia-agent-morpheus-cve-analysis.md) - Reduced CVE triage from hours/days to seconds with 9.3x speedup analyzing 200k+ vulnerabilities
 - [Google Security Incident Response with Generative AI](google-incident-response-genai.md) - 51% time savings in incident summary writing with LLM-generated drafts rated 10% higher quality than human equivalents
 
 ---
