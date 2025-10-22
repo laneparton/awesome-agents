@@ -95,6 +95,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Cisco Outshift JARVIS - Agentic AI Platform Engineer](examples/development/cisco-outshift-jarvis-platform-engineer.md) by Outshift by Cisco
 *10x productivity boost through distributed multi-agent system - CI/CD setup from 1 week to <1 hour, resource provisioning from half-day to seconds*
 
+**Problem: Investigating incidents in monolithic repositories is complex and time-consuming with thousands of potential code changes**
+→ [Meta AI for Efficient Incident Response](examples/development/meta-ai-incident-response.md) by Meta Engineering Team
+*AI-assisted root cause analysis achieving 42% accuracy in identifying root causes using fine-tuned Llama 2 with heuristic-based retrieval and LLM-based ranking*
+
 **Problem: Teams across Boeing independently building AI chatbots, duplicating 512 hours of work per agent**
 → [Unified Chatbot Framework at Jeppesen](examples/development/jeppesen-unified-chatbot-framework.md) by Jeppesen AI Team
 *Reduced agent development time by 87% (512 to 64 hours), saving ~2,000 engineering hours with a shared framework powered by LlamaIndex*
