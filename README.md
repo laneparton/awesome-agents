@@ -147,6 +147,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Delivery Hero Agentic Product Knowledge Base](examples/data-analysis/delivery-hero-product-knowledge-base.md) by Delivery Hero QC
 *Automates extraction of 22 product attributes and title standardization with predefined agents, improving efficiency and data quality through knowledge distillation*
 
+**Problem: 51% of data consumers taking multiple days to find datasets among 200,000+ tables with low documentation coverage**
+→ [Grab Hubble - Conversational Data Discovery](examples/data-analysis/grab-hubble-conversational-data-discovery.md) by Grab Hubble Team
+*LLM-powered conversational data discovery reducing search time from days to seconds, achieving 73% user satisfaction with GPT-4 documentation generation and Slack integration*
+
 **Problem: Data-driven decisions requiring specific numbers from SQL queries, with users lacking table knowledge, access, or SQL skills**
 → [Swiggy Hermes - Charter-Based Text-to-SQL](examples/data-analysis/swiggy-hermes-text-to-sql.md) by Swiggy Data Science Team
 *Charter-based multi-stage RAG system delivering SQL queries in <2 minutes via Slack, serving hundreds of users across product, DS, and analyst teams*
