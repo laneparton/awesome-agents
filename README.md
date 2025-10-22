@@ -83,6 +83,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Omega - AI Sales Agent](examples/productivity/netguru-omega-sales-agent.md) by Netguru Team
 *Multi-agent system automating sales workflows in Slack with analyze-execute-review pattern, eliminating context-switching across HubSpot, Salesforce, and Drive*
 
+**Problem: Knowledge workers suffering from information overload, needing to manually read through long documents and videos**
+→ [Dropbox AI-Powered File Summaries](examples/productivity/dropbox-ai-file-summaries.md) by Dropbox ML Team
+*93% cost reduction for summaries and 96.5% latency improvement (115s→4s) through k-means clustering and semantic search, delivering instant answers in file previews*
+
 ---
 
 ### 🛠️ Development & Engineering
