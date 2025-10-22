@@ -127,6 +127,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Manus - Context Engineering for Production AI Agents](examples/development/manus-context-engineering-agent.md) by Manus Engineering Team
 *10x cost savings through KV-cache optimization and context engineering patterns, enabling rapid iteration (hours vs weeks) tested across millions of users*
 
+**Problem: LLMs struggle to generate unit tests for complex codebases where context and dependencies are crucial**
+→ [Adyen AST-Based Unit Test Generation](examples/development/adyen-ast-unit-test-generation.md) by Adyen Engineering Team
+*AST parsing and Knowledge Graphs move beyond vector embeddings to capture code structure and semantics, tested on open-source products with planned internal deployment*
+
 **Problem: Overwhelming CVE volumes with labor-intensive manual investigation to determine vulnerability exploitability**
 → [NVIDIA Agent Morpheus - CVE Analysis at Enterprise Scale](examples/development/nvidia-agent-morpheus-cve-analysis.md) by NVIDIA Security Engineering
 *Reduced CVE triage from hours/days to seconds with 9.3x speedup through event-driven multi-agent workflow analyzing 200k+ vulnerabilities*
