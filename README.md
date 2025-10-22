@@ -71,6 +71,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Adobe Unified Support Knowledge Retrieval Agent](examples/development/adobe-unified-support-retrieval-agent.md) by Adobe Developer Platform Team
 *20% accuracy increase with semantic search and metadata filtering, serving thousands of developers with immediate answers and reduced support costs*
 
+**Problem: Data labeling scalability bottleneck and costly manual bank integration maintenance causing user disruptions**
+→ [Plaid AI Agents for Product Experiences](examples/development/plaid-ai-agents-product-experiences.md) by Plaid Product Management
+*AI Annotator achieving >95% human alignment for data labeling and Fix My Connection enabling 2M+ logins with 90% reduction in repair time*
+
 ---
 
 ### 🔬 Research & Analysis
