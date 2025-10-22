@@ -71,6 +71,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Hiring Assistant Agent](examples/productivity/linkedin-hiring-assistant-agent.md) by LinkedIn Engineering Team
 *First LinkedIn AI agent with experiential memory learning recruiter preferences, automating workflows with iterative collaborative design at enterprise scale*
 
+**Problem: Enterprise employees spending hours manually searching across fragmented systems to stay informed**
+→ [Moveworks Brief Me Agentic System](examples/productivity/moveworks-brief-me-agent.md) by Moveworks Engineering Team
+*Two-stage document intelligence with custom MPNet model achieving 97.24% action accuracy, delivering personalized summaries with <10s P90 latency*
+
 **Problem: On-call support copilot providing incomplete, inaccurate responses failing to meet SME quality standards**
 → [Uber Enhanced Agentic-RAG - Genie On-Call Copilot](examples/productivity/uber-enhanced-agentic-rag.md) by Uber Engineering Security and AI Teams
 *Enhanced agentic RAG achieving 27% relative increase in acceptable answers and 60% reduction in incorrect advice through enriched document processing and LLM-powered agents*

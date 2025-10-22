@@ -22,6 +22,7 @@ Examples in this category should focus on:
 - [Airtable Event-Driven Agentic Framework](airtable-agentic-framework.md) - Powers Omni and Field Agents with event-driven state machine, 15-30% cost reduction through smart context management
 - [Ask Astro - Dreamforce Event Agent](salesforce-dreamforce-event-agent.md) - Built in 5 days with hybrid search and RAG handling event queries with near real-time index updates
 - [Hiring Assistant Agent](linkedin-hiring-assistant-agent.md) - LinkedIn's first AI agent with experiential memory learning recruiter preferences for personalized workflow automation
+- [Moveworks Brief Me Agentic System](moveworks-brief-me-agent.md) - Two-stage document intelligence system with custom MPNet embedding model achieving 97.24% action accuracy for employee productivity
 - [Uber Enhanced Agentic-RAG - Genie On-Call Copilot](uber-enhanced-agentic-rag.md) - Enhanced agentic RAG achieving 27% increase in acceptable answers and 60% reduction in incorrect advice through enriched document processing
 - [Omega - AI Sales Agent](netguru-omega-sales-agent.md) - Multi-agent system automating sales workflows in Slack with analyze-execute-review pattern
 
