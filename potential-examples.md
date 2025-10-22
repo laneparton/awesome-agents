@@ -2,70 +2,7 @@
 
 ### High Priority - Clear Agent Use Cases
 
-1-3 were imported already
-
-4. **Ramp - Agents Users Can Trust**
-   - Source: https://engineering.ramp.com/post/how-to-build-agents-users-can-trust
-   - Tags: LLM, AI agents, product feature
-   - Description: Automate expense management with AI agents
-   - Category: Finance & Investment
-   - Year: 2025
-
-5. **Salesforce - Text-To-SQL AI Agent**
-   - Source: https://www.salesforce.com/blog/text-to-sql-agent/
-   - Tags: LLM, AI agents
-   - Description: How We Built a Text-To-SQL AI Agent to Get Instant Answers From Our Data
-   - Category: Data Analysis
-   - Year: 2025
-
-6. **Uber Finch - Conversational AI Data Agent**
-   - Source: https://www.uber.com/en-IN/blog/unlocking-financial-insights-with-finch/
-   - Tags: ops, LLM, AI agents
-   - Description: Transforms natural language into structured data for financial insights
-   - Category: Finance & Investment
-   - Year: 2025
-
-7. **Netguru - Sales AI Agent**
-   - Source: https://www.netguru.com/blog/how-we-built-an-ai-agent
-   - Tags: LLM, AI agents
-   - Description: From Slack Bot to Sales Brain: How We Built Our AI Agent
-   - Category: Productivity & Automation
-   - Year: 2025
-
-8. **Manus - AI Agent Context Engineering**
-   - Source: https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus
-   - Tags: LLM, AI agents
-   - Description: Context Engineering for AI Agents: Lessons from Building Manus
-   - Category: Development & Engineering
-   - Year: 2025
-
-9. **Dropbox Dash - RAG and AI Agents**
-   - Source: https://dropbox.tech/machine-learning/building-dash-rag-multi-step-ai-agents-business-users
-   - Tags: search, LLM, RAG, AI agents
-   - Description: How RAG and AI agents help us meet the needs of businesses
-   - Category: Research & Analysis
-   - Year: 2025
-
-10. **eBay Mercury - Agentic AI Platform for Recommendations**
-    - Source: https://www.linkedin.com/pulse/mercury-agentic-ai-platform-llm-powered-experiences-ebay-chowdhury-kka8e/
-    - Tags: recommender system, LLM, AI agents
-    - Description: Agentic AI Platform for LLM Powered Recommendation Experiences at eBay
-    - Category: E-commerce
-    - Year: 2025
-
-11. **Uber Enhanced Agentic-RAG**
-    - Source: https://www.uber.com/blog/enhanced-agentic-rag/
-    - Tags: RAG, LLM, chatbot, AI agents
-    - Description: What If Chatbots Could Deliver Near-Human Precision?
-    - Category: Productivity & Automation
-    - Year: 2025
-
-12. **Plaid - AI Agents for Product Experiences**
-    - Source: https://plaid.com/blog/ai-agents-june-2025/
-    - Tags: ops, generative AI, LLM
-    - Description: Leveraging AI to improve our core product experiences (automate data labeling)
-    - Category: Development & Engineering
-    - Year: 2025
+Items 1-12 were imported already
 
 ### Medium Priority - Gen AI with Potential Agent Components
 
@@ -176,14 +113,7 @@
     - Category: Data Analysis
     - Year: 2024
 
-28. **Pinterest - Text-to-SQL**
-    - Source: https://medium.com/pinterest-engineering/how-we-built-text-to-sql-at-pinterest-30bad30dabff
-    - Tags: LLM, generative AI, RAG
-    - Description: Transform user questions to SQL queries
-    - Category: Data Analysis
-    - Year: 2024
-
-29. **Duolingo - Scaling Content Generation**
+28. **Duolingo - Scaling Content Generation**
     - Source: https://blog.duolingo.com/scaling-duoradio/
     - Tags: generative AI, LLM
     - Description: Using generative AI to scale DuoRadio 10x faster
@@ -215,40 +145,7 @@
 
 ### High Priority - Clear Agent Use Cases
 
-33. **LinkedIn - Hiring Assistant Agent**
-    - Source: https://www.linkedin.com/blog/engineering/generative-ai/the-tech-behind-the-first-agent-from-linkedin-hiring-assistant
-    - Tags: generative AI, LLM, product feature
-    - Description: Under the hood: the tech behind the first agent from LinkedIn, Hiring Assistant
-    - Category: Productivity & Automation
-    - Year: 2024
-
-34. **Salesforce - Dreamforce Event Agent**
-    - Source: https://www.salesforce.com/blog/build-an-ai-agent/
-    - Tags: LLM, AI agents, RAG
-    - Description: How We Built the First Dreamforce Event Agent in 5 Days with Agentforce
-    - Category: Productivity & Automation
-    - Year: 2024
-
-35. **Delivery Hero - QueryAnswerBird AI Data Analyst (Part 1)**
-    - Source: https://tech.deliveryhero.com/blog/introducing-the-ai-data-analyst-queryanswerbird-part-1-utilization-of-rag-and-text-to-sql/
-    - Tags: LLM, RAG, AI agents
-    - Description: AI Data Analyst using RAG and Text-to-SQL
-    - Category: Data Analysis
-    - Year: 2024
-
-36. **Delivery Hero - QueryAnswerBird AI Data Analyst (Part 2)**
-    - Source: https://tech.deliveryhero.com/blog/introducing-the-ai-data-analyst-queryanswerbird-part-2-data-discovery/
-    - Tags: LLM, AI agents
-    - Description: AI Data Analyst for Data Discovery
-    - Category: Data Analysis
-    - Year: 2024
-
-37. **Moveworks - Brief Me Agentic System**
-    - Source: https://www.moveworks.com/us/en/resources/blog/how-we-built-brief-me-for-productivity
-    - Tags: LLM, AI agents
-    - Description: AI agent for employee productivity - exploration of agentic engineering system
-    - Category: Productivity & Automation
-    - Year: 2024
+Items 33-37 were imported already
 
 ### Lower Priority - Gen AI (May Have Agent Components)
 
@@ -287,14 +184,7 @@
     - Category: Productivity & Automation
     - Year: 2024
 
-43. **Uber - QueryGPT Natural Language to SQL**
-    - Source: https://www.uber.com/en-IN/blog/query-gpt/
-    - Tags: LLM, generative AI
-    - Description: Transform natural language to SQL queries
-    - Category: Data Analysis
-    - Year: 2024
-
-44. **Grab - Conversational Data Discovery**
+43. **Grab - Conversational Data Discovery**
     - Source: https://engineering.grab.com/hubble-data-discovery
     - Tags: generative AI, LLM
     - Description: Help users discover data with LLMs
@@ -315,14 +205,7 @@
     - Category: Development & Engineering
     - Year: 2024
 
-47. **Swiggy - Hermes Text-to-SQL**
-    - Source: https://bytes.swiggy.com/hermes-a-text-to-sql-solution-at-swiggy-81573fb4fb6e
-    - Tags: generative AI, LLM
-    - Description: Transform user questions to SQL queries
-    - Category: Data Analysis
-    - Year: 2024
-
-48. **Pinterest - Canvas Text-to-Image**
+47. **Pinterest - Canvas Text-to-Image**
     - Source: https://medium.com/pinterest-engineering/building-pinterest-canvas-a-text-to-image-foundation-model-aa34965e84d9
     - Tags: generative AI, CV
     - Description: Generate image backgrounds from text
