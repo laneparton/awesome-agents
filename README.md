@@ -123,6 +123,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Manus - Context Engineering for Production AI Agents](examples/development/manus-context-engineering-agent.md) by Manus Engineering Team
 *10x cost savings through KV-cache optimization and context engineering patterns, enabling rapid iteration (hours vs weeks) tested across millions of users*
 
+**Problem: Security teams spending hours manually writing incident summaries for executives and stakeholders**
+→ [Google Security Incident Response with Generative AI](examples/development/google-incident-response-genai.md) by Google Security Teams
+*51% time savings in summary writing with LLM-generated drafts rated 10% higher quality than human-written equivalents*
+
 ---
 
 ### 🔬 Research & Analysis
