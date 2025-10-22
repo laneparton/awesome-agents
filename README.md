@@ -91,6 +91,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Omega - AI Sales Agent](examples/productivity/netguru-omega-sales-agent.md) by Netguru Team
 *Multi-agent system automating sales workflows in Slack with analyze-execute-review pattern, eliminating context-switching across HubSpot, Salesforce, and Drive*
 
+**Problem: Digital sales agents manually hunting for product info and policies during live customer chats**
+→ [Wayfair Sales Agent Co-Pilot](examples/productivity/wayfair-sales-agent-copilot.md) by Bradley West and Ashequl Qadir
+*10% reduction in average handle time through AI-powered real-time response recommendations analyzing full conversation context*
+
 ---
 
 ### 🛠️ Development & Engineering
