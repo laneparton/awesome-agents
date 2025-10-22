@@ -1,5 +1,18 @@
 # Potential Examples to Process
 
+## Recently Processed (2025-10-22)
+
+### ✅ Added to Repository
+- **Item 19: Wayfair - Agent Co-Pilot for Sales Agents** → PR #35
+- **Item 24: Google - Incident Response with GenAI** → PR #36
+- **Item 25: NVIDIA - CVE Analysis with GenAI** → PR #37
+
+### ❌ Scanned but Not Added
+- **Item 20: Expedia Romie** - Alpha product announcement without concrete impact metrics or measurable results
+- **Item 21: DoorDash - Product Knowledge Graph** - URL redirected with 403 error, content inaccessible
+- **Item 22: Uber DragonCrawl** - URL returned 404 error, content not found
+- **Item 23: Replit - Code Repair** - Focused on model development/benchmarks rather than deployed business impact
+
 ### High Priority - Clear Agent Use Cases
 
 Items 1-12 were imported already
@@ -50,54 +63,7 @@ Items 1-12 were imported already
 
 ### Lower Priority - Gen AI (May Have Agent Components)
 
-19. **Wayfair - Agent Co-Pilot for Sales Agents**
-    - Source: https://www.aboutwayfair.com/careers/tech-blog/agent-co-pilot-wayfairs-gen-ai-assistant-for-digital-sales-agents
-    - Tags: LLM, generative AI
-    - Description: Provides live chat response recommendations for digital sales agents
-    - Category: Productivity & Automation
-    - Year: 2024
-
-20. **Expedia Romie - Personal Travel Assistant**
-    - Source: https://medium.com/expedia-group-tech/traveling-just-got-a-whole-lot-smarter-with-romie-dfb9b21c07c5
-    - Tags: generative AI
-    - Description: Building a personal travel assistant
-    - Category: Travel
-    - Year: 2024
-
-21. **DoorDash - Product Knowledge Graph with LLMs**
-    - Source: https://doordash.engineering/2024/04/23/building-doordashs-product-knowledge-graph-with-large-language-models/
-    - Tags: LLM, generative AI
-    - Description: Extract product attributes from unstructured SKU data
-    - Category: Data Analysis
-    - Year: 2024
-
-22. **Uber DragonCrawl - Mobile Testing with GenAI**
-    - Source: https://www.uber.com/en-GB/blog/generative-ai-for-high-quality-mobile-testing/
-    - Tags: LLM, ops, generative AI
-    - Description: Test mobile applications with LLMs
-    - Category: Development & Engineering
-    - Year: 2024
-
-23. **Replit - LLMs for Code Repair**
-    - Source: https://blog.replit.com/code-repair
-    - Tags: product feature, LLM, generative AI
-    - Description: Finetuning LLMs for code repairs
-    - Category: Development & Engineering
-    - Year: 2024
-
-24. **Google - Incident Response with GenAI**
-    - Source: https://security.googleblog.com/2024/04/accelerating-incident-response-using.html
-    - Tags: LLM, search, generative AI
-    - Description: Summarize security and privacy incidents
-    - Category: Development & Engineering
-    - Year: 2024
-
-25. **NVIDIA - CVE Analysis with GenAI**
-    - Source: https://developer.nvidia.com/blog/applying-generative-ai-for-cve-analysis-at-an-enterprise-scale/
-    - Tags: LLM, ops, generative AI
-    - Description: Detect software vulnerabilities at enterprise scale
-    - Category: Development & Engineering
-    - Year: 2024
+19-25. ~~Items processed on 2025-10-22 (see top of file)~~
 
 26. **Thomson Reuters - Customer Support Using RAG**
     - Source: https://medium.com/tr-labs-ml-engineering-blog/better-customer-support-using-retrieval-augmented-generation-rag-at-thomson-reuters-4d140a6044c3
