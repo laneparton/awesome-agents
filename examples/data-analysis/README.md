@@ -18,6 +18,7 @@ Examples in this category should focus on:
 ## Examples
 
 - [Delivery Hero Agentic Product Knowledge Base](delivery-hero-product-knowledge-base.md) - Automates extraction of 22 product attributes and title standardization using predefined agents with knowledge distillation
+- [eBay Mercury - Agentic AI Platform](ebay-mercury-agentic-platform.md) - Agentic framework serving hundreds of millions of customers across 2 billion+ listings with hundreds of ms latency through plug-and-play components
 - [Text-to-SQL AI Agent](salesforce-text-to-sql-agent.md) - Slack-integrated agent reducing query time from days to minutes with RAG-powered SQL generation
 
 ---
