@@ -91,6 +91,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Omega - AI Sales Agent](examples/productivity/netguru-omega-sales-agent.md) by Netguru Team
 *Multi-agent system automating sales workflows in Slack with analyze-execute-review pattern, eliminating context-switching across HubSpot, Salesforce, and Drive*
 
+**Problem: Knowledge workers suffering from information overload, needing to manually read through long documents and videos**
+→ [Dropbox AI-Powered File Summaries](examples/productivity/dropbox-ai-file-summaries.md) by Dropbox ML Team
+*93% cost reduction for summaries and 96.5% latency improvement (115s→4s) through k-means clustering and semantic search, delivering instant answers in file previews*
+
 **Problem: Viewers need specific information from videos but lack time to watch lengthy content entirely**
 → [Vimeo Video Q&A with RAG](examples/productivity/vimeo-video-qa-rag.md) by Vimeo AI Research Team
 *Production RAG system with bottom-up transcript processing and speaker detection without facial recognition, enabling natural language conversations with video content*
