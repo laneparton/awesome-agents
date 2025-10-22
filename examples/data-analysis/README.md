@@ -18,6 +18,7 @@ Examples in this category should focus on:
 ## Examples
 
 - [Delivery Hero Agentic Product Knowledge Base](delivery-hero-product-knowledge-base.md) - Automates extraction of 22 product attributes and title standardization using predefined agents with knowledge distillation
+- [Walmart Ghotok - Ensemble AI for Product Categorization](walmart-ghotok-product-categorization.md) - Production ensemble combining predictive and generative AI with chain-of-thought prompting to map 400M+ SKUs across category hierarchies
 - [Swiggy Hermes - Charter-Based Text-to-SQL](swiggy-hermes-text-to-sql.md) - Charter-based multi-stage RAG system delivering SQL queries in <2 minutes via Slack, serving hundreds of users across product, DS, and analyst teams
 - [Uber QueryGPT Multi-Agent Text-to-SQL](uber-querygpt-text-to-sql.md) - Multi-agent system with specialized Intent, Table, and Column Prune agents reducing SQL authoring from 10 to 3 minutes with 78% user satisfaction
 - [Pinterest Text-to-SQL in Querybook](pinterest-text-to-sql-querybook.md) - RAG-enhanced Text-to-SQL achieving 40%+ first-shot acceptance and 35% task speed improvement by weighting table documentation (90% vs 40% hit rate)
