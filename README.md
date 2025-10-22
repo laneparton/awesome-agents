@@ -105,6 +105,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Delivery Hero Agentic Product Knowledge Base](examples/data-analysis/delivery-hero-product-knowledge-base.md) by Delivery Hero QC
 *Automates extraction of 22 product attributes and title standardization with predefined agents, improving efficiency and data quality through knowledge distillation*
 
+**Problem: Scaling LLM applications to serve hundreds of millions of customers across billions of item listings cost-effectively**
+→ [eBay Mercury - Agentic AI Platform](examples/data-analysis/ebay-mercury-agentic-platform.md) by eBay Recommendations Team
+*Agentic framework serving hundreds of millions of customers across 2 billion+ listings with hundreds of ms latency through plug-and-play agent components*
+
 ---
 
 ### 💡 Uncategorized
