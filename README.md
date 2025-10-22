@@ -183,6 +183,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Delivery Hero Agentic Product Knowledge Base](examples/data-analysis/delivery-hero-product-knowledge-base.md) by Delivery Hero QC
 *Automates extraction of 22 product attributes and title standardization with predefined agents, improving efficiency and data quality through knowledge distillation*
 
+**Problem: With 400M+ SKUs, need to correctly map products to categories across complex hierarchies**
+→ [Walmart Ghotok - Ensemble AI for Product Categorization](examples/data-analysis/walmart-ghotok-product-categorization.md) by Walmart Global Tech Team
+*Production ensemble AI combining predictive and generative models with chain-of-thought prompting, reducing millions of candidates to validated mappings with millisecond response times*
+
 **Problem: Data analysts overwhelmed with repetitive queries and time-consuming fraud investigations**
 → [Grab RAG-Powered LLM for Analytics](examples/data-analysis/grab-rag-analytics.md) by Grab Integrity Analytics Team
 *RAG-powered system with Data-Arks API middleware saving 3-4 hours per report and reducing fraud investigations to minutes through automated query execution and LLM summarization*
