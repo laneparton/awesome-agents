@@ -32,13 +32,13 @@ This skill helps you add new real-world agent case studies to the awesome-agents
 When given a URL, extract these key details:
 - **Problem**: What manual process existed? Time/effort involved? Pain points?
 - **Solution**: What does the agent do? High-level description
-- **Impact**: Quantifiable results (time saved, productivity gains, cost reduction)
+- **Impact**: Real-world results (metrics are nice but NOT required - focus on the actual deployment and use)
 - **How It Works**: Architecture, key technologies, process flow
 - **Key Insight**: What made it work? Technical breakthroughs or lessons learned
 - **Author/Team**: Who built it?
 - **Date**: When was it published/implemented?
 
-**Important**: Focus on the agentic solution and architecture, NOT on marketing the specific tools/frameworks used.
+**Important**: Focus on REAL-WORLD agents and applied AI solving actual problems, NOT on marketing the specific tools/frameworks used. The key criteria is that it's a genuine implementation (production or serious prototype), not theoretical.
 
 ### Step 2: Determine Category
 
@@ -89,10 +89,11 @@ Use the template in [templates/example-template.md](templates/example-template.m
 - Focus on functional capabilities and patterns
 
 **Writing guidelines**:
-- Focus on the **agentic solution**, not tool promotion
-- Include **concrete metrics** (time saved, productivity gains, scale)
-- Explain **why the approach worked** (technical insights)
-- Use **specific numbers** and **real-world details**
+- Focus on the **agentic solution** and architecture, not tool promotion
+- Emphasize the **real-world application** - what problem it solved and how it was deployed
+- Include metrics when available, but don't skip examples without them
+- Explain **why the approach worked** (technical insights and architecture decisions)
+- Use **specific details** about the implementation and use cases
 - Keep tool mentions factual, not promotional
 
 ### Step 5: Update READMEs
@@ -138,11 +139,12 @@ Use [templates/pr-description.md](templates/pr-description.md) for PR body.
 Before finalizing, verify:
 
 **Content Quality**:
-- [ ] Example is from a real implementation (not theoretical)
+- [ ] Example is from a real implementation (production or serious prototype, not purely theoretical)
 - [ ] Source URL is valid and credible
-- [ ] Includes concrete metrics/numbers
-- [ ] Focuses on agentic solution, not tool marketing
-- [ ] Explains WHY the solution worked (key insights)
+- [ ] Describes a real-world problem being solved with applied AI/agents
+- [ ] Focuses on agentic solution and architecture, not tool marketing
+- [ ] Explains the technical approach and implementation details
+- [ ] Includes WHY the solution worked (key insights) when available
 - [ ] Proper attribution to original author/team
 
 **Format Compliance**:
@@ -174,7 +176,7 @@ Before finalizing, verify:
 **Solution**: Reframe to focus on the agent architecture, capabilities, and what made it work rather than which specific tools were used
 
 **Issue**: Missing concrete metrics
-**Solution**: Look for any quantifiable results in the source. If none exist, note "specific metrics not disclosed" but ensure the problem/solution is still compelling
+**Solution**: Metrics are nice to have but NOT required. Focus on the real-world implementation, the problem being solved, and the technical architecture. As long as it's a genuine agent/AI application (not theoretical), it qualifies
 
 **Issue**: Unclear which category fits
 **Solution**: Choose based on the primary use case. If it spans multiple categories, pick the most relevant and mention others in tags
@@ -205,7 +207,8 @@ All templates are in the `templates/` directory:
 ## Notes
 
 - Always verify the source is credible before adding
-- Focus on production implementations, not experiments
-- Prioritize examples with measurable impact
+- Focus on real-world implementations (production systems or serious prototypes) solving actual problems
+- Prioritize examples that showcase applied AI and agent architectures
+- Metrics are valuable when available but NOT a requirement for inclusion
 - Maintain neutral tone (no promotional language)
 - Ensure proper attribution to original authors
