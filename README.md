@@ -55,6 +55,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Minimal Multi-Agent Customer Support System](examples/productivity/minimal-multi-agent-customer-support.md) by Titus Ex and Niek Hogenboom
 *Multi-agent system achieving 80%+ efficiency gains, autonomously handling 90% of support tickets with integrated order management*
 
+**Problem: Dasher delivery support limited by flow-based systems, language barriers, and hard-to-find knowledge base articles**
+→ [DoorDash LLM-Based Dasher Support Automation](examples/productivity/doordash-llm-dasher-support-chatbot.md) by DoorDash Engineering Team
+*RAG-based chatbot assisting thousands of Dashers daily with 90% reduction in hallucinations and 99% reduction in compliance issues through two-tier guardrail system*
+
 **Problem: Healthcare security investigations taking weeks to verify practitioner identities and prevent account fraud**
 → [Fullscript Automated Security Investigation Agent](examples/productivity/fullscript-security-investigation-agent.md) by Fullscript Engineering Team
 *Built in 2 days at hackathon, reduced investigations by 97% (weeks to 30 minutes), saving 3,600+ hours/year with AI-powered workflow automation*
@@ -62,6 +66,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 **Problem: Early AI features couldn't reason dynamically or handle complex multi-step workflows**
 → [Airtable Event-Driven Agentic Framework](examples/productivity/airtable-agentic-framework.md) by Airtable Engineering Team
 *Powers Omni app builder and Field Agents with event-driven state machine, achieving 15-30% cost reduction and enabling conversational workflows*
+
+**Problem: Traditional conversational AI systems too rigid with predefined workflows, hard to scale for new use cases**
+→ [Airbnb Automation Platform v2](examples/productivity/airbnb-automation-platform-v2.md) by Airbnb Engineering Team
+*LLM-powered conversational AI platform combining Chain of Thought reasoning with traditional workflows, helping customer support agents work more efficiently at scale*
 
 **Problem: Rapid migration of event app agent to enterprise platform before major conference in 5 days**
 → [Ask Astro - Dreamforce Event Agent](examples/productivity/salesforce-dreamforce-event-agent.md) by Salesforce Events Team
@@ -87,6 +95,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Thomson Reuters Customer Support RAG](examples/productivity/thomson-reuters-customer-support-rag.md) by Thomson Reuters Labs
 *GPT-4 powered RAG system reducing resolution times by grounding responses in actual knowledge base, eliminating hallucinations with provenance-backed answers*
 
+**Problem: Digital sales agents manually hunting for product info and policies during live customer chats**
+→ [Wayfair Sales Agent Co-Pilot](examples/productivity/wayfair-sales-agent-copilot.md) by Bradley West and Ashequl Qadir
+*10% reduction in average handle time through AI-powered real-time response recommendations analyzing full conversation context*
+
 ---
 
 ### 🛠️ Development & Engineering
@@ -94,6 +106,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 **Problem: Platform engineers overwhelmed by routine developer requests while trying to build new features**
 → [Cisco Outshift JARVIS - Agentic AI Platform Engineer](examples/development/cisco-outshift-jarvis-platform-engineer.md) by Outshift by Cisco
 *10x productivity boost through distributed multi-agent system - CI/CD setup from 1 week to <1 hour, resource provisioning from half-day to seconds*
+
+**Problem: Investigating incidents in monolithic repositories is complex and time-consuming with thousands of potential code changes**
+→ [Meta AI for Efficient Incident Response](examples/development/meta-ai-incident-response.md) by Meta Engineering Team
+*AI-assisted root cause analysis achieving 42% accuracy in identifying root causes using fine-tuned Llama 2 with heuristic-based retrieval and LLM-based ranking*
 
 **Problem: Teams across Boeing independently building AI chatbots, duplicating 512 hours of work per agent**
 → [Unified Chatbot Framework at Jeppesen](examples/development/jeppesen-unified-chatbot-framework.md) by Jeppesen AI Team
@@ -110,6 +126,14 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 **Problem: Building production AI agents requires choosing between slow fine-tuning or rapid in-context learning**
 → [Manus - Context Engineering for Production AI Agents](examples/development/manus-context-engineering-agent.md) by Manus Engineering Team
 *10x cost savings through KV-cache optimization and context engineering patterns, enabling rapid iteration (hours vs weeks) tested across millions of users*
+
+**Problem: Overwhelming CVE volumes with labor-intensive manual investigation to determine vulnerability exploitability**
+→ [NVIDIA Agent Morpheus - CVE Analysis at Enterprise Scale](examples/development/nvidia-agent-morpheus-cve-analysis.md) by NVIDIA Security Engineering
+*Reduced CVE triage from hours/days to seconds with 9.3x speedup through event-driven multi-agent workflow analyzing 200k+ vulnerabilities*
+
+**Problem: Security teams spending hours manually writing incident summaries for executives and stakeholders**
+→ [Google Security Incident Response with Generative AI](examples/development/google-incident-response-genai.md) by Google Security Teams
+*51% time savings in summary writing with LLM-generated drafts rated 10% higher quality than human-written equivalents*
 
 ---
 
@@ -139,7 +163,9 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### ✍️ Content Creation
 
-*Examples coming soon - [contribute yours!](CONTRIBUTING.md)*
+**Problem: Labor-intensive audio content production limiting reach to small percentage of learners**
+→ [Duolingo DuoRadio - Scaling Content Generation](examples/content-creation/duolingo-duoradio-content-generation.md) by Duolingo Engineering Team
+*Scaled from 300 to 15,000+ episodes (2 to 25+ courses) in fewer than two quarters with 99% cost savings using curriculum-driven AI generation and comprehensive quality filtering*
 
 ---
 
@@ -148,6 +174,14 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 **Problem: Manual product catalog management across regions with inconsistent vendor data formats**
 → [Delivery Hero Agentic Product Knowledge Base](examples/data-analysis/delivery-hero-product-knowledge-base.md) by Delivery Hero QC
 *Automates extraction of 22 product attributes and title standardization with predefined agents, improving efficiency and data quality through knowledge distillation*
+
+**Problem: Data analysts overwhelmed with repetitive queries and time-consuming fraud investigations**
+→ [Grab RAG-Powered LLM for Analytics](examples/data-analysis/grab-rag-analytics.md) by Grab Integrity Analytics Team
+*RAG-powered system with Data-Arks API middleware saving 3-4 hours per report and reducing fraud investigations to minutes through automated query execution and LLM summarization*
+
+**Problem: 51% of data consumers taking multiple days to find datasets among 200,000+ tables with low documentation coverage**
+→ [Grab Hubble - Conversational Data Discovery](examples/data-analysis/grab-hubble-conversational-data-discovery.md) by Grab Hubble Team
+*LLM-powered conversational data discovery reducing search time from days to seconds, achieving 73% user satisfaction with GPT-4 documentation generation and Slack integration*
 
 **Problem: Data-driven decisions requiring specific numbers from SQL queries, with users lacking table knowledge, access, or SQL skills**
 → [Swiggy Hermes - Charter-Based Text-to-SQL](examples/data-analysis/swiggy-hermes-text-to-sql.md) by Swiggy Data Science Team
