@@ -18,6 +18,7 @@ Examples in this category should focus on:
 ## Examples
 
 - [Delivery Hero Agentic Product Knowledge Base](delivery-hero-product-knowledge-base.md) - Automates extraction of 22 product attributes and title standardization using predefined agents with knowledge distillation
+- [Grab RAG-Powered LLM for Analytics](grab-rag-analytics.md) - RAG system with Data-Arks API middleware saving 3-4 hours per report and reducing fraud investigations to minutes
 - [Grab Hubble - Conversational Data Discovery](grab-hubble-conversational-data-discovery.md) - LLM-powered conversational data discovery reducing search time from days to seconds with GPT-4 documentation generation and 73% user satisfaction
 - [Swiggy Hermes - Charter-Based Text-to-SQL](swiggy-hermes-text-to-sql.md) - Charter-based multi-stage RAG system delivering SQL queries in <2 minutes via Slack, serving hundreds of users across product, DS, and analyst teams
 - [Uber QueryGPT Multi-Agent Text-to-SQL](uber-querygpt-text-to-sql.md) - Multi-agent system with specialized Intent, Table, and Column Prune agents reducing SQL authoring from 10 to 3 minutes with 78% user satisfaction
