@@ -115,6 +115,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Whatnot Trust & Safety - GenAI Scam Detection](examples/productivity/whatnot-trust-safety-scam-detection.md) by Charudatta (CD) Wad
 *95% of scam attempts detected proactively within minutes with 96% precision using LLM-powered conversational context analysis*
 
+**Problem: Microsoft Q&A users waiting hours for community responses, often receiving clarifying questions instead of answers**
+→ [Microsoft Ask Learn - Advanced RAG Knowledge Service](examples/productivity/microsoft-ask-learn-rag.md) by Microsoft Skilling Organization
+*Advanced RAG with extensive pre/post-processing powering Microsoft Q&A Assist and Copilot for Azure, reducing wait time from hours to instant documentation-grounded answers*
+
 ---
 
 ### 🛠️ Development & Engineering
