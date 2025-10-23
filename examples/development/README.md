@@ -22,6 +22,7 @@ Examples in this category should focus on:
 - [Meta AI for Efficient Incident Response](meta-ai-incident-response.md) - AI-assisted root cause analysis achieving 42% accuracy using fine-tuned Llama 2 with heuristic-based retrieval and LLM-based ranking
 - [Unified Chatbot Framework at Jeppesen (Boeing)](jeppesen-unified-chatbot-framework.md) - Reduced agent development time by 87%, saving ~2,000 engineering hours
 - [Adobe Unified Support Knowledge Retrieval Agent](adobe-unified-support-retrieval-agent.md) - 20% accuracy increase serving thousands of developers with AI-powered semantic search across fragmented documentation
+- [Grab LLM-Powered Data Classification](grab-data-classification.md) - 20K+ data entities scanned in first month with 360 man-days saved annually using GPT-3.5 powered column-level data tagging for governance at petabyte scale
 - [Plaid AI Agents for Product Operations](plaid-ai-agents-product-ops.md) - Two specialized agents: data labeling achieving 95%+ human alignment, connection maintenance reducing fix time by 90%
 - [Manus - Context Engineering for Production AI Agents](manus-context-engineering-agent.md) - 10x cost savings through KV-cache optimization with context engineering patterns tested across millions of users
 - [Adyen AST-Based Unit Test Generation](adyen-ast-unit-test-generation.md) - AST parsing and Knowledge Graphs capture code structure and semantics, moving beyond vector embeddings for context-aware test generation

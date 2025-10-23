@@ -107,6 +107,22 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Wayfair Sales Agent Co-Pilot](examples/productivity/wayfair-sales-agent-copilot.md) by Bradley West and Ashequl Qadir
 *10% reduction in average handle time through AI-powered real-time response recommendations analyzing full conversation context*
 
+**Problem: Employees needing AI assistance but lacking company-specific context, templates, and workflow integration**
+→ [Instacart Ava - Company-Wide Internal AI Assistant](examples/productivity/instacart-ava-internal-assistant.md) by Zain Adil
+*50% of company using monthly with Prompt Exchange for template sharing and Slack integration reducing thread context grind from 5-10 minutes to seconds*
+
+**Problem: Scammers targeting marketplace users with multi-message fraud patterns undetectable by single-message analysis**
+→ [Whatnot Trust & Safety - GenAI Scam Detection](examples/productivity/whatnot-trust-safety-scam-detection.md) by Charudatta (CD) Wad
+*95% of scam attempts detected proactively within minutes with 96% precision using LLM-powered conversational context analysis*
+
+**Problem: Microsoft Q&A users waiting hours for community responses, often receiving clarifying questions instead of answers**
+→ [Microsoft Ask Learn - Advanced RAG Knowledge Service](examples/productivity/microsoft-ask-learn-rag.md) by Microsoft Skilling Organization
+*Advanced RAG with extensive pre/post-processing powering Microsoft Q&A Assist and Copilot for Azure, reducing wait time from hours to instant documentation-grounded answers*
+
+**Problem: Salesforce employees experiencing cognitive overload from manually reading through multiple Slack channels daily**
+→ [Salesforce AI Summarist for Slack](examples/productivity/salesforce-slack-summarist.md) by Salesforce AI Research
+*Conversational AI automatically summarizing Slack channels and threads for faster catch-up and efficient multi-channel monitoring, deployed internally at Salesforce*
+
 ---
 
 ### 🛠️ Development & Engineering
@@ -126,6 +142,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 **Problem: Developers spending excessive time searching across fragmented documentation for Adobe-specific guidelines**
 → [Adobe Unified Support Knowledge Retrieval Agent](examples/development/adobe-unified-support-retrieval-agent.md) by Adobe Developer Platform Team
 *20% accuracy increase with semantic search and metadata filtering, serving thousands of developers with immediate answers and reduced support costs*
+
+**Problem: Manual data governance classification at petabyte scale causing over-classification and access bottlenecks**
+→ [Grab LLM-Powered Data Classification](examples/development/grab-data-classification.md) by Grab Data Engineering Team
+*20K+ data entities scanned in first month with 360 man-days saved annually using GPT-3.5 powered column-level tagging, eliminating over-restrictive schema-level classification*
 
 **Problem: Manual data labeling bottleneck and costly reactive maintenance across thousands of financial institution integrations**
 → [Plaid AI Agents for Product Operations](examples/development/plaid-ai-agents-product-ops.md) by Plaid Engineering Team
@@ -218,6 +238,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 **Problem: Scaling LLM applications to serve hundreds of millions of customers across billions of item listings cost-effectively**
 → [eBay Mercury - Agentic AI Platform](examples/data-analysis/ebay-mercury-agentic-platform.md) by eBay Recommendations Team
 *Agentic framework serving hundreds of millions of customers across 2 billion+ listings with hundreds of ms latency through plug-and-play agent components*
+
+**Problem: Manual search quality evaluation taking days/weeks at scale, blocking rapid iteration on improvements**
+→ [LinkedIn Automated GenAI-Driven Search Quality Evaluation](examples/data-analysis/linkedin-automated-search-quality.md) by LinkedIn Engineering Team
+*20% reduction in low-quality typeahead suggestions with GPT-powered automated evaluation reducing assessment time from days/weeks to hours*
 
 **Problem: Users need to learn platform-specific query syntax and operators, creating barrier to ad-hoc data exploration**
 → [Honeycomb Natural Language Query Assistant](examples/data-analysis/honeycomb-query-assistant.md) by Honeycomb Engineering
