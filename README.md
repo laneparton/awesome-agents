@@ -119,6 +119,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Microsoft Ask Learn - Advanced RAG Knowledge Service](examples/productivity/microsoft-ask-learn-rag.md) by Microsoft Skilling Organization
 *Advanced RAG with extensive pre/post-processing powering Microsoft Q&A Assist and Copilot for Azure, reducing wait time from hours to instant documentation-grounded answers*
 
+**Problem: Salesforce employees experiencing cognitive overload from manually reading through multiple Slack channels daily**
+→ [Salesforce AI Summarist for Slack](examples/productivity/salesforce-slack-summarist.md) by Salesforce AI Research
+*Conversational AI automatically summarizing Slack channels and threads for faster catch-up and efficient multi-channel monitoring, deployed internally at Salesforce*
+
 ---
 
 ### 🛠️ Development & Engineering
