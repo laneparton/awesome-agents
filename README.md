@@ -219,6 +219,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [eBay Mercury - Agentic AI Platform](examples/data-analysis/ebay-mercury-agentic-platform.md) by eBay Recommendations Team
 *Agentic framework serving hundreds of millions of customers across 2 billion+ listings with hundreds of ms latency through plug-and-play agent components*
 
+**Problem: Users need to learn platform-specific query syntax and operators, creating barrier to ad-hoc data exploration**
+→ [Honeycomb Natural Language Query Assistant](examples/data-analysis/honeycomb-query-assistant.md) by Honeycomb Engineering
+*Production LLM feature converting natural language to executable queries, solving real-world challenges of latency (2-15s), context limits (5,000+ schema fields), prompt injection, and enterprise compliance*
+
 **Problem: Non-technical users can't access data insights without SQL expertise, creating engineer bottlenecks**
 → [Text-to-SQL AI Agent](examples/data-analysis/salesforce-text-to-sql-agent.md) by Salesforce Engineering Team
 *Reduced data query time from days to minutes through Slack-integrated agent with RAG-powered SQL generation and consensus validation*
