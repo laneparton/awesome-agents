@@ -107,6 +107,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Wayfair Sales Agent Co-Pilot](examples/productivity/wayfair-sales-agent-copilot.md) by Bradley West and Ashequl Qadir
 *10% reduction in average handle time through AI-powered real-time response recommendations analyzing full conversation context*
 
+**Problem: Microsoft Q&A users waiting hours for community responses, often receiving clarifying questions instead of answers**
+→ [Microsoft Ask Learn - Advanced RAG Knowledge Service](examples/productivity/microsoft-ask-learn-rag.md) by Microsoft Skilling Organization
+*Advanced RAG with extensive pre/post-processing powering Microsoft Q&A Assist and Copilot for Azure, reducing wait time from hours to instant documentation-grounded answers*
+
 ---
 
 ### 🛠️ Development & Engineering
