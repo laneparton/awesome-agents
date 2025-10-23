@@ -107,6 +107,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Wayfair Sales Agent Co-Pilot](examples/productivity/wayfair-sales-agent-copilot.md) by Bradley West and Ashequl Qadir
 *10% reduction in average handle time through AI-powered real-time response recommendations analyzing full conversation context*
 
+**Problem: Faculty unable to answer 250+ students' questions about course material before class**
+→ [Harvard ChatLTV AI Teaching Assistant](examples/productivity/harvard-chatltv-teaching-assistant.md) by Professor Jeffrey Bussgang
+*3,000+ queries from 170 students across full semester with RAG-powered Slack chatbot trained on proprietary 15M-word corpus, enabling automated project feedback at scale*
+
 ---
 
 ### 🛠️ Development & Engineering
