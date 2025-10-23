@@ -135,6 +135,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Adobe Unified Support Knowledge Retrieval Agent](examples/development/adobe-unified-support-retrieval-agent.md) by Adobe Developer Platform Team
 *20% accuracy increase with semantic search and metadata filtering, serving thousands of developers with immediate answers and reduced support costs*
 
+**Problem: Manual data governance classification at petabyte scale causing over-classification and access bottlenecks**
+→ [Grab LLM-Powered Data Classification](examples/development/grab-data-classification.md) by Grab Data Engineering Team
+*20K+ data entities scanned in first month with 360 man-days saved annually using GPT-3.5 powered column-level tagging, eliminating over-restrictive schema-level classification*
+
 **Problem: Manual data labeling bottleneck and costly reactive maintenance across thousands of financial institution integrations**
 → [Plaid AI Agents for Product Operations](examples/development/plaid-ai-agents-product-ops.md) by Plaid Engineering Team
 *Two specialized agents: AI Annotator achieving 95%+ human alignment for data labeling, Fix My Connection reducing repair time by 90% enabling 2M+ successful logins*
