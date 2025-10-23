@@ -183,6 +183,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 
 ### 📊 Data Analysis
 
+**Problem: Generating millions of annotations for ML models across massive content catalogs with ad hoc, inefficient processes**
+→ [Spotify Content Annotations Platform at Scale](examples/data-analysis/spotify-content-annotations-platform.md) by Spotify ML Infrastructure Team
+*10x increase in annotation corpus size and 3x improvement in annotator productivity through integrated platform combining human expertise with LLM-based quality escalation*
+
 **Problem: Manual product catalog management across regions with inconsistent vendor data formats**
 → [Delivery Hero Agentic Product Knowledge Base](examples/data-analysis/delivery-hero-product-knowledge-base.md) by Delivery Hero QC
 *Automates extraction of 22 product attributes and title standardization with predefined agents, improving efficiency and data quality through knowledge distillation*
