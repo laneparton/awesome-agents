@@ -107,6 +107,14 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Wayfair Sales Agent Co-Pilot](examples/productivity/wayfair-sales-agent-copilot.md) by Bradley West and Ashequl Qadir
 *10% reduction in average handle time through AI-powered real-time response recommendations analyzing full conversation context*
 
+**Problem: Employees needing AI assistance but lacking company-specific context, templates, and workflow integration**
+→ [Instacart Ava - Company-Wide Internal AI Assistant](examples/productivity/instacart-ava-internal-assistant.md) by Zain Adil
+*50% of company using monthly with Prompt Exchange for template sharing and Slack integration reducing thread context grind from 5-10 minutes to seconds*
+
+**Problem: Scammers targeting marketplace users with multi-message fraud patterns undetectable by single-message analysis**
+→ [Whatnot Trust & Safety - GenAI Scam Detection](examples/productivity/whatnot-trust-safety-scam-detection.md) by Charudatta (CD) Wad
+*95% of scam attempts detected proactively within minutes with 96% precision using LLM-powered conversational context analysis*
+
 ---
 
 ### 🛠️ Development & Engineering
@@ -222,6 +230,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 **Problem: Scaling LLM applications to serve hundreds of millions of customers across billions of item listings cost-effectively**
 → [eBay Mercury - Agentic AI Platform](examples/data-analysis/ebay-mercury-agentic-platform.md) by eBay Recommendations Team
 *Agentic framework serving hundreds of millions of customers across 2 billion+ listings with hundreds of ms latency through plug-and-play agent components*
+
+**Problem: Manual search quality evaluation taking days/weeks at scale, blocking rapid iteration on improvements**
+→ [LinkedIn Automated GenAI-Driven Search Quality Evaluation](examples/data-analysis/linkedin-automated-search-quality.md) by LinkedIn Engineering Team
+*20% reduction in low-quality typeahead suggestions with GPT-powered automated evaluation reducing assessment time from days/weeks to hours*
 
 **Problem: Non-technical users can't access data insights without SQL expertise, creating engineer bottlenecks**
 → [Text-to-SQL AI Agent](examples/data-analysis/salesforce-text-to-sql-agent.md) by Salesforce Engineering Team
