@@ -17,6 +17,7 @@ Examples in this category should focus on:
 
 ## Examples
 
+- [Spotify Content Annotations Platform at Scale](spotify-content-annotations-platform.md) - 10x increase in annotation corpus size and 3x improvement in annotator productivity through integrated platform combining human expertise with LLM-based quality escalation
 - [Delivery Hero Agentic Product Knowledge Base](delivery-hero-product-knowledge-base.md) - Automates extraction of 22 product attributes and title standardization using predefined agents with knowledge distillation
 - [Walmart Ghotok - Ensemble AI for Product Categorization](walmart-ghotok-product-categorization.md) - Production ensemble combining predictive and generative AI with chain-of-thought prompting to map 400M+ SKUs across category hierarchies
 - [Grab RAG-Powered LLM for Analytics](grab-rag-analytics.md) - RAG system with Data-Arks API middleware saving 3-4 hours per report and reducing fraud investigations to minutes
