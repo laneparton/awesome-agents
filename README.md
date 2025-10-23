@@ -243,6 +243,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [LinkedIn Automated GenAI-Driven Search Quality Evaluation](examples/data-analysis/linkedin-automated-search-quality.md) by LinkedIn Engineering Team
 *20% reduction in low-quality typeahead suggestions with GPT-powered automated evaluation reducing assessment time from days/weeks to hours*
 
+**Problem: Users need to learn platform-specific query syntax and operators, creating barrier to ad-hoc data exploration**
+→ [Honeycomb Natural Language Query Assistant](examples/data-analysis/honeycomb-query-assistant.md) by Honeycomb Engineering
+*Production LLM feature converting natural language to executable queries, solving real-world challenges of latency (2-15s), context limits (5,000+ schema fields), prompt injection, and enterprise compliance*
+
 **Problem: Non-technical users can't access data insights without SQL expertise, creating engineer bottlenecks**
 → [Text-to-SQL AI Agent](examples/data-analysis/salesforce-text-to-sql-agent.md) by Salesforce Engineering Team
 *Reduced data query time from days to minutes through Slack-integrated agent with RAG-powered SQL generation and consensus validation*
