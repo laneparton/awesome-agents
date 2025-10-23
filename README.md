@@ -107,6 +107,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Wayfair Sales Agent Co-Pilot](examples/productivity/wayfair-sales-agent-copilot.md) by Bradley West and Ashequl Qadir
 *10% reduction in average handle time through AI-powered real-time response recommendations analyzing full conversation context*
 
+**Problem: Scammers targeting marketplace users with multi-message fraud patterns undetectable by single-message analysis**
+→ [Whatnot Trust & Safety - GenAI Scam Detection](examples/productivity/whatnot-trust-safety-scam-detection.md) by Charudatta (CD) Wad
+*95% of scam attempts detected proactively within minutes with 96% precision using LLM-powered conversational context analysis*
+
 ---
 
 ### 🛠️ Development & Engineering
