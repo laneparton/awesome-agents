@@ -107,6 +107,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Wayfair Sales Agent Co-Pilot](examples/productivity/wayfair-sales-agent-copilot.md) by Bradley West and Ashequl Qadir
 *10% reduction in average handle time through AI-powered real-time response recommendations analyzing full conversation context*
 
+**Problem: Salesforce employees experiencing cognitive overload from manually reading through multiple Slack channels daily**
+→ [Salesforce AI Summarist for Slack](examples/productivity/salesforce-slack-summarist.md) by Salesforce AI Research
+*Conversational AI automatically summarizing Slack channels and threads for faster catch-up and efficient multi-channel monitoring, deployed internally at Salesforce*
+
 ---
 
 ### 🛠️ Development & Engineering

@@ -31,6 +31,7 @@ Examples in this category should focus on:
 - [Vimeo Video Q&A with RAG](vimeo-video-qa-rag.md) - Production RAG system with bottom-up transcript processing and speaker detection, enabling natural language Q&A with video content
 - [Thomson Reuters Customer Support RAG](thomson-reuters-customer-support-rag.md) - GPT-4 powered RAG system reducing resolution times with provenance-backed answers from knowledge base
 - [Wayfair Sales Agent Co-Pilot](wayfair-sales-agent-copilot.md) - 10% reduction in average handle time through AI-powered real-time chat response recommendations for digital sales agents
+- [Salesforce AI Summarist for Slack](salesforce-slack-summarist.md) - Conversational AI automatically summarizing Slack channels and threads to reduce information overload at Salesforce
 
 ---
 
