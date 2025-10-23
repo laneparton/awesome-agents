@@ -107,6 +107,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Wayfair Sales Agent Co-Pilot](examples/productivity/wayfair-sales-agent-copilot.md) by Bradley West and Ashequl Qadir
 *10% reduction in average handle time through AI-powered real-time response recommendations analyzing full conversation context*
 
+**Problem: Employees needing AI assistance but lacking company-specific context, templates, and workflow integration**
+→ [Instacart Ava - Company-Wide Internal AI Assistant](examples/productivity/instacart-ava-internal-assistant.md) by Zain Adil
+*50% of company using monthly with Prompt Exchange for template sharing and Slack integration reducing thread context grind from 5-10 minutes to seconds*
+
 ---
 
 ### 🛠️ Development & Engineering
