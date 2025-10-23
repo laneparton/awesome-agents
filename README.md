@@ -107,6 +107,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Wayfair Sales Agent Co-Pilot](examples/productivity/wayfair-sales-agent-copilot.md) by Bradley West and Ashequl Qadir
 *10% reduction in average handle time through AI-powered real-time response recommendations analyzing full conversation context*
 
+**Problem: Vimeo customers facing delays and irrelevant search results when seeking support answers**
+→ [Vimeo Customer Support with Generative AI](examples/productivity/vimeo-customer-support-genai.md) by Vimeo Office of the CTO
+*RAG-powered prototype combining Zendesk articles with LangChain for immediate, contextual responses, rigorously comparing Google Vertex AI Bison and OpenAI models*
+
 ---
 
 ### 🛠️ Development & Engineering
