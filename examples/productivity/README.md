@@ -35,6 +35,7 @@ Examples in this category should focus on:
 - [Whatnot Trust & Safety - GenAI Scam Detection](whatnot-trust-safety-scam-detection.md) - 95% of scam attempts detected proactively within minutes with 96% precision using LLM-powered conversational context analysis
 - [Microsoft Ask Learn - Advanced RAG Knowledge Service](microsoft-ask-learn-rag.md) - Advanced RAG system powering Microsoft Q&A Assist and Copilot for Azure, reducing response wait time from hours to instant answers
 - [Salesforce AI Summarist for Slack](salesforce-slack-summarist.md) - Conversational AI automatically summarizing Slack channels and threads to reduce information overload at Salesforce
+- [Vimeo Customer Support with Generative AI](vimeo-customer-support-genai.md) - RAG-powered help desk chat prototype integrating Zendesk articles with LangChain for immediate, contextual customer support responses
 
 ---
 

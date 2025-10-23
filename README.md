@@ -123,6 +123,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Salesforce AI Summarist for Slack](examples/productivity/salesforce-slack-summarist.md) by Salesforce AI Research
 *Conversational AI automatically summarizing Slack channels and threads for faster catch-up and efficient multi-channel monitoring, deployed internally at Salesforce*
 
+**Problem: Vimeo customers facing delays and irrelevant search results when seeking support answers**
+→ [Vimeo Customer Support with Generative AI](examples/productivity/vimeo-customer-support-genai.md) by Vimeo Office of the CTO
+*RAG-powered prototype combining Zendesk articles with LangChain for immediate, contextual responses, rigorously comparing Google Vertex AI Bison and OpenAI models*
+
 ---
 
 ### 🛠️ Development & Engineering
