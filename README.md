@@ -111,6 +111,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Instacart Ava - Company-Wide Internal AI Assistant](examples/productivity/instacart-ava-internal-assistant.md) by Zain Adil
 *50% of company using monthly with Prompt Exchange for template sharing and Slack integration reducing thread context grind from 5-10 minutes to seconds*
 
+**Problem: Scammers targeting marketplace users with multi-message fraud patterns undetectable by single-message analysis**
+→ [Whatnot Trust & Safety - GenAI Scam Detection](examples/productivity/whatnot-trust-safety-scam-detection.md) by Charudatta (CD) Wad
+*95% of scam attempts detected proactively within minutes with 96% precision using LLM-powered conversational context analysis*
+
 ---
 
 ### 🛠️ Development & Engineering

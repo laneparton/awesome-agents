@@ -32,6 +32,7 @@ Examples in this category should focus on:
 - [Thomson Reuters Customer Support RAG](thomson-reuters-customer-support-rag.md) - GPT-4 powered RAG system reducing resolution times with provenance-backed answers from knowledge base
 - [Wayfair Sales Agent Co-Pilot](wayfair-sales-agent-copilot.md) - 10% reduction in average handle time through AI-powered real-time chat response recommendations for digital sales agents
 - [Instacart Ava - Company-Wide Internal AI Assistant](instacart-ava-internal-assistant.md) - 50% of company using monthly with Prompt Exchange for template sharing and Slack integration reducing context grind from 5-10 minutes to seconds
+- [Whatnot Trust & Safety - GenAI Scam Detection](whatnot-trust-safety-scam-detection.md) - 95% of scam attempts detected proactively within minutes with 96% precision using LLM-powered conversational context analysis
 
 ---
 
