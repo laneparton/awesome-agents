@@ -127,6 +127,10 @@ We're not interested in theoretical use cases or marketing content. Every exampl
 → [Vimeo Customer Support with Generative AI](examples/productivity/vimeo-customer-support-genai.md) by Vimeo Office of the CTO
 *RAG-powered prototype combining Zendesk articles with LangChain for immediate, contextual responses, rigorously comparing Google Vertex AI Bison and OpenAI models*
 
+**Problem: Faculty unable to answer 250+ students' questions about course material before class**
+→ [Harvard ChatLTV AI Teaching Assistant](examples/productivity/harvard-chatltv-teaching-assistant.md) by Professor Jeffrey Bussgang
+*3,000+ queries from 170 students across full semester with RAG-powered Slack chatbot trained on proprietary 15M-word corpus, enabling automated project feedback at scale*
+
 ---
 
 ### 🛠️ Development & Engineering

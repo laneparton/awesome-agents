@@ -36,6 +36,7 @@ Examples in this category should focus on:
 - [Microsoft Ask Learn - Advanced RAG Knowledge Service](microsoft-ask-learn-rag.md) - Advanced RAG system powering Microsoft Q&A Assist and Copilot for Azure, reducing response wait time from hours to instant answers
 - [Salesforce AI Summarist for Slack](salesforce-slack-summarist.md) - Conversational AI automatically summarizing Slack channels and threads to reduce information overload at Salesforce
 - [Vimeo Customer Support with Generative AI](vimeo-customer-support-genai.md) - RAG-powered help desk chat prototype integrating Zendesk articles with LangChain for immediate, contextual customer support responses
+- [Harvard ChatLTV AI Teaching Assistant](harvard-chatltv-teaching-assistant.md) - 3,000+ queries from 170 students with RAG-powered Slack chatbot trained on proprietary course corpus, enabling at-scale faculty support and automated project feedback
 
 ---
 
