@@ -1,3 +1,10 @@
+---
+title: "Vimeo Video Q&A with RAG"
+category: "Productivity & Automation"
+company: "Vimeo"
+date: "July 2024"
+---
+
 # Vimeo Video Q&A with RAG
 
 **Company**: Vimeo

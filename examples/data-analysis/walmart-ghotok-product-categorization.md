@@ -1,3 +1,10 @@
+---
+title: "Walmart Ghotok - Ensemble AI for Product Categorization"
+category: "Data Analysis"
+company: "Walmart"
+date: "July 2024"
+---
+
 # Walmart Ghotok - Ensemble AI for Product Categorization
 
 **Company**: Walmart

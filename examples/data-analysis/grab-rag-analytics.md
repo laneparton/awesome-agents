@@ -1,3 +1,10 @@
+---
+title: "Grab RAG-Powered LLM for Analytics"
+category: "Data Analysis"
+company: "Grab"
+date: "October 2024"
+---
+
 # Grab RAG-Powered LLM for Analytics
 
 **Company**: Grab

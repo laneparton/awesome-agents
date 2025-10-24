@@ -1,3 +1,12 @@
+---
+title: "Airbnb Automation Platform v2 - LLM-Powered Conversational AI"
+category: "Productivity & Automation"
+company: "Airbnb"
+author: "Chutian Wang, Zhiheng Xu, Paul Lou, Ziyi Wang, Jiayu Lou, Liuming Zhang, Jingwen Qiang, Clint Kelly, Lei Shi, Dan Zhao, Xu Hu, Jianqi Liao, Zecheng Xu, Tong Chen"
+source: "https://medium.com/airbnb-engineering/automation-platform-v2-improving-conversational-ai-at-airbnb-d86c9386e0cb"
+date: "October 28, 2024"
+---
+
 # Airbnb Automation Platform v2 - LLM-Powered Conversational AI
 
 **Source**: [Airbnb Engineering Blog - Automation Platform v2: Improving Conversational AI at Airbnb](https://medium.com/airbnb-engineering/automation-platform-v2-improving-conversational-ai-at-airbnb-d86c9386e0cb)

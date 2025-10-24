@@ -4,13 +4,11 @@ company: "Google"
 author: "Lambert Rosique, Jan Keller, Diana Kramer, Alexandra Bowen, Andrew Cho"
 source: "https://security.googleblog.com/2024/04/accelerating-incident-response-using.html"
 date: "2024-04"
-category: "development"
+category: "Development & Engineering"
 tags: ["incident-response", "document-generation", "prompt-engineering", "production", "workflow-automation"]
 description: "51% time savings in incident summary writing through LLM-generated summaries that outperformed human-written equivalents by 10%"
-
-# Problem Classification
-problemPattern: "document-generation"
-problemComplexity: "medium"
+problemPattern: "workflow-automation"
+problemComplexity: "moderate"
 
 # Architecture
 architecture:

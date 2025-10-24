@@ -1,3 +1,12 @@
+---
+title: "Duolingo DuoRadio - Scaling Content Generation with Generative AI"
+category: "Content Creation"
+company: "Duolingo"
+author: "Luis Mas Castillo, Sophie Mackey, Cindy Berger"
+source: "https://blog.duolingo.com/scaling-duoradio/"
+date: "March 11, 2025"
+---
+
 # Duolingo DuoRadio - Scaling Content Generation with Generative AI
 
 **Source**: [Duolingo Engineering Blog - Using generative AI to scale DuoRadio 10x faster](https://blog.duolingo.com/scaling-duoradio/)

@@ -1,3 +1,10 @@
+---
+title: "Dropbox AI-Powered File Summaries and Q&A"
+category: "Productivity & Automation"
+company: "Dropbox"
+date: "October 2024"
+---
+
 # Dropbox AI-Powered File Summaries and Q&A
 
 **Company**: Dropbox

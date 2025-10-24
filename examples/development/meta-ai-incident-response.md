@@ -1,3 +1,12 @@
+---
+title: "Meta AI for Efficient Incident Response"
+category: "Development & Engineering"
+company: "Meta"
+author: "Diana Hsu, Michael Neu, Mohamed Farrag, Rahul Kindi"
+source: "https://engineering.fb.com/2024/06/24/data-infrastructure/leveraging-ai-for-efficient-incident-response/"
+date: "June 24, 2024"
+---
+
 # Meta AI for Efficient Incident Response
 
 **Source**: [Meta Engineering Blog - Leveraging AI for efficient incident response](https://engineering.fb.com/2024/06/24/data-infrastructure/leveraging-ai-for-efficient-incident-response/)

@@ -1,3 +1,12 @@
+---
+title: "Grab Hubble - Conversational Data Discovery with LLMs"
+category: "Data Analysis"
+company: "Grab"
+author: "Shreyas Parbat, Amanda Ng, Yucheng Zeng, Vinnson Lee, Feng Cheng, Varun Torka"
+source: "https://engineering.grab.com/hubble-data-discovery"
+date: "September 26, 2024"
+---
+
 # Grab Hubble - Conversational Data Discovery with LLMs
 
 **Source**: [Grab Engineering Blog - Enabling conversational data discovery with LLMs at Grab](https://engineering.grab.com/hubble-data-discovery)

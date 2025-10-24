@@ -1,3 +1,12 @@
+---
+title: "DoorDash LLM-Based Dasher Support Automation"
+category: "Productivity & Automation"
+company: "DoorDash"
+author: "Zhe Jia, Shuai Wang, Aditi Bamba, Martin Wang"
+source: "https://careers.doordash.com/blog/large-language-modules-based-dasher-support-automation/"
+date: "September 17, 2024"
+---
+
 # DoorDash LLM-Based Dasher Support Automation
 
 **Source**: [DoorDash Careers Blog - Path to high-quality LLM-based Dasher support automation](https://careers.doordash.com/blog/large-language-modules-based-dasher-support-automation/)

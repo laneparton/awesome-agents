@@ -1,3 +1,10 @@
+---
+title: "Thomson Reuters Customer Support RAG System"
+category: "Productivity & Automation"
+company: "Thomson Reuters"
+date: "August 2023"
+---
+
 # Thomson Reuters Customer Support RAG System
 
 **Company**: Thomson Reuters
