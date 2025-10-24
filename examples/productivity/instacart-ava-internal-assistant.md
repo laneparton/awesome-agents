@@ -7,6 +7,48 @@ date: "2023-09"
 category: "productivity"
 tags: ["developer-productivity", "workflow-automation", "knowledge-retrieval", "enterprise", "production"]
 description: "50% of Instacart employees using monthly, 900+ weekly, with Prompt Exchange for template sharing and Slack integration reducing context grind from 5-10 minutes to seconds"
+
+# Problem Classification
+problemPattern: "developer-productivity"
+problemComplexity: "medium"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "organizational-infrastructure-platform"
+  rationale: "Democratizing AI through organizational infrastructure (Prompt Exchange, Slack integration, conversation sharing) rather than individual access dramatically increases adoption and impact; Prompt Exchange enables domain experts to encode expertise into shareable templates reducing barrier to entry for non-technical users; Slack integration meets users where they work eliminating 5-10 minute context grind; unfurled conversation links increase organic awareness; GPT-4 32K context handles longer conversations while automatic model upgrades and code-copying shortcuts improve ergonomics"
+  components: ["web-interface", "prompt-exchange", "slack-integration", "conversation-sharing", "fast-breakdown-template", "support-sidekick", "automatic-model-selection"]
+
+# What Made It Work
+breakthroughInsight: "Democratizing AI through organizational infrastructure rather than individual access dramatically increases adoption and impact - building company-specific features (Prompt Exchange, Slack integration, conversation sharing) proved more valuable than raw AI capabilities, enabling knowledge sharing and reducing friction; individual AI tool access doesn't enable organizational learning or best practice sharing; template sharing allows domain experts to encode expertise for others to leverage; unfurled conversation links increase product awareness and adoption organically"
+
+criticalConstraints:
+  - "company-wide-scale"
+  - "individual-chatgpt-accounts-fragmented"
+  - "no-prompt-sharing-mechanism"
+  - "context-switching-friction"
+  - "5-10-minute-thread-summary-time"
+  - "non-technical-user-adoption"
+  - "data-privacy-security-guarantees"
+  - "internal-documentation-integration"
+
+antiPatterns:
+  - "individual-access-only: Providing individual ChatGPT accounts without organizational infrastructure prevents knowledge sharing and best practice distribution - company-specific features (Prompt Exchange, conversation sharing) enable organizational learning exponentially more valuable than isolated access"
+  - "blank-text-box-barrier: Starting with empty interface creates barrier to entry for non-technical users unfamiliar with prompt engineering - Prompt Exchange template library allows browsing and reusing proven prompts reducing friction dramatically"
+  - "external-context-switching: Requiring users to navigate to external websites and paste context repeatedly introduces 5-10 minute overhead - Slack integration with @Ava mentions enables instant thread summarization meeting users where they work"
+  - "siloed-prompt-development: Teams independently creating similar prompts duplicates effort and prevents cross-functional learning - Prompt Exchange with starring and sharing enables domain experts to encode expertise for organization-wide leverage"
+
+# Tech Stack
+techStack:
+  framework: "custom-web-platform"
+  llmProvider: "OpenAI-GPT-4-GPT-3.5"
+  knowledgeRetrieval: "prompt-templates"
+  otherTools: ["Slack-bot-integration", "conversation-search", "automatic-model-upgrades", "code-copying-shortcuts", "unfurled-links", "Support-Sidekick-RAG"]
+
+# Scale
+scale:
+  volume: "50% of Instacart employees using monthly, 900+ using weekly, Prompt Exchange user-created template library, company-wide adoption across engineering, Ops, Recruiting, Marketing, HR"
+  latency: "20+ minutes per session average, significant code generation usage, thread summarization reduces 5-10 minute context grind to seconds, 80% development time on UI vs 20% on AI/prompts"
 ---
 
 # Instacart Ava - Company-Wide Internal AI Assistant

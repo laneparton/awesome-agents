@@ -7,21 +7,48 @@ date: "2024-07"
 category: "data-analysis"
 tags: ["multi-agent", "rag", "text-to-sql", "workflow-automation", "knowledge-retrieval", "production", "enterprise"]
 description: "Multi-chain RAG architecture with Router Supervisor generating production-quality SQL queries in 30-60 seconds through domain-enriched metadata and ReAct prompting"
-problem_type: "95% of employees using data but >50% unable to write SQL or validate query reliability across business domains"
-architecture_pattern: "multi-chain-rag-with-router-supervisor"
-key_components: ["router-supervisor", "vector-store-pipeline", "react-prompt-engineering", "llmops-infrastructure", "slack-interface"]
-breakthrough_insight: "Enriching table metadata with business terminology, few-shot examples, and multi-stage retrieval algorithms transforms generic GPT-4 into domain-expert Text-to-SQL capable of production use"
-anti_patterns_avoided: ["simple-prompt-only", "generic-metadata", "single-retriever", "no-evaluation-framework"]
-tech_stack:
-  llms: ["GPT-4o", "GPT-3.5"]
-  frameworks: ["LangChain", "LangServe"]
-  infrastructure: ["VectorDB", "Microsoft Azure OpenAI", "Slack API"]
-  methods: ["RAG", "ReAct", "Chain-of-Thought", "Few-shot learning"]
-scale_metrics:
-  response_time: "30-60 seconds"
-  ab_tests_conducted: "500+"
-  development_timeline: "6 months (task force)"
-  hackathon_result: "1st place winner"
+
+# Problem Classification
+problemPattern: "text-to-sql"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "multi-agent"
+  pattern: "router-supervisor-with-specialized-chains"
+  rationale: "Router Supervisor categorizes questions and routes to specialized chains (query generation, interpretation, validation, table exploration, log guides) enabling targeted processing; multi-stage retrieval refines questions, extracts business terms, retrieves metadata, and selects few-shot examples at different stages reducing hallucination; ReAct prompting combines chain-of-thought reasoning with dynamic data search/selection for step-by-step generation; domain-enriched metadata (DDL, descriptions, terminology glossary, few-shot examples) transforms generic GPT-4 into domain expert; LLMOps infrastructure (A/B testing, leaderboard, caching, monitoring) enabled 500+ experiments for systematic improvement"
+  components: ["router-supervisor", "specialized-chains", "multi-stage-retrieval", "react-prompting", "vector-store-pipeline", "business-terminology-glossary", "few-shot-examples", "llmops-infrastructure", "slack-interface", "feedback-loop"]
+
+# What Made It Work
+breakthroughInsight: "Enriching table metadata with business terminology, few-shot examples from domain experts, and multi-stage retrieval algorithms transforms generic GPT-4 into domain-expert Text-to-SQL capable of production use - simply using GPT-4 alone produces queries lacking company context, ignoring data policies, and suffering hallucinations, but combination of (1) augmented documentation with detailed column descriptions and business glossaries, (2) sophisticated search algorithms refining questions and selecting relevant examples, and (3) ReAct prompting reasoning step-by-step while dynamically retrieving context enables query quality that employees trust for actual work; 'garbage in, garbage out' principle applies where foundation model performance capped by input quality"
+
+criticalConstraints:
+  - "95-percent-employees-using-data"
+  - "50-percent-plus-cannot-write-sql"
+  - "business-logic-complexity"
+  - "data-reliability-concerns"
+  - "terminology-inconsistency"
+  - "analyst-bottleneck"
+  - "dozens-business-domains"
+  - "production-quality-requirements"
+
+antiPatterns:
+  - "simple-prompt-only: Using GPT-4 with basic prompt produces queries lacking company context, ignoring data policies, and suffering hallucinations - domain-enriched metadata and multi-stage retrieval essential for production quality"
+  - "generic-metadata-without-enrichment: Table schemas alone insufficient for business logic encoding - augmented documentation with detailed column descriptions, business terminology glossaries, and few-shot SQL examples from domain experts required"
+  - "single-stage-retrieval: Retrieving all context at once introduces irrelevant information causing hallucinations - multi-stage approach (refine question → extract terms → retrieve metadata → select examples) at different stages reduces noise"
+  - "no-systematic-evaluation: Building complex multi-chain system without evaluation framework prevents improvement - custom metrics, automated testing, and gamified leaderboard enabled 500+ A/B tests to systematically enhance performance"
+
+# Tech Stack
+techStack:
+  framework: "LangChain-LangServe"
+  llmProvider: "GPT-4o-Azure-OpenAI"
+  knowledgeRetrieval: "multi-stage-rag"
+  otherTools: ["VectorDB", "ReAct-prompting", "chain-of-thought", "few-shot-learning", "Slack-API", "GPT-caching", "monitoring-dashboards", "CI-CD-deployment"]
+
+# Scale
+scale:
+  volume: "95% of employees using data (>50% cannot write SQL), dozens of business domains, 1st place Woowa Hackathon 2023 winner promoted to 6-month task force, 500+ A/B tests conducted"
+  latency: "30-60 seconds per query generation, production-quality SQL that employees directly reference for work, feedback loops expand standardized knowledge to other users via GPT cache"
 ---
 
 # Delivery Hero QueryAnswerBird AI Data Analyst - Text-to-SQL

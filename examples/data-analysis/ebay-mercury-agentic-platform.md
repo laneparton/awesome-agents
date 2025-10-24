@@ -7,21 +7,48 @@ date: "2025-04"
 category: "data-analysis"
 tags: ["agent-framework", "rag", "knowledge-retrieval", "semantic-search", "production", "enterprise"]
 description: "Agentic framework serving hundreds of millions of customers across 2 billion+ listings with hundreds of ms latency through plug-and-play agent components"
-problem_type: "Scaling LLM applications to serve hundreds of millions of customers across billions of item listings cost-effectively while maintaining low latency"
-architecture_pattern: "agentic-framework-with-plug-and-play-components"
-key_components: ["agent-abstraction", "rag-integration", "listing-matching-engine", "nrt-execution-platform", "text-to-listing-retrieval"]
-breakthrough_insight: "Agent abstraction decoupling input/output from implementation allows multiple variations honoring same contract but differing in complexity/models/optimization, maintaining strong inter-agent compatibility and reusability for rapid development"
-anti_patterns_avoided: ["monolithic-coupling", "hardcoded-models", "synchronous-processing-at-scale", "single-retrieval-approach"]
-tech_stack:
-  llms: ["Multiple LLMs across providers", "Fine-tuned models (Llama, Mistral, Lillium)"]
-  frameworks: ["Mercury agentic framework", "Chains", "LangGraph patterns"]
-  infrastructure: ["NRT execution platform", "Distributed queue-based messaging", "Vector databases", "Common Crawl", "Google Search API"]
-  methods: ["RAG", "KNN search", "BERT-based embeddings", "Personalized ranking", "Content moderation"]
-scale_metrics:
-  users: "Hundreds of millions of customers"
-  inventory: "2 billion+ active listings"
-  latency: "As low as hundreds of ms"
-  deployment: "Industrial scale across numerous experiences"
+
+# Problem Classification
+problemPattern: "recommendation-system"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "multi-agent"
+  pattern: "plug-and-play-agent-framework"
+  rationale: "Agent abstraction decoupling input/output contracts from implementation allows multiple variations honoring same interface but differing in complexity/models/optimization; plug-and-play components enable strong inter-agent compatibility and reusability; NRT distributed queue-based execution platform smooths traffic peaks for consistent GPU utilization; Listing Matching Engine bridges LLM text outputs to 2B+ live inventory through hybrid exact-match and semantic search; OOP engineering standards enable complex systems built from simple well-defined parts"
+  components: ["agent-abstraction", "chain-orchestration", "rag-integration", "listing-matching-engine", "nrt-execution-platform", "text-to-listing-retrieval", "content-moderation", "guardrails"]
+
+# What Made It Work
+breakthroughInsight: "Agent abstraction decoupling input/output from implementation allows multiple variations honoring same contract but differing in complexity/models/optimization - maintaining strong inter-agent compatibility and reusability for rapid development; if solution works in developer's local environment for single instance, platform automatically scales to eBay's industrial needs serving hundreds of millions across billions of listings; NRT distributed queue-based messaging smooths user activity peaks/valleys for consistent controllable throughput and better GPU utilization"
+
+criticalConstraints:
+  - "hundreds-millions-customers-scale"
+  - "2-billion-plus-listings"
+  - "hundreds-ms-latency-requirements"
+  - "unstructured-listing-data-volume"
+  - "cost-efficiency-llm-inference"
+  - "dynamic-inventory-access"
+  - "reusability-across-use-cases"
+  - "model-provider-flexibility"
+
+antiPatterns:
+  - "monolithic-agent-coupling: Tightly coupling agents to specific models or implementation details prevents independent evolution and optimization - agent contracts with defined inputs/outputs allow swapping implementations while maintaining downstream compatibility"
+  - "synchronous-user-dependent-processing: Processing tied to user activity patterns creates GPU utilization peaks/valleys and unpredictable costs - NRT distributed queue-based platform smooths traffic for consistent controllable throughput across all use cases"
+  - "llm-only-inventory-access: LLMs lack access to current insights into eBay's dynamic 2B+ item inventory - Listing Matching Engine essential to bridge LLM text outputs to live listings through hybrid exact-match and semantic retrieval"
+  - "custom-infrastructure-per-use-case: Building separate infrastructure for each recommendation experience doesn't scale - reusable plug-and-play components with defined contracts enable rapid development where each new use case improves the entire system"
+
+# Tech Stack
+techStack:
+  framework: "Mercury-agentic-framework"
+  llmProvider: "multiple-providers-fine-tuned-models"
+  knowledgeRetrieval: "rag-with-multiple-sources"
+  otherTools: ["Chains", "LangGraph-patterns", "NRT-execution-platform", "distributed-queue-messaging", "vector-databases", "Common-Crawl", "Google-Search-API", "KNN-search", "BERT-embeddings", "content-moderation"]
+
+# Scale
+scale:
+  volume: "Hundreds of millions of customers, 2 billion+ active listings, industrial scale deployment across numerous experiences, multiple LLM providers and fine-tuned models (Llama, Mistral, Lillium)"
+  latency: "As low as hundreds of ms for recommendations, resilient self-healing distributed processing with automated retry, consistent controllable throughput via on-the-fly configuration"
 ---
 
 # eBay Mercury - Agentic AI Platform for LLM-Powered Recommendation Experiences

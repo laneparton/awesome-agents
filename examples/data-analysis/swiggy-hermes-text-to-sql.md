@@ -7,21 +7,48 @@ date: "2024-07"
 category: "data-analysis"
 tags: ["rag", "text-to-sql", "workflow-automation", "knowledge-retrieval", "production", "developer-productivity"]
 description: "Charter-based multi-stage RAG system delivering SQL queries in <2 minutes via Slack, serving hundreds of users across product, DS, and analyst teams"
-problem_type: "Data-driven decisions requiring specific numbers from SQL queries, with users lacking table knowledge, access, or SQL skills"
-architecture_pattern: "multi-stage-rag-with-domain-charters"
-key_components: ["charter-compartmentalization", "knowledge-base", "multi-stage-retrieval", "query-validation", "slack-integration"]
-breakthrough_insight: "Compartmentalizing by business charters (Swiggy Food, Instamart, etc.) with charter-specific metadata dramatically improved performance vs kitchen-sink approach treating all data uniformly"
-anti_patterns_avoided: ["monolithic-metadata", "generic-cross-domain-models", "no-query-validation", "ignoring-metadata-quality"]
-tech_stack:
-  llms: ["GPT-4o", "GPT-3.5 (V1)"]
-  frameworks: ["Databricks", "AWS Lambda"]
-  infrastructure: ["Slack", "Snowflake", "Vector embeddings"]
-  methods: ["RAG", "Few-shot prompting", "Vector similarity search"]
-scale_metrics:
-  users: "Hundreds of users"
-  queries_processed: "Several thousand queries"
-  turnaround_time: "<2 minutes average"
-  user_types: "Product managers, data scientists, analysts"
+
+# Problem Classification
+problemPattern: "text-to-sql"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "charter-based-multi-stage-rag"
+  rationale: "Compartmentalizing by business charters (Food, Instamart, Genie) with charter-specific metadata/models dramatically improved performance vs kitchen-sink approach treating all domains uniformly; multi-stage retrieval (metrics → tables/columns → few-shot SQL → structured prompt) progressively narrows context; query validation with retry loop catches errors before delivery; modular charter lifecycle enables independent onboarding/testing/iteration per business unit; Slack integration delivers SQL+results directly in workflow without context switching"
+  components: ["charter-compartmentalization", "knowledge-base", "multi-stage-retrieval", "metrics-retrieval", "table-column-retrieval", "few-shot-sql-retrieval", "query-validation", "slack-integration", "feedback-collection"]
+
+# What Made It Work
+breakthroughInsight: "Compartmentalizing by business charters (Swiggy Food, Instamart, etc.) with charter-specific metadata dramatically improved performance vs kitchen-sink approach treating all data uniformly - sheer volume of tables/columns combined with necessity to incorporate Swiggy-specific context (Food Marketplace metrics differ from Instamart but are similar) meant treating all business needs as the same did not work; table metadata generated through data governance efforts crucial to overall performance, which heavily depends on complexity of use cases and quality of metadata in knowledge base"
+
+criticalConstraints:
+  - "hundreds-of-tables-across-domains"
+  - "domain-specific-context-required"
+  - "sql-skills-barrier"
+  - "data-access-permissions"
+  - "decision-making-time-pressure"
+  - "non-technical-user-base"
+  - "context-token-limits"
+  - "metadata-quality-dependency"
+
+antiPatterns:
+  - "kitchen-sink-metadata: Treating all business domains (Food, Instamart, Genie) uniformly with monolithic metadata failed - charter compartmentalization with domain-specific metadata/models essential for performance as volume increases and Swiggy-specific context required"
+  - "v1-simple-rag-only: Straightforward vector search with user-provided metadata and GPT-3.5 declined with query complexity - multi-stage retrieval pipeline (metrics → tables → columns → few-shot SQL) with GPT-4o and knowledge base required"
+  - "no-query-validation-loop: Generating SQL without executing to check for errors leads to high failure rates - validation with retry loop (relay errors back to LLM for correction) essential for usability"
+  - "ignoring-metadata-governance: Performance heavily depends on quality of charter-specific metadata in knowledge base - treating metadata as afterthought vs. core data governance effort bottlenecks entire system"
+
+# Tech Stack
+techStack:
+  framework: "Databricks-pipeline"
+  llmProvider: "GPT-4o"
+  knowledgeRetrieval: "charter-based-knowledge-base"
+  otherTools: ["AWS-Lambda-middleware", "Slack-integration", "vector-embeddings", "few-shot-prompting", "query-validation", "Snowflake"]
+
+# Scale
+scale:
+  volume: "Hundreds of users (product managers, data scientists, analysts), several thousand queries processed, multiple business charters (Food, Instamart, Genie, etc.)"
+  latency: "<2 minutes average turnaround time from Slack question to SQL + results delivery, automated onboarding cron for new charters with QA validation"
 ---
 
 # Swiggy Hermes - Charter-Based Text-to-SQL with Multi-Stage RAG

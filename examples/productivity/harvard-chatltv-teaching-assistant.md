@@ -7,6 +7,48 @@ date: "2023-12"
 category: "productivity"
 tags: ["rag", "knowledge-retrieval", "customer-support", "production", "enterprise"]
 description: "3,000+ queries from 170 students across full semester with RAG-powered Slack chatbot trained on proprietary course corpus, enabling at-scale faculty support and automated project feedback"
+
+# Problem Classification
+problemPattern: "knowledge-retrieval"
+problemComplexity: "medium"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "rag-with-dual-knowledge-bases"
+  rationale: "RAG-based Q&A retrieves relevant context from vector database and generates answers with source citations avoiding hallucinations through explicit prompting ('Do not make up answers'); dual knowledge bases (separate corpuses for course content and administrative logistics) reduce retrieval noise and improve precision; Slack integration eliminates context switching enabling seamless student workflow; Azure OpenAI deployment protects proprietary HBS content from public model retraining; 500 Q&A test sets validate system accuracy before student deployment ensuring reliability essential for educational trust"
+  components: ["rag-based-qa", "dual-knowledge-bases", "vector-retrieval", "source-citations", "slack-integration", "custom-gpt-feedback", "testing-infrastructure"]
+
+# What Made It Work
+breakthroughInsight: "RAG systems need manual + automated testing infrastructure for reliability in education - Harvard built 500 Q&A test sets to validate system accuracy before student deployment, recognizing that unreliable answers would undermine trust more than no answers at all; separate corpuses for course content vs administrative content reduced retrieval noise; 99% private usage showed students value confidential preparation space over public collaboration; Azure OpenAI instead of public APIs prevents proprietary content from entering model training protecting IP"
+
+criticalConstraints:
+  - "250-plus-students-scale"
+  - "limited-faculty-availability"
+  - "student-question-hesitation"
+  - "final-project-feedback-impossible"
+  - "preparation-level-invisibility"
+  - "proprietary-course-content"
+  - "hallucination-credibility-risk"
+  - "full-semester-deployment"
+
+antiPatterns:
+  - "no-testing-infrastructure: Launching RAG system without rigorous validation leads to hallucinations that damage credibility more than no answers - 500 Q&A test sets essential to validate accuracy before student deployment in educational context where trust is paramount"
+  - "monolithic-knowledge-base: Combining course content and administrative content in single corpus introduces retrieval noise reducing precision - dual knowledge bases (separate corpuses) improve answer quality by reducing irrelevant context"
+  - "public-llm-api-for-proprietary-content: Using public OpenAI APIs risks proprietary HBS course content entering model training data - Azure OpenAI deployment essential for IP protection preventing content from public model retraining"
+  - "public-only-access: Forcing students to ask questions publicly discourages participation on 'basic' questions - 99% private usage shows students value confidential preparation space driving 3,000+ queries from 170 students (57% cohort)"
+
+# Tech Stack
+techStack:
+  framework: "LangChain"
+  llmProvider: "Azure-OpenAI-GPT-4"
+  knowledgeRetrieval: "rag-dual-corpuses"
+  otherTools: ["Pinecone-vector-database", "Slack-integration", "Custom-GPT-feedback", "500-QA-test-sets", "explicit-prompting", "source-citation-enforcement"]
+
+# Scale
+scale:
+  volume: "200-document corpus (15 million words), dual knowledge bases (course content + administrative logistics), 500 Q&A test sets for validation, 3,000+ queries from ~170 students (57% of 250-student cohort), 24 case sessions, Custom GPT feedback to 125+ final projects"
+  latency: "~130 queries per case, 40% of users rated answer quality 4 or 5 on 5-point scale, 99% private usage, full semester deployment, 2-hour setup for Custom GPT feedback tool, ~2-3 person-months development (8,000 backend + 9,000-line CMS)"
 ---
 
 # Harvard ChatLTV AI Teaching Assistant

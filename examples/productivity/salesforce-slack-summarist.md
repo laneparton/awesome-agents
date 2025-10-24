@@ -7,6 +7,48 @@ date: "2022-12"
 category: "productivity"
 tags: ["workflow-automation", "knowledge-retrieval", "production", "enterprise"]
 description: "Conversational AI automatically summarizing Slack channels and threads to reduce information overload, deployed at Salesforce for faster catch-up and multi-channel monitoring"
+
+# Problem Classification
+problemPattern: "workflow-automation"
+problemComplexity: "medium"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "on-demand-summarization-with-privacy"
+  rationale: "Deploying AI summarization directly within communication tools eliminates context-switching overhead; on-demand execution (via /summary command) and scheduled digests provide flexible consumption models; conversation disentanglement separates interleaved discussions from mixed message streams enabling coherent summaries; thread importance identification (reactions, reply patterns) surfaces key decisions; ad-hoc execution model with no data storage addresses enterprise privacy concerns; linked summaries balance brevity with full context access"
+  components: ["on-demand-summaries", "scheduled-digests", "conversation-disentanglement", "thread-importance-identification", "linked-summaries", "privacy-first-execution"]
+
+# What Made It Work
+breakthroughInsight: "Deploying AI summarization directly within communication tools eliminates context-switching overhead and reduces information overload for knowledge workers - by meeting users where they work (Slack) rather than requiring external tools, AI Summarist enables more efficient multi-channel monitoring and faster catch-up after time away; privacy-first architecture (ad-hoc execution, no storage) addresses enterprise data concerns while flexible triggers (on-demand commands + scheduled digests) empower users to control information consumption"
+
+criticalConstraints:
+  - "multiple-channel-cognitive-overload"
+  - "catch-up-time-after-absence"
+  - "interleaved-conversation-complexity"
+  - "important-information-buried"
+  - "context-switching-overhead"
+  - "enterprise-data-privacy"
+  - "real-time-execution-requirements"
+  - "no-data-retention-allowed"
+
+antiPatterns:
+  - "external-summarization-tools: Requiring users to copy Slack content into separate summarization tools introduces context-switching overhead and friction - integrating directly into Slack via commands (/summary, /summarize) meets users where they work"
+  - "always-on-summarization: Continuous automated summaries without user control creates notification fatigue - flexible triggers (on-demand commands + scheduled daily/weekly digests) empower users to control consumption patterns"
+  - "single-message-summarization: Treating each message independently ignores conversation flow and interleaved discussions - conversation disentanglement separating mixed message streams enables coherent summaries capturing actual discussion threads"
+  - "data-retention-for-improvement: Storing messages and summaries for model training creates enterprise privacy concerns - ad-hoc execution model processing requests on-demand without retaining data addresses compliance requirements"
+
+# Tech Stack
+techStack:
+  framework: "custom-summarization-system"
+  llmProvider: "dialogue-summarization-AI"
+  knowledgeRetrieval: "slack-api"
+  otherTools: ["conversation-disentanglement", "thread-importance-detection", "linked-summaries", "ad-hoc-execution", "scheduled-digest-automation"]
+
+# Scale
+scale:
+  volume: "Production deployment at Salesforce for internal employee productivity, multiple channels and timeframes supported, daily and weekly digest schedules"
+  latency: "On-demand summaries via /summary or /summarize commands, scheduled automated digests, linked summaries for context navigation, no data storage post-delivery ensuring privacy compliance"
 ---
 
 # Salesforce AI Summarist for Slack

@@ -7,21 +7,48 @@ date: "2025-05"
 category: "productivity"
 tags: ["workflow-automation", "rag", "knowledge-retrieval", "document-analysis", "production"]
 description: "Enhanced agentic RAG achieving 27% relative increase in acceptable answers and 60% reduction in incorrect advice through enriched document processing and LLM-powered agents"
-problem_type: "On-call support copilot providing incomplete, inaccurate responses failing to retrieve relevant information from knowledge base at SME quality standards"
-architecture_pattern: "enhanced-agentic-rag-with-enriched-processing"
-key_components: ["enriched-document-processing", "query-optimizer-agent", "source-identifier-agent", "hybrid-retrieval", "post-processor-agent", "llm-as-judge"]
-breakthrough_insight: "Enriched document processing with LLM-powered table formatting and metadata enrichment (summaries, FAQs, keywords) combined with agentic pre/post retrieval steps dramatically improves accuracy beyond traditional RAG"
-anti_patterns_avoided: ["traditional-pdf-loaders-losing-formatting", "simple-semantic-similarity-only", "single-retrieval-method", "manual-sme-evaluation-bottleneck"]
-tech_stack:
-  llms: ["LLMs for agents and answer generation"]
-  frameworks: ["Langfx (Uber internal LangChain service)", "LangGraph", "Michelangelo"]
-  infrastructure: ["Vector store", "BM25 retriever", "Offline feature store", "Google Docs API"]
-  methods: ["RAG", "Custom document loaders", "LLM-powered enrichment", "Hybrid retrieval (vector + BM25)", "LLM-as-Judge evaluation"]
-scale_metrics:
-  improvement: "27% relative increase in acceptable answers"
-  error_reduction: "60% relative reduction in incorrect advice"
-  deployment: "Multiple security and privacy help channels"
-  evaluation_speedup: "Weeks to minutes for experiment evaluation"
+
+# Problem Classification
+problemPattern: "knowledge-retrieval"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "multi-agent"
+  pattern: "enhanced-agentic-rag-with-enriched-processing"
+  rationale: "Traditional PDF loaders lose critical structure (tables, formatting) fragmenting context while simple semantic similarity retrieves irrelevant content when documents have subtle distinctions; custom Google Docs loader with LLM-powered table markdown conversion and metadata enrichment (summaries, FAQs, keywords) preserves structure; Query Optimizer agent refines ambiguous queries and breaks complex queries into simpler ones; Source Identifier agent narrows document subset using document list artifact; hybrid retrieval (vector + BM25 with enriched metadata) combines semantic and literal matching; Post-Processor agent de-duplicates and structures context; LLM-as-Judge automation reduces evaluation from weeks to minutes enabling rapid iteration"
+  components: ["enriched-document-processing", "custom-google-docs-loader", "llm-powered-table-formatting", "metadata-enrichment", "query-optimizer-agent", "source-identifier-agent", "hybrid-retrieval", "post-processor-agent", "llm-as-judge-evaluation"]
+
+# What Made It Work
+breakthroughInsight: "Enriched document processing with LLM-powered table formatting and metadata enrichment (summaries, FAQs, keywords) combined with agentic pre/post retrieval steps dramatically improves accuracy beyond traditional RAG - traditional PDF loaders lose critical structure (tables, formatting) fragmenting context, while simple semantic similarity retrieves irrelevant content when documents have subtle distinctions; by preserving structure through custom loaders with LLM-enrichment and adding intelligent agents to optimize queries, identify sources, and structure context, system bridges gap between basic RAG and SME-quality precision; data quality foundation critical as model quality depends on data quality"
+
+criticalConstraints:
+  - "sme-quality-standards-required"
+  - "security-privacy-policy-criticality"
+  - "incomplete-inaccurate-responses"
+  - "ambiguous-context-lacking-queries"
+  - "pdf-formatting-loss"
+  - "table-fragmentation"
+  - "semantic-search-limitations"
+  - "manual-evaluation-bottleneck-weeks"
+
+antiPatterns:
+  - "traditional-pdf-loaders: SimpleDirectoryLoader and PyPDFLoader lose formatting, complex tables spanning 5+ pages with nested cells become fragmented, cells isolated without row/column context, chunking splits tables incorrectly - custom Google Docs loader with LLM-powered markdown conversion and metadata identifiers for table-aware chunking preserves structure"
+  - "simple-semantic-similarity-only: Basic embedding similarity leads to retrieving irrelevant context with subtle distinctions across documents - hybrid retrieval combining vector search (semantic) + BM25 (keyword-based with enriched metadata summaries, FAQs, keywords) captures both conceptual and literal matches"
+  - "no-query-preprocessing: Ambiguous or complex queries without refinement lead to poor retrieval results - Query Optimizer agent refines unclear queries and breaks complex queries into simpler ones before retrieval dramatically improving accuracy"
+  - "manual-sme-evaluation-only: Manual SME assessment taking significant bandwidth often requiring weeks per experiment creates bottleneck preventing rapid iteration - LLM-as-Judge framework reduces evaluation time from weeks to minutes using query, SME response, evaluation instructions, and additional documents as context"
+
+# Tech Stack
+techStack:
+  framework: "Langfx-LangGraph-Michelangelo"
+  llmProvider: "LLM-based"
+  knowledgeRetrieval: "enhanced-agentic-rag"
+  otherTools: ["custom-Google-Docs-loader", "Python-API", "llm-table-enrichment", "vector-store", "BM25-retriever", "offline-feature-store", "metadata-summaries-FAQs-keywords", "table-aware-chunking"]
+
+# Scale
+scale:
+  volume: "Multiple security and privacy help channels deployment, 40+ policy documents knowledge base, 100+ curated queries golden set, ~1M enriched document chunks"
+  latency: "27% relative increase in acceptable answers, 60% relative reduction in incorrect advice, evaluation time reduced from weeks to minutes enabling rapid iterations, measurable reduction in support load for on-call engineers and SMEs"
 ---
 
 # Uber Enhanced Agentic-RAG - Genie On-Call Copilot

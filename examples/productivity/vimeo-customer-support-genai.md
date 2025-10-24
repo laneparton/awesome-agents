@@ -7,6 +7,48 @@ date: "2023-08"
 category: "productivity"
 tags: ["rag", "knowledge-retrieval", "customer-support", "production"]
 description: "RAG-powered help desk chat prototype integrating Zendesk articles with LangChain, comparing Google Vertex AI Bison and OpenAI models for customer support automation"
+
+# Problem Classification
+problemPattern: "customer-support"
+problemComplexity: "medium"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "conversational-retrieval-rag"
+  rationale: "RAG architecture combining organization-specific knowledge base (Zendesk Help Center) with LLMs enables precise, contextualized support responses impossible with LLMs alone; conversational retrieval pattern uses chat history to reformulate followup questions as standalone queries improving retrieval accuracy; vector store with HNSWLib enables semantic matching beyond keyword-based search limitations; automatic webhook-based updates keep index synchronized with article changes; source attribution links responses to authoritative articles building trust"
+  components: ["vector-store-indexing", "conversational-retrieval-chain", "standalone-question-generation", "similarity-search", "contextual-response-generation", "source-attribution", "automatic-webhook-updates"]
+
+# What Made It Work
+breakthroughInsight: "RAG architecture combining organization-specific knowledge bases with LLMs enables precise, contextualized support responses impossible with LLMs alone - by indexing Vimeo's Help Center into vector store and using conversational retrieval patterns, prototype demonstrated how AI can provide immediate, actionable answers grounded in existing documentation rather than hallucinated information; generic LLMs (commercial or open-source) lack context for company-specific needs, but RAG bridges this gap by retrieving relevant internal documentation before generation"
+
+criticalConstraints:
+  - "help-center-search-irrelevance"
+  - "third-party-chatbot-limitations"
+  - "ticket-wait-times"
+  - "repetitive-query-volumes"
+  - "company-specific-knowledge-gap"
+  - "exhaustive-qa-testing-impossible"
+  - "api-reliability-variation"
+  - "training-data-privacy-concerns"
+
+antiPatterns:
+  - "llm-only-without-rag: Generic LLMs (commercial or open-source) lack context for company-specific support needs and hallucinate plausible but incorrect information - RAG retrieval of internal documentation before generation essential for accurate, grounded responses"
+  - "keyword-search-only: Traditional Help Center search returning irrelevant results (e.g., 'domain restrict embed' returns nothing) - vector similarity search enables semantic matching beyond exact keyword requirements"
+  - "ignoring-conversation-history: Treating each question independently fails on followup queries lacking context - conversational retrieval reformulating question + history into standalone query dramatically improves retrieval for multi-turn interactions"
+  - "no-source-attribution: Answers without links to original articles reduce trust and prevent users from exploring related content - metadata (title, URL, tags) attached to enable verification and deeper learning"
+
+# Tech Stack
+techStack:
+  framework: "LangChain"
+  llmProvider: "Google-Vertex-AI-Chat-Bison"
+  knowledgeRetrieval: "rag-conversational-retrieval"
+  otherTools: ["HNSWLib-vector-store", "OpenAI-embeddings", "Zendesk-API", "webhook-automation", "temperature-0", "safety-filters", "moderation-endpoints"]
+
+# Scale
+scale:
+  volume: "Zendesk Help Center articles scraped, chunked, embedded, and indexed, automatic webhook updates on article changes, tested with multiple LLM providers (Google Vertex AI Chat Bison, OpenAI ChatGPT 3.5 Turbo, ChatGPT 4, Azure OpenAI)"
+  latency: "Immediate responses vs ticket wait times, Google Vertex AI selected for: concise bullet-point answers, faster response (fewer characters), better prompt following, cost savings, seamless GCP authentication, all-at-once response vs streaming"
 ---
 
 # Vimeo Customer Support with Generative AI

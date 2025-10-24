@@ -7,22 +7,48 @@ date: "2024-10"
 category: "productivity"
 tags: ["workflow-automation", "knowledge-retrieval", "rag", "semantic-search", "map-reduce", "production", "enterprise"]
 description: "Two-stage document intelligence system with custom MPNet embedding model achieving 97.24% action accuracy for employee productivity"
-problem_type: "Information overload requiring employees to manually search across multiple enterprise systems and documents"
-architecture_pattern: "two-stage-pipeline"
-key_components: ["query-rewriter", "operation-planner", "custom-embedding-model", "map-reduce-generator"]
-breakthrough_insight: "Decomposing complex user intent into atomic SEARCH and READ operations enables precise hybrid retrieval while maintaining query context through multi-turn GPT-4o rewriting"
-anti_patterns_avoided: ["monolithic-query-processing", "generic-embedding-models", "synchronous-content-generation"]
-tech_stack:
-  llms: ["GPT-4o", "GPT-4o-mini"]
-  embeddings: ["Custom MPNet (100M params)"]
-  frameworks: ["LangChain", "Pydantic"]
-  infrastructure: ["Streaming pipeline", "Map-reduce architecture"]
-scale_metrics:
-  training_data: "~1M query-document pairs"
-  latency_p90: "<10s for source data ingestion"
-  action_accuracy: "97.24%"
-  resource_prediction: "97.35%"
-  groundedness: "89.21%"
+
+# Problem Classification
+problemPattern: "knowledge-retrieval"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "multi-agent"
+  pattern: "two-stage-pipeline-with-custom-embeddings"
+  rationale: "Decomposing complex user intent into atomic SEARCH and READ operations enables precise hybrid retrieval while maintaining query context through multi-turn GPT-4o rewriting; two-stage architecture separates concerns: online source data ingestion for real-time retrieval (P90 <10s) and online content generation using map-reduce for synthesis; custom 100M parameter MPNet model trained on ~1M query-document pairs captures enterprise-specific semantic relationships significantly outperforming generic embedding models; Operation Planner with structured Pydantic models ensures type-safe atomic actions while maintaining flexibility for complex queries; streaming splitter enables parallel processing while maintaining low latency"
+  components: ["query-rewriter", "operation-planner", "custom-mpnet-embedding-model", "source-data-ingestion", "map-reduce-generator", "streaming-splitter", "hybrid-retrieval"]
+
+# What Made It Work
+breakthroughInsight: "Decomposing complex user intent into atomic SEARCH and READ operations enables precise hybrid retrieval while maintaining query context through multi-turn GPT-4o rewriting - this architecture separates concerns of understanding what user wants (query rewriting), planning how to get it (operation planning), and actually retrieving and synthesizing information (map-reduce generation), allowing each component to be optimized independently; custom embeddings pay off as domain-specific training on 1M query-document pairs significantly outperforms generic models for enterprise retrieval; atomic operations provide deterministic retrieval paths while LLM rewriting handles ambiguous natural language"
+
+criticalConstraints:
+  - "information-fragmentation-across-systems"
+  - "hours-searching-reading-overhead"
+  - "missing-critical-updates"
+  - "manual-synthesis-effort"
+  - "no-role-based-personalization"
+  - "enterprise-scale-requirements"
+  - "latency-expectations-p90"
+  - "groundedness-accuracy-requirements"
+
+antiPatterns:
+  - "monolithic-query-processing: Single-stage systems handling understanding, retrieval, and synthesis in one pass cannot optimize each concern independently - two-stage pipeline with separate online source data ingestion and online content generation allows targeted optimization"
+  - "generic-embedding-models: Off-the-shelf embeddings lack enterprise-specific semantic relationships crucial for domain retrieval - custom 100M parameter MPNet trained on ~1M query-document pairs significantly outperforms generic models (97.35% resource prediction accuracy)"
+  - "synchronous-content-generation: Sequential processing of retrieved documents introduces latency bottlenecks at scale - map-reduce pipeline with streaming splitter enables parallel processing while maintaining P90 latency under 10 seconds"
+  - "unstructured-operation-planning: Free-form retrieval actions lead to inconsistent behavior and difficult debugging - structured Pydantic models for atomic SEARCH/READ operations ensure type-safe deterministic retrieval paths"
+
+# Tech Stack
+techStack:
+  framework: "LangChain-Pydantic"
+  llmProvider: "GPT-4o-GPT-4o-mini"
+  knowledgeRetrieval: "custom-mpnet-embeddings"
+  otherTools: ["100M-parameter-MPNet", "map-reduce-architecture", "streaming-pipeline", "structured-operation-planner", "hybrid-retrieval", "1M-query-document-training-pairs"]
+
+# Scale
+scale:
+  volume: "Enterprise-wide deployment, ~1M query-document training pairs for custom MPNet model, multiple enterprise systems integration (Slack, email, Confluence, dashboards)"
+  latency: "P90 <10s for source data ingestion, 97.24% action accuracy, 97.35% resource prediction accuracy, 89.21% groundedness score, streaming output for user experience"
 ---
 
 # Moveworks Brief Me Agentic System

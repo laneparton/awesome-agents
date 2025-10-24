@@ -7,22 +7,48 @@ date: "2024-04"
 category: "data-analysis"
 tags: ["rag", "text-to-sql", "semantic-search", "knowledge-retrieval", "production", "developer-productivity"]
 description: "RAG-enhanced Text-to-SQL achieving 40%+ first-shot acceptance rate and 35% task completion speed improvement through table metadata optimization"
-problem_type: "Data analysts struggling to find correct tables among hundreds of thousands and translate analytical problems into efficient SQL"
-architecture_pattern: "rag-enhanced-text-to-sql"
-key_components: ["vector-table-search", "llm-table-summarization", "metadata-enrichment", "streaming-response", "offline-vector-indexing"]
-breakthrough_insight: "Table documentation quality trumps model sophistication - weighting embeddings toward table metadata increased search hit rate from 40% to 90%, proving data governance is the bottleneck for Text-to-SQL performance"
-anti_patterns_avoided: ["generic-embeddings-only", "ignoring-table-documentation", "synchronous-response-generation", "benchmark-only-evaluation"]
-tech_stack:
-  llms: ["GPT (unspecified version)"]
-  frameworks: ["LangChain"]
-  infrastructure: ["OpenSearch (vector store)", "WebSocket", "Querybook (open source)"]
-  methods: ["RAG", "Partial JSON parsing", "Embedding similarity search"]
-scale_metrics:
-  tables_in_warehouse: "Hundreds of thousands"
-  first_shot_acceptance: "20% → 40%+"
-  task_speed_improvement: "35%"
-  top_tier_tables_indexed: "Tiered subset"
-  metadata_hit_rate_improvement: "40% → 90%"
+
+# Problem Classification
+problemPattern: "text-to-sql"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "two-stage-rag-with-metadata-optimization"
+  rationale: "Two-stage architecture (table discovery via vector similarity → SQL generation) addresses real-world challenge where finding right tables among hundreds of thousands is harder than writing SQL; offline vector indexing of LLM-generated table/query summaries enables efficient similarity search; metadata optimization (documentation weighting, low-cardinality value injection, column pruning) increased hit rate 40%→90%; streaming response with WebSocket + partial JSON parsing avoids 10+ second wait times; tiered table indexing promotes high-quality datasets"
+  components: ["vector-table-search", "llm-table-summarization", "metadata-enrichment", "streaming-response", "offline-vector-indexing", "table-reselection", "user-validation"]
+
+# What Made It Work
+breakthroughInsight: "Table documentation quality trumps model sophistication - weighting embeddings toward table metadata increased search hit rate from 40% to 90%, proving data governance is the primary bottleneck for Text-to-SQL performance; real-world deployment revealed table discovery (finding right tables among hundreds of thousands) and metadata quality (accurate descriptions of table purpose and column meanings) far more critical than prompt engineering or model selection; benchmarks like Spider fail to capture this as they treat small number of pre-specified well-normalized tables as given"
+
+criticalConstraints:
+  - "hundreds-thousands-tables"
+  - "table-discovery-challenge"
+  - "domain-knowledge-requirement"
+  - "fast-paced-business-environment"
+  - "denormalized-schemas"
+  - "context-window-limits-large-tables"
+  - "streaming-latency-expectations"
+  - "metadata-quality-dependency"
+
+antiPatterns:
+  - "generic-embeddings-only: Pure semantic similarity on table schemas yielded 40% hit rate without documentation weighting - weighting embeddings toward curated table metadata achieved 90%, showing human-created documentation outweighs pure semantic similarity"
+  - "ignoring-data-governance: Benchmarks like Spider suggest Text-to-SQL is solved, but production systems fail without investment in table descriptions, column documentation, and business terminology standardization - data governance is foundation not afterthought"
+  - "synchronous-response-blocking: 10+ second LLM generation with blocking UI creates poor user experience - streaming via WebSocket with partial JSON parsing shows real-time progress and reduces perceived latency"
+  - "benchmark-driven-evaluation-only: Spider and academic benchmarks use small well-labeled table sets failing to capture table discovery challenge central to real-world Text-to-SQL - realistic benchmarks must include larger denormalized table sets with discovery as core criteria"
+
+# Tech Stack
+techStack:
+  framework: "LangChain"
+  llmProvider: "GPT"
+  knowledgeRetrieval: "rag-with-vector-search"
+  otherTools: ["OpenSearch-vector-store", "WebSocket-streaming", "partial-JSON-parsing", "Querybook-open-source", "offline-indexing"]
+
+# Scale
+scale:
+  volume: "Hundreds of thousands of tables in data warehouse, tiered subset indexed, LLM-generated table/query summaries, low-cardinality column value injection"
+  latency: "First-shot acceptance 20% → 40%+, 35% task completion speed improvement vs manual, streaming response reduces perceived latency, metadata optimization hit rate 40% → 90%"
 ---
 
 # Pinterest Text-to-SQL in Querybook
