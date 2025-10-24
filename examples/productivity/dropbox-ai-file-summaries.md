@@ -10,7 +10,7 @@ description: "Dual-retrieval AI system achieving 93% cost reduction and 96.5% la
 
 # Problem Classification
 problemPattern: "knowledge-retrieval"
-problemComplexity: "medium"
+problemComplexity: "moderate"
 
 # Architecture
 architecture:

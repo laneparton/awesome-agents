@@ -10,7 +10,7 @@ description: "50% of Instacart employees using monthly, 900+ weekly, with Prompt
 
 # Problem Classification
 problemPattern: "developer-productivity"
-problemComplexity: "medium"
+problemComplexity: "moderate"
 
 # Architecture
 architecture:

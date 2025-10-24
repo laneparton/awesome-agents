@@ -10,7 +10,7 @@ description: "RAG-powered help desk chat prototype integrating Zendesk articles 
 
 # Problem Classification
 problemPattern: "customer-support"
-problemComplexity: "medium"
+problemComplexity: "moderate"
 
 # Architecture
 architecture:

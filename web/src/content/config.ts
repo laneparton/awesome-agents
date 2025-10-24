@@ -21,18 +21,31 @@ const examples = defineCollection({
 
     // Problem classification
     problemPattern: z.enum([
-      'document-processing-at-scale',
-      'multi-source-research',
-      'workflow-automation',
-      'framework-platform-building',
-      'structured-data-extraction',
+      'code-generation',
       'content-discovery',
+      'content-generation',
+      'customer-support',
+      'data-annotation',
+      'data-classification',
+      'developer-productivity',
+      'document-processing-at-scale',
+      'framework-platform-building',
+      'fraud-detection',
+      'knowledge-retrieval',
+      'multi-source-research',
+      'quality-evaluation',
+      'recommendation-system',
+      'root-cause-analysis',
+      'structured-data-extraction',
+      'text-to-query',
+      'text-to-sql',
+      'workflow-automation',
     ]).optional(),
     problemComplexity: z.enum(['simple', 'moderate', 'complex']).optional(),
 
     // Architecture insights
     architecture: z.object({
-      type: z.enum(['single-agent', 'multi-agent', 'event-driven', 'hybrid']),
+      type: z.enum(['single-agent', 'multi-agent', 'multi-stage-system', 'event-driven', 'hybrid', 'ensemble', 'pipeline']),
       pattern: z.string().optional(),
       rationale: z.string().optional(),
       components: z.array(z.string()).optional(),

@@ -10,7 +10,7 @@ description: "Production LLM feature converting natural language to executable H
 
 # Problem Classification
 problemPattern: "text-to-query"
-problemComplexity: "medium"
+problemComplexity: "moderate"
 
 # Architecture
 architecture:

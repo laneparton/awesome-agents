@@ -10,7 +10,7 @@ description: "Conversational AI automatically summarizing Slack channels and thr
 
 # Problem Classification
 problemPattern: "workflow-automation"
-problemComplexity: "medium"
+problemComplexity: "moderate"
 
 # Architecture
 architecture:

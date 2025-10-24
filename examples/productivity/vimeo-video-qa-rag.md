@@ -10,7 +10,7 @@ description: "Multi-level RAG system for video Q&A with bottom-up processing (10
 
 # Problem Classification
 problemPattern: "knowledge-retrieval"
-problemComplexity: "medium"
+problemComplexity: "moderate"
 
 # Architecture
 architecture:

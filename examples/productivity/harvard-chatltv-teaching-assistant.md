@@ -10,7 +10,7 @@ description: "3,000+ queries from 170 students across full semester with RAG-pow
 
 # Problem Classification
 problemPattern: "knowledge-retrieval"
-problemComplexity: "medium"
+problemComplexity: "moderate"
 
 # Architecture
 architecture:

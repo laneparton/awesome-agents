@@ -10,7 +10,7 @@ description: "RAG system with GPT-4 and Milvus vector database reducing customer
 
 # Problem Classification
 problemPattern: "knowledge-retrieval"
-problemComplexity: "medium"
+problemComplexity: "moderate"
 
 # Architecture
 architecture:

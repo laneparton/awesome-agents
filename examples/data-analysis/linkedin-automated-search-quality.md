@@ -10,7 +10,7 @@ description: "20% reduction in low-quality typeahead suggestions with automated 
 
 # Problem Classification
 problemPattern: "quality-evaluation"
-problemComplexity: "medium"
+problemComplexity: "moderate"
 
 # Architecture
 architecture:

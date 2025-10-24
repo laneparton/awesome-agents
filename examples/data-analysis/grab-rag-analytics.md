@@ -10,7 +10,7 @@ description: "RAG-powered LLM system with self-service API middleware automating
 
 # Problem Classification
 problemPattern: "workflow-automation"
-problemComplexity: "medium"
+problemComplexity: "moderate"
 
 # Architecture
 architecture:
