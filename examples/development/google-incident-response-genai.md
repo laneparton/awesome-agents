@@ -7,6 +7,8 @@ date: "2024-04"
 category: "Development & Engineering"
 tags: ["incident-response", "document-generation", "prompt-engineering", "production", "workflow-automation"]
 description: "51% time savings in incident summary writing through LLM-generated summaries that outperformed human-written equivalents by 10%"
+
+# Problem Classification
 problemPattern: "workflow-automation"
 problemComplexity: "moderate"
 
