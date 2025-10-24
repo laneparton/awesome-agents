@@ -612,3 +612,13 @@ None identified in this batch (mostly traditional ML use cases from 2022-2023)
      - Description: Improve customer support with AI text generation
      - Category: Productivity & Automation
      - Year: 2022
+
+<https://shopify.engineering/leveraging-multimodal-llms>
+
+<https://blog.picnic.nl/adding-eyes-to-picnics-automated-warehouses-part-2-b283dd7f7de6>
+
+<https://vercel.com/blog/v0-composite-model-family>
+
+<https://x.com/_brimtown/status/1979669362232463704>
+
+<https://arxiv.org/abs/2508.06813https://www.linkedin.com/pulse/genai-architecture-series-streamlining-background-robert-schwentker-hexic/>
