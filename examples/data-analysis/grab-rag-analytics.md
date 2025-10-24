@@ -1,8 +1,51 @@
 ---
 title: "Grab RAG-Powered LLM for Analytics"
-category: "Data Analysis"
 company: "Grab"
-date: "October 2024"
+author: "Edmund Hong, Yi Ni Ong, Meichen Lu, Jia Long Loh, Pu Li"
+source: "https://engineering.grab.com/transforming-the-analytics-landscape-with-RAG-powered-LLM"
+date: "2024-10"
+category: "data-analysis"
+tags: ["rag", "analytics", "report-generation", "fraud-detection", "production", "api-middleware", "slack-integration"]
+description: "RAG-powered LLM system with self-service API middleware automating report generation (saving 3-4 hours/report) and fraud investigations (reduced to minutes) through multi-tool integration"
+
+# Problem Classification
+problemPattern: "workflow-automation"
+problemComplexity: "medium"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "rag-with-api-middleware"
+  rationale: "RAG over fine-tuning for cost efficiency, access to current data without retraining, and model reusability; Data-Arks middleware enables self-service SQL API packaging that LLM calls via RAG for multi-source integration"
+  components: ["spellvault-llm-platform", "data-arks-api-middleware", "scheduler", "slack-integration", "rag-retrieval"]
+
+# What Made It Work
+breakthroughInsight: "RAG over fine-tuning for analytics - computationally cheaper, retrieves current production data without model retraining, and same base model reusable across use cases; self-service API middleware democratizes automation by letting any employee package SQL queries as LLM-callable APIs"
+
+criticalConstraints:
+  - "repetitive-query-workload"
+  - "fraud-investigation-speed"
+  - "multi-source-data-integration"
+  - "latest-information-required"
+  - "cost-efficiency-needed"
+  - "self-service-democratization"
+
+antiPatterns:
+  - "fine-tuning-for-analytics: Computationally expensive, requires retraining with each data update, and lacks access to latest production data - RAG provides cost-effective current information retrieval"
+  - "llm-only-solution: LLMs alone insufficient for analytics automation - requires data middleware (Data-Arks), scheduling infrastructure, and messaging integration for end-to-end workflow"
+  - "llm-memorization-reliance: Expecting LLM to remember specific data formats and query structures leads to hallucinations - RAG retrieval of exact information from knowledge base more reliable"
+
+# Tech Stack
+techStack:
+  framework: "custom"
+  llmProvider: "Spellvault"
+  knowledgeRetrieval: "rag"
+  otherTools: ["Data-Arks-API-platform", "Scheduler", "Slack", "Python", "SQL"]
+
+# Scale
+scale:
+  volume: "Production deployment across Integrity Analytics team with multiple use cases"
+  latency: "3-4 hours saved per report, fraud investigations reduced to minutes from hours"
 ---
 
 # Grab RAG-Powered LLM for Analytics

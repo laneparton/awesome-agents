@@ -1,8 +1,50 @@
 ---
 title: "Dropbox AI-Powered File Summaries and Q&A"
-category: "Productivity & Automation"
 company: "Dropbox"
-date: "October 2024"
+author: "Dropbox Machine Learning Team"
+source: "https://dropbox.tech/machine-learning/bringing-ai-powered-answers-and-summaries-to-file-previews-on-the-web"
+date: "2024-10"
+category: "productivity"
+tags: ["document-summarization", "qa-system", "semantic-search", "production", "cost-optimization", "embeddings", "retrieval"]
+description: "Dual-retrieval AI system achieving 93% cost reduction and 96.5% latency improvement (115s→4s) through opposing strategies: K-means clustering for summary breadth vs semantic search for Q&A precision"
+
+# Problem Classification
+problemPattern: "knowledge-retrieval"
+problemComplexity: "medium"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "dual-retrieval-modes"
+  rationale: "Summaries and Q&A require fundamentally different chunk selection - K-means clustering selects dissimilar chunks for document breadth while semantic search selects similar chunks for query precision; Riviera framework provides format-agnostic processing across documents, videos, presentations through unified conversion pipeline"
+  components: ["riviera-conversion-framework", "k-means-clustering", "semantic-search", "embedding-generation", "llm-synthesis"]
+
+# What Made It Work
+breakthroughInsight: "Opposing retrieval strategies optimize different use cases - summaries need dissimilar chunks via K-means clustering to capture document breadth, while Q&A needs similar chunks via semantic search for precise answers; single retrieval strategy can't serve both effectively; format-agnostic Riviera framework enables consistent AI across diverse content types"
+
+criticalConstraints:
+  - "diverse-file-formats"
+  - "large-document-video-content"
+  - "cost-efficiency-at-scale"
+  - "latency-requirements"
+  - "production-web-integration"
+
+antiPatterns:
+  - "single-retrieval-strategy: Using same chunk selection approach for both summaries and Q&A degrades performance - summaries need breadth (dissimilar chunks), Q&A needs precision (similar chunks)"
+  - "format-specific-processing: Building separate pipelines for documents, videos, presentations creates maintenance overhead - unified Riviera conversion framework handles all formats consistently"
+  - "full-document-processing: Sending entire document to LLM for every summary/query wastes tokens and increases latency - strategic chunk selection (K-means, semantic search) reduces cost 64-93%"
+
+# Tech Stack
+techStack:
+  framework: "custom"
+  llmProvider: "LLM-based"
+  knowledgeRetrieval: "dual-mode-retrieval"
+  otherTools: ["Riviera-framework", "K-means-clustering", "semantic-search", "embeddings", "vector-retrieval"]
+
+# Scale
+scale:
+  volume: "Production early access on select Dropbox plans handling documents, videos, presentations"
+  latency: "96.5% improvement for summaries (115s→4s P75), 80% improvement for Q&A (25s→5s P75), 93% cost reduction summaries, 64% cost reduction Q&A"
 ---
 
 # Dropbox AI-Powered File Summaries and Q&A

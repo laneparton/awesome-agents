@@ -7,22 +7,49 @@ date: "2024-09"
 category: "data-analysis"
 tags: ["multi-agent", "text-to-sql", "rag", "workflow-automation", "production", "developer-productivity"]
 description: "Multi-agent system with Intent, Table, and Column Prune agents reducing SQL authoring from 10 minutes to 3 minutes with 78% user satisfaction"
-problem_type: "1.2M monthly queries requiring deep SQL knowledge and understanding of complex internal data models"
-architecture_pattern: "multi-agent-with-specialized-classifiers"
-key_components: ["intent-agent", "table-agent", "column-prune-agent", "workspaces", "rag-similarity-search", "human-in-the-loop-validation"]
-breakthrough_insight: "LLMs excel as specialized classifiers when given single units of work - decomposing query generation into Intent, Table Selection, and Column Pruning agents dramatically improved accuracy over monolithic approach"
-anti_patterns_avoided: ["monolithic-generation", "simple-rag-only", "no-domain-organization", "ignoring-token-limits"]
-tech_stack:
-  llms: ["OpenAI GPT-4 Turbo (128K context)"]
-  methods: ["RAG", "k-NN similarity search", "Few-shot prompting", "Vector embeddings"]
-  infrastructure: ["Vector database", "Workspaces (domain-specific collections)"]
-scale_metrics:
-  monthly_queries: "1.2M interactive queries"
-  daily_active_users: "~300 (limited release)"
-  time_reduction: "10 min → 3 min per query"
-  user_satisfaction: "78% report reduced time"
-  operations_contribution: "36% of total queries"
-  algorithm_iterations: "20+ between hackathon and production"
+
+# Problem Classification
+problemPattern: "text-to-sql"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "multi-agent"
+  pattern: "specialized-classifiers"
+  rationale: "LLMs excel as specialized classifiers with single units of work - decomposing into Intent (domain mapping), Table Selection (human-in-loop validation), and Column Prune (token management) agents dramatically improved accuracy over monolithic; Workspaces (domain-specific collections) narrow search radius; 20+ iterations from hackathon to production optimized each agent; human-in-loop at table selection catches errors before expensive generation"
+  components: ["intent-agent", "table-agent", "column-prune-agent", "workspaces", "rag-similarity-search", "human-in-the-loop-validation", "vector-database"]
+
+# What Made It Work
+breakthroughInsight: "LLMs excel as specialized classifiers when given single units of work - decomposing query generation into Intent (domain classification), Table Selection (schema identification), and Column Pruning (token reduction) agents dramatically improved accuracy over monolithic approach; Workspaces (domain-scoped collections) essential for narrowing search radius among hundreds of thousands of tables; human-in-loop validation at table selection stage catches errors before expensive generation; 20+ algorithm iterations between hackathon and production refined each specialized agent"
+
+criticalConstraints:
+  - "1.2m-monthly-queries"
+  - "hundreds-thousands-tables"
+  - "200-plus-column-schemas"
+  - "40-60k-token-schemas"
+  - "32k-early-token-limits"
+  - "business-terminology-gap"
+  - "domain-knowledge-required"
+  - "10-minute-query-authoring"
+
+antiPatterns:
+  - "monolithic-generation: Single LLM generating SQL from all tables failed - accuracy declined as tables added; specialized agents (Intent, Table, Column) with single-unit focus dramatically improved results"
+  - "simple-rag-only: Similarity search on schemas/SQL without domain organization underperformed - Workspaces (domain-specific collections) narrowing search radius essential for hundreds of thousands of tables"
+  - "no-domain-organization: Without Workspaces grouping tables by business domain, search space too large for effective RAG retrieval among hundreds of thousands of tables"
+  - "ignoring-token-limits: 200+ column schemas consume 40-60K tokens exceeding 32K early limits - Column Prune agent removing irrelevant columns essential for token management"
+  - "no-human-validation: Errors in table selection propagate to expensive query generation - human-in-loop at table stage catches mistakes early"
+
+# Tech Stack
+techStack:
+  framework: "custom-multi-agent"
+  llmProvider: "GPT-4-Turbo-128K"
+  knowledgeRetrieval: "rag-with-workspaces"
+  otherTools: ["vector-database", "k-NN-similarity", "few-shot-prompting", "Workspaces-domain-collections", "column-pruning"]
+
+# Scale
+scale:
+  volume: "1.2M monthly queries, ~300 daily active users (limited release), 36% operations contribution, 20+ algorithm iterations hackathon→production"
+  latency: "10 min → 3 min per query, 78% user satisfaction reporting reduced time"
 ---
 
 # Uber QueryGPT - Multi-Agent Natural Language to SQL

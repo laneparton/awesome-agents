@@ -1,10 +1,52 @@
 ---
 title: "Duolingo DuoRadio - Scaling Content Generation with Generative AI"
-category: "Content Creation"
 company: "Duolingo"
 author: "Luis Mas Castillo, Sophie Mackey, Cindy Berger"
 source: "https://blog.duolingo.com/scaling-duoradio/"
-date: "March 11, 2025"
+date: "2025-03-11"
+category: "content-creation"
+tags: ["content-generation", "text-to-speech", "quality-filtering", "curriculum-design", "audio-production", "production"]
+description: "Generate-many-filter-to-best approach scaling DuoRadio 50x (300→15,000+ episodes) with 99% cost savings and 10x growth (500K→5M daily sessions) by feeding curriculum content as patterns instead of complex prompt instructions"
+
+# Problem Classification
+problemPattern: "content-generation"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "pipeline"
+  pattern: "generate-filter-deploy"
+  rationale: "Feeding existing curriculum content as patterns to AI proved far more effective than complex prompt constraints for original content generation; generate-many-filter-to-best approach with AI-powered evaluators (naturalness, grammaticality, coherence) ensures quality at scale while enabling zero human intervention post-initiation"
+  components: ["curriculum-driven-generation", "ai-evaluators", "exercise-standardization", "tts-audio-production", "audio-hashing", "end-to-end-pipelines"]
+
+# What Made It Work
+breakthroughInsight: "Patterns over prompts - feeding AI existing curriculum content as examples dramatically outperformed adding more constraints to prompt instructions; generate-many-filter-to-best approach (create multiple episodes, AI evaluators select highest quality) more effective than trying to generate perfect content on first try; curriculum foundation ensures level-appropriate, grammatically sound content"
+
+criticalConstraints:
+  - "manual-production-unsustainable"
+  - "multi-language-scale-required"
+  - "curriculum-alignment-essential"
+  - "quality-consistency-needed"
+  - "limited-course-coverage"
+  - "audio-editing-bottleneck"
+
+antiPatterns:
+  - "complex-prompt-instructions: Adding more English-only constraints to prompts for original content generation produced subpar results requiring extensive manual editing - feeding curriculum content as patterns worked better"
+  - "perfect-first-try-generation: Trying to make AI generate perfect content immediately failed - generate-many-filter-to-best approach with comprehensive evaluators more effective"
+  - "unstructured-exercise-placement: Giving AI freedom to sequence exercises resulted in hit-or-miss quality - standardizing exercise order using learner session data improved reliability"
+  - "translation-automation-only: Automated translations frequently missed accuracy and proficiency level requirements - curriculum-driven generation better aligned with learning goals"
+
+# Tech Stack
+techStack:
+  framework: "custom-pipeline"
+  llmProvider: "GenAI"
+  knowledgeRetrieval: "curriculum-content"
+  otherTools: ["Workflow-Builder", "TTS", "audio-hashing", "ai-evaluators", "deployment-pipelines"]
+
+# Scale
+scale:
+  volume: "2→25+ courses, 300→15,000+ episodes, 500K→5M daily sessions in 6 months"
+  latency: "99% cost savings, 5+ years work completed in 2 quarters, zero human intervention post-initiation"
 ---
 
 # Duolingo DuoRadio - Scaling Content Generation with Generative AI

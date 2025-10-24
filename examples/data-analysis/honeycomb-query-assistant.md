@@ -5,8 +5,50 @@ author: "Phillip Carter, Honeycomb Engineering"
 source: "https://www.honeycomb.io/blog/hard-stuff-nobody-talks-about-llm"
 date: "2023-05"
 category: "data-analysis"
-tags: ["production", "enterprise", "workflow-automation"]
+tags: ["production", "enterprise", "workflow-automation", "text-to-query", "few-shot-prompting"]
 description: "Production LLM feature converting natural language to executable Honeycomb queries, addressing real-world challenges of latency, context limits, prompt injection, and enterprise compliance"
+
+# Problem Classification
+problemPattern: "text-to-query"
+problemComplexity: "medium"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "single-pass-generation"
+  rationale: "Single-pass LLM prompting avoids compounding accuracy issues (90% accuracy compounds to 59% over 5 chains); extensive context (syntax docs, domain knowledge, schema, few-shot examples) provides all needed information upfront; schema constrained to 7-day active fields for large customers handles context limits; integrated with standard Query Builder (not chat UI) reduces prompt injection surface; 'engines for features' approach treats LLM as tool powering specific workflow"
+  components: ["few-shot-prompter", "schema-constrainer", "output-validator", "query-builder-integration"]
+
+# What Made It Work
+breakthroughInsight: "Single-pass generation essential to avoid accuracy degradation - 90% accuracy compounds to 59% over 5 chains, so chaining multiple LLM calls fails; few-shot prompting outperformed zero-shot and chain-of-thought; accepting 'good enough' outputs (flexible interpretation like user typing 'slow') serves users better than rigid correctness; LLMs are engines for features not standalone products; schema filtering by 7-day activity handles context limits for 5,000+ field customers"
+
+criticalConstraints:
+  - "query-syntax-barrier"
+  - "context-window-limits-5000-plus-fields"
+  - "latency-2-15-seconds"
+  - "prompt-injection-risk"
+  - "enterprise-compliance-healthcare"
+  - "no-chat-ui-standard-builder-only"
+  - "single-pass-accuracy-requirements"
+
+antiPatterns:
+  - "chaining-llm-calls: 90% accuracy per call compounds to 59% over 5 chains - single-pass generation essential to avoid compounding accuracy degradation"
+  - "zero-shot-or-chain-of-thought: Few-shot prompting with examples outperformed both zero-shot and chain-of-thought variants for query generation"
+  - "chat-ui-interface: Chat interface increases prompt injection surface area - standard Query Builder integration provides safety and familiar UX"
+  - "full-schema-context: Context limits fail with 5,000+ field customers - constraining to fields with 7-day activity essential for large schemas"
+  - "perfect-correctness-requirement: Rigid correctness rejects useful vague inputs (user types 'slow') - accepting 'good enough' flexible interpretation serves users better"
+
+# Tech Stack
+techStack:
+  framework: "custom"
+  llmProvider: "LLM-based"
+  knowledgeRetrieval: "schema-aware"
+  otherTools: ["few-shot-prompting", "output-validation", "7-day-schema-filtering", "Query-Builder-integration"]
+
+# Scale
+scale:
+  volume: "Production feature deployed to Honeycomb customers"
+  latency: "2-15+ seconds per query generation, single-pass to avoid accuracy degradation"
 ---
 
 # Honeycomb Natural Language Query Assistant

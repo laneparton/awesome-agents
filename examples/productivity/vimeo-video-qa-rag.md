@@ -1,8 +1,52 @@
 ---
 title: "Vimeo Video Q&A with RAG"
-category: "Productivity & Automation"
 company: "Vimeo"
-date: "July 2024"
+author: "Alon Faktor, Yedidya Hyams, Naama Ben-Dor"
+source: "https://medium.com/vimeo-engineering-blog/unlocking-knowledge-sharing-for-videos-with-rag-810ab496ae59"
+date: "2024-07"
+category: "productivity"
+tags: ["rag", "video-processing", "semantic-search", "transcript-analysis", "production", "embeddings", "multi-level-retrieval"]
+description: "Multi-level RAG system for video Q&A with bottom-up processing (100-500 word chunks), speaker detection via conversation transitions, and timestamp-precise moment navigation without facial recognition"
+
+# Problem Classification
+problemPattern: "knowledge-retrieval"
+problemComplexity: "medium"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "multi-level-rag"
+  rationale: "Bottom-up processing with multiple granularities (100, 200, 500 words, full video summary) stored in single vector database enables answering all question types - general overviews, speaker-specific queries, and specific detail requests - from one unified system"
+  components: ["transcript-processor", "multi-level-chunker", "vector-database", "speaker-detector", "two-prompt-answer-system", "question-generator"]
+
+# What Made It Work
+breakthroughInsight: "Multi-level bottom-up processing creates different granularity chunks enabling single RAG system to answer all question types; speaker names detected from conversation transitions (where names naturally appear during handovers) without facial recognition; separating answer generation from quote extraction into two prompts improves both accuracy and source attribution"
+
+criticalConstraints:
+  - "long-video-content"
+  - "multi-speaker-conversations"
+  - "precise-timestamp-navigation"
+  - "no-facial-recognition"
+  - "question-variety-general-to-specific"
+  - "speaker-attribution-accuracy"
+
+antiPatterns:
+  - "single-prompt-answer-and-reference: Combining question answering with quote extraction in one prompt degraded performance with ChatGPT 3.5 - separating into two prompts improved both tasks"
+  - "facial-recognition-dependency: Privacy concerns and technical complexity avoided through textual transition analysis where speaker names naturally appear during conversation handovers"
+  - "single-granularity-chunking: Fixed chunk size can't handle both general overview questions and specific detail questions effectively - multi-level approach (100, 200, 500 words) essential"
+  - "open-world-question-generation: Generating related questions without RAG context leads to unanswerable questions - grounding in retrieved video content ensures questions are actually answerable"
+
+# Tech Stack
+techStack:
+  framework: "custom-rag"
+  llmProvider: "LLM-based"
+  knowledgeRetrieval: "multi-level-rag"
+  otherTools: ["vector-database", "automatic-transcription", "audio-clustering", "embeddings", "masking-prompts", "voting-mechanism"]
+
+# Scale
+scale:
+  volume: "Production deployment on Vimeo platform for video Q&A and previews"
+  latency: "Instant summaries and timestamp-precise moment navigation"
 ---
 
 # Vimeo Video Q&A with RAG

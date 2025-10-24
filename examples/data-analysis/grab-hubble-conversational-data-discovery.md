@@ -1,10 +1,53 @@
 ---
 title: "Grab Hubble - Conversational Data Discovery with LLMs"
-category: "Data Analysis"
 company: "Grab"
 author: "Shreyas Parbat, Amanda Ng, Yucheng Zeng, Vinnson Lee, Feng Cheng, Varun Torka"
 source: "https://engineering.grab.com/hubble-data-discovery"
-date: "September 26, 2024"
+date: "2024-09-26"
+category: "data-analysis"
+tags: ["data-discovery", "documentation-generation", "semantic-search", "elasticsearch", "enterprise-search", "slack-integration", "production"]
+description: "Three-stage systematic approach reducing data discovery from days to seconds: enhanced Elasticsearch (82%→94% CTR), GPT-4 doc generation (20%→90% coverage), LLM chatbot (HubbleIQ) - documentation foundation essential before LLM discovery works"
+
+# Problem Classification
+problemPattern: "knowledge-retrieval"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "multi-stage-system"
+  pattern: "incremental-capability-building"
+  rationale: "Three-step systematic approach builds foundation before advanced capabilities - enhanced Elasticsearch addresses 75% exact/partial searches, GPT-4 documentation generation creates context store (20%→90% coverage) essential for LLM effectiveness, HubbleIQ chatbot on Glean leverages existing enterprise search for faster go-to-market; four distinct search categories require different technical solutions"
+  components: ["enhanced-elasticsearch", "gpt4-doc-generator", "hubbleiq-llm-chatbot", "glean-integration", "slack-bot", "context-store"]
+
+# What Made It Work
+breakthroughInsight: "Documentation is foundation for LLM discovery - without high-quality docs (increased from 20%→90% coverage), LLM chatbot cannot work effectively; four distinct search categories (exact, partial, inexact, semantic) require different solutions - keyword search handles 75%, LLM handles semantic; incremental approach (Elasticsearch→Docs→LLM) validated each step before next; leveraging existing Glean tool accelerated go-to-market vs building from scratch"
+
+criticalConstraints:
+  - "200k-plus-tables-scale"
+  - "18-percent-search-abandonment"
+  - "low-documentation-coverage"
+  - "tribal-knowledge-dependency"
+  - "multi-day-discovery-time"
+  - "four-search-category-types"
+  - "existing-tool-integration"
+
+antiPatterns:
+  - "llm-without-documentation: LLM-based discovery cannot work without high-quality documentation coverage - team had to solve documentation problem first (20%→90%) before chatbot would be effective"
+  - "one-search-solution-all-categories: Four distinct search categories (exact, partial, inexact, semantic) require different technical solutions - Elasticsearch for 75%, LLM for semantic; single approach can't serve all effectively"
+  - "build-from-scratch: Building custom enterprise search from scratch would delay go-to-market - leveraging existing Glean tool significantly accelerated deployment"
+  - "keyword-only-search: Elasticsearch without semantic capability couldn't accept user context, leading to 18% search abandonment for semantic queries"
+
+# Tech Stack
+techStack:
+  framework: "custom-multi-stage"
+  llmProvider: "GPT-4"
+  knowledgeRetrieval: "hybrid-search"
+  otherTools: ["Datahub", "Elasticsearch", "Glean", "Glean-Apps", "Slack", "clickstream-analysis"]
+
+# Scale
+scale:
+  volume: "200,000+ tables in data lake, production deployment at Grab scale, all-time high monthly active users"
+  latency: "Discovery time reduced from multiple days to seconds, CTR 82%→94%, docs coverage 20%→90%, 73% found discovery easy (17pp increase), 95% found AI docs useful"
 ---
 
 # Grab Hubble - Conversational Data Discovery with LLMs

@@ -1,10 +1,55 @@
 ---
 title: "DoorDash LLM-Based Dasher Support Automation"
-category: "Productivity & Automation"
 company: "DoorDash"
 author: "Zhe Jia, Shuai Wang, Aditi Bamba, Martin Wang"
 source: "https://careers.doordash.com/blog/large-language-modules-based-dasher-support-automation/"
-date: "September 17, 2024"
+date: "2024-09-17"
+category: "productivity"
+tags: ["rag", "chatbot", "customer-support", "guardrails", "quality-monitoring", "gpt4", "claude3", "prompt-engineering", "chain-of-thought", "production", "multi-language"]
+description: "RAG chatbot with three-layer quality control (two-tier guardrails, LLM Judge, improvement pipeline) achieving 90% hallucination reduction and 99% compliance issue reduction while assisting thousands of Dashers daily"
+
+# Problem Classification
+problemPattern: "customer-support"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "rag-with-quality-controls"
+  rationale: "RAG enables KB-grounded multilingual responses; three critical quality control systems essential for production: 1) two-tier guardrails (semantic similarity + LLM evaluator) prevent hallucinations before user sees them, 2) LLM Judge across 5 dimensions monitors quality and surfaces improvement areas, 3) human-AI collaboration pipeline with Promptfoo regression testing ensures continuous improvement without degradation"
+  components: ["conversation-summarizer", "historical-case-retrieval", "kb-article-integration", "two-tier-guardrails", "llm-judge-5-dimensions", "quality-improvement-pipeline", "promptfoo-regression-testing"]
+
+# What Made It Work
+breakthroughInsight: "Guardrails non-negotiable for production LLMs - two-tier system (semantic similarity shallow check + LLM evaluator deep check) reduced hallucinations 90% and compliance issues 99%; LLM Judge across 5 dimensions (retrieval, accuracy, grammar, coherence, relevance) drives actionable improvements; human-AI collaboration with SME reviews transforms prototypes into robust solutions; regression prevention via Promptfoo prevents quality degradation as prompts evolve"
+
+criticalConstraints:
+  - "flow-based-system-limited-coverage"
+  - "kb-access-difficult"
+  - "english-only-content"
+  - "human-agent-bottleneck"
+  - "hallucination-risk"
+  - "compliance-requirements"
+  - "multilingual-support-needed"
+  - "latency-vs-quality-tradeoff"
+
+antiPatterns:
+  - "llm-without-guardrails: Initial prototype had hallucinations and compliance issues - two-tier guardrail system (semantic similarity + LLM evaluator) essential for production, reducing hallucinations 90% and compliance issues 99%"
+  - "no-regression-testing: As prompts and models evolve, quality can degrade - automated testing via Promptfoo like unit testing prevents regressions by blocking failing prompt changes"
+  - "negative-prompting: Negative language in prompts degrades performance - clearly outline desired actions with illustrative examples instead"
+  - "dense-complex-prompts: Large monolithic prompts harder to debug - breaking down into smaller parts with parallel processing improves manageability and performance"
+  - "outdated-kb-content: LLM drew from outdated public data (Quora, Reddit, Twitter) - KB serves as foundational truth and must be complete, accurate, regularly updated"
+
+# Tech Stack
+techStack:
+  framework: "custom-rag"
+  llmProvider: "GPT-4, Claude-3"
+  knowledgeRetrieval: "rag-with-historical-cases"
+  otherTools: ["semantic-similarity", "LLM-Judge", "Promptfoo", "vector-store", "chain-of-thought", "sliding-window-similarity"]
+
+# Scale
+scale:
+  volume: "Thousands of Dashers assisted autonomously each day in production"
+  latency: "90% hallucination reduction, 99% compliance issue reduction, sub-second to tens of seconds response time with two-tier guardrails"
 ---
 
 # DoorDash LLM-Based Dasher Support Automation

@@ -1,8 +1,52 @@
 ---
 title: "Walmart Ghotok - Ensemble AI for Product Categorization"
-category: "Data Analysis"
 company: "Walmart"
-date: "July 2024"
+author: "Adnan Hassan, Tanay Kumar Saha"
+source: "https://medium.com/walmartglobaltech/using-predictive-and-gen-ai-to-improve-product-categorization-at-walmart-dc9821c6a481"
+date: "2024-07"
+category: "data-analysis"
+tags: ["ensemble-models", "classification", "chain-of-thought", "production", "semantic-search", "predictive-ai", "caching"]
+description: "Ensemble AI system combining predictive AI filtering with GenAI semantic validation to categorize 400M+ SKUs across complex many-to-many product hierarchies with sub-millisecond latency"
+
+# Problem Classification
+problemPattern: "data-classification"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "ensemble"
+  pattern: "multi-stage-filtering"
+  rationale: "Two-stage ensemble leverages predictive AI for cost-efficient broad filtering (millions→thousands of candidates) while using GenAI's semantic comprehension for precise refinement, optimizing for both cost and accuracy at scale"
+  components: ["predictive-ai-ensemble", "genai-false-positive-filter", "two-tier-lru-cache", "exception-handler"]
+
+# What Made It Work
+breakthroughInsight: "GenAI as validator not generator - using billion-parameter GenAI models to filter false positives from predictive AI (rather than generate mappings) leverages semantic comprehension while avoiding hallucination, and cost-optimizes by only applying expensive GenAI to thousands instead of millions of candidates"
+
+criticalConstraints:
+  - "400m-skus-scale"
+  - "many-to-many-relationships"
+  - "real-time-latency-required"
+  - "cost-optimization-essential"
+  - "limited-human-labels"
+  - "noisy-engagement-data"
+
+antiPatterns:
+  - "single-model-approach: Neither pure predictive AI nor pure GenAI alone achieved satisfactory false positive rates - ensemble combining both paradigms proved essential"
+  - "engagement-data-reliance: Customer click data is noisy (curiosity clicks, accidental clicks) and doesn't provide reliable ground truth for product categorization"
+  - "node-name-only-context: Using just category node names without full root-to-leaf path context significantly degraded relevance assessment quality"
+  - "genai-for-all-candidates: Running GenAI inference on millions of candidates is prohibitively expensive - predictive AI pre-filtering essential for cost optimization"
+
+# Tech Stack
+techStack:
+  framework: "custom-ensemble"
+  llmProvider: "GenAI-based"
+  knowledgeRetrieval: "semantic-comprehension"
+  otherTools: ["predictive-ai-models", "two-tier-lru-cache", "chain-of-thought", "symbol-tuning"]
+
+# Scale
+scale:
+  volume: "400M+ SKUs, millions of category-product type mappings in production"
+  latency: "sub-millisecond cache access, real-time filtering"
 ---
 
 # Walmart Ghotok - Ensemble AI for Product Categorization

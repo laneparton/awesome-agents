@@ -1,8 +1,49 @@
 ---
 title: "Adyen AST-Based Unit Test Generation with LLMs"
-category: "Development & Engineering"
 company: "Adyen"
-date: "March 2024"
+author: "Rok Popov Ledinski"
+source: "https://www.adyen.com/knowledge-hub/elevating-code-quality-through-llm-integration"
+date: "2024-03"
+category: "development"
+tags: ["code-generation", "knowledge-graphs", "ast-parsing", "testing", "graph-database", "developer-productivity"]
+description: "AST + Knowledge Graph approach enables context-aware unit test generation for complex codebases by capturing syntactic structure and semantic relationships that vector embeddings miss"
+
+# Problem Classification
+problemPattern: "code-generation"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "knowledge-graph-rag"
+  rationale: "Traditional vector embeddings miss code context - AST parsing provides syntactic structure while Knowledge Graphs add semantic relationships, enabling LLMs to understand invisible logic, dependencies, and state changes critical for test generation"
+  components: ["ast-parser", "knowledge-graph-constructor", "graph-database", "llm-code-generator"]
+
+# What Made It Work
+breakthroughInsight: "Vector embeddings fail for code because they can't capture context-dependent semantics, state changes, and dependency structures - AST + Knowledge Graphs provide complementary syntactic and semantic views that reveal the invisible logic and architectural relationships LLMs need"
+
+criticalConstraints:
+  - "large-complex-codebase"
+  - "deep-framework-integration"
+  - "dependency-tracking-required"
+  - "quality-consistency-essential"
+
+antiPatterns:
+  - "vector-embeddings-only: Surface-level semantic similarities miss context-dependent code semantics, state changes, and dependency structures integral to programming"
+  - "text-based-rag: Treating code as linear text fails to capture hierarchical structure, variable scope, and logical relationships between components"
+  - "simple-copilot-generation: Works for boilerplate but fails for complex integrated code requiring deep architectural understanding and dependency awareness"
+
+# Tech Stack
+techStack:
+  framework: "custom"
+  llmProvider: "LLM-based"
+  knowledgeRetrieval: "knowledge-graph"
+  otherTools: ["AST-parser", "graph-database", "directed-multigraph"]
+
+# Scale
+scale:
+  volume: "Tested on open-source products, planning internal deployment for main codebase"
+  latency: "context-aware retrieval via graph queries"
 ---
 
 # Adyen AST-Based Unit Test Generation with LLMs

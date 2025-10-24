@@ -1,10 +1,53 @@
 ---
 title: "Meta AI for Efficient Incident Response"
-category: "Development & Engineering"
 company: "Meta"
 author: "Diana Hsu, Michael Neu, Mohamed Farrag, Rahul Kindi"
 source: "https://engineering.fb.com/2024/06/24/data-infrastructure/leveraging-ai-for-efficient-incident-response/"
-date: "June 24, 2024"
+date: "2024-06-24"
+category: "development"
+tags: ["incident-response", "root-cause-analysis", "fine-tuning", "llama", "heuristic-retrieval", "production", "system-reliability"]
+description: "Two-stage incident response system achieving 42% accuracy identifying root cause in top 5 suggestions through heuristic filtering (thousands→hundreds changes) + fine-tuned Llama 2 (7B) election-based ranking (hundreds→5)"
+
+# Problem Classification
+problemPattern: "root-cause-analysis"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "pipeline"
+  pattern: "two-stage-retrieval-ranking"
+  rationale: "Heuristic retrieval (code ownership, runtime graphs) maintains high recall while reducing thousands→hundreds changes; fine-tuned Llama 2 (7B) with election-based ranking handles context limits by processing max 20 changes per batch, aggregating across requests until 5 candidates remain; two-stage approach balances recall and precision"
+  components: ["heuristic-retriever", "llama2-7b-ranker", "election-aggregator", "logprob-ranker", "confidence-measurement"]
+
+# What Made It Work
+breakthroughInsight: "Fine-tuning on ~5,000 historical investigations with sparse information (matching what's known at investigation start) was biggest performance lever, not pre-trained models; election-based ranking processes 20 changes at a time and aggregates results to handle context limits while reasoning across large candidate sets; using logprobs to rank relevancy and training model to produce ranked lists dramatically improved output"
+
+criticalConstraints:
+  - "monolithic-repository-scale"
+  - "thousands-of-code-changes"
+  - "unique-investigations"
+  - "context-building-overhead"
+  - "cross-team-dependencies"
+  - "time-sensitive-mitigation"
+  - "context-window-limits"
+
+antiPatterns:
+  - "pre-trained-only-models: Biggest performance lever was fine-tuning on ~5,000 historical Meta investigations - pre-trained models lack domain-specific context for Meta infrastructure and terminology"
+  - "dense-training-information: Training on comprehensive information degrades real-world performance - intentionally sparse training data (matching investigation start conditions) makes model perform better in practice"
+  - "full-context-ranking: Processing all candidates in one prompt exceeds context limits and degrades reasoning - election-based approach with max 20 changes per batch and aggregation enables effective ranking"
+  - "direct-llm-without-retrieval: Processing thousands of changes directly wastes tokens and degrades accuracy - heuristic filtering (ownership, code graphs) maintains recall while reducing search space"
+
+# Tech Stack
+techStack:
+  framework: "custom-pipeline"
+  llmProvider: "Llama-2-7B-fine-tuned"
+  knowledgeRetrieval: "heuristic-retrieval"
+  otherTools: ["CPT", "SFT", "logprobs-ranking", "election-aggregation", "code-ownership-analysis", "runtime-code-graphs"]
+
+# Scale
+scale:
+  volume: "Production deployment at Meta scale for web monorepo investigations"
+  latency: "42% accuracy root cause in top 5 suggestions, significant time savings in investigation process"
 ---
 
 # Meta AI for Efficient Incident Response

@@ -1,8 +1,51 @@
 ---
 title: "Thomson Reuters Customer Support RAG System"
-category: "Productivity & Automation"
 company: "Thomson Reuters"
-date: "August 2023"
+author: "Keshav Unni"
+source: "https://medium.com/tr-labs-ml-engineering-blog/better-customer-support-using-retrieval-augmented-generation-rag-at-thomson-reuters-4d140a6044c3"
+date: "2023-08"
+category: "productivity"
+tags: ["rag", "customer-support", "semantic-search", "production", "embeddings", "vector-database", "knowledge-retrieval"]
+description: "RAG system with GPT-4 and Milvus vector database reducing customer support resolution times by grounding responses in up-to-date knowledge base articles with provenance, eliminating hallucinations"
+
+# Problem Classification
+problemPattern: "knowledge-retrieval"
+problemComplexity: "medium"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "rag"
+  rationale: "RAG combines parametric (LLM generalization) and non-parametric (vector DB knowledge) components to solve three critical support issues: hallucinations, lack of provenance, and stale knowledge - enabling accurate domain-specific responses with source citations and flexible knowledge updates without retraining"
+  components: ["sentence-transformer-embeddings", "milvus-vector-database", "gpt4-generation", "similarity-search", "chunking-processor"]
+
+# What Made It Work
+breakthroughInsight: "RAG solves fundamental LLM limitations for support by introducing non-parametric retrieval component: eliminates hallucinations through grounding in actual KB articles, provides provenance with source citations, and enables knowledge updates without expensive LLM retraining - dense embeddings capture semantic relationships that keyword matching misses"
+
+criticalConstraints:
+  - "hundreds-thousands-kb-articles"
+  - "expert-customer-base"
+  - "specialized-legal-tax-products"
+  - "rapidly-changing-product-information"
+  - "cognitive-overload-agents"
+  - "rising-support-expectations"
+
+antiPatterns:
+  - "pure-llm-without-retrieval: Generates plausible but incorrect generic advice without product-specific grounding, lacks source citations, and can't access current product information - produces hallucinations"
+  - "sparse-keyword-retrieval: Traditional keyword matching misses fine-grained semantic relationships between queries and relevant knowledge, underperforms compared to dense vector embeddings for document retrieval"
+  - "fixed-parametric-knowledge: LLMs trained on static data become stale quickly as products evolve - non-parametric vector DB allows knowledge updates without expensive retraining"
+
+# Tech Stack
+techStack:
+  framework: "custom-rag"
+  llmProvider: "GPT-4"
+  knowledgeRetrieval: "dense-vector-retrieval"
+  otherTools: ["Milvus", "sentence-transformers", "all-MiniLM-L6-v2", "cosine-similarity"]
+
+# Scale
+scale:
+  volume: "Hundreds of thousands of KB articles across legal and tax products"
+  latency: "Reduced resolution times with fast dense retrieval"
 ---
 
 # Thomson Reuters Customer Support RAG System

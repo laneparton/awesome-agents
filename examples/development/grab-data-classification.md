@@ -5,8 +5,50 @@ author: "Hualin Liu, Stefan Jaro, and Grab Data Engineering Team"
 source: "https://engineering.grab.com/llm-powered-data-classification"
 date: "2024-07"
 category: "development"
-tags: ["workflow-automation", "production", "enterprise", "structured-output", "platform-engineering"]
+tags: ["workflow-automation", "production", "enterprise", "structured-output", "platform-engineering", "data-governance"]
 description: "20K+ data entities scanned in first month with 360 man-days saved annually using GPT-3.5 powered column-level data tagging for governance at petabyte scale"
+
+# Problem Classification
+problemPattern: "data-classification"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "single-agent"
+  pattern: "orchestration-service"
+  rationale: "Column-level classification vs schema-level prevents over-classification (half of schemas marked Tier 1 due to single sensitive table); Gemini orchestration service with message queue batching, rate limiting (240K tokens/minute), and context chunking (4K token limits) enables petabyte-scale automation; JSON structured output with DTOs ensures consistent downstream integration"
+  components: ["gemini-orchestration-service", "message-queue-batching", "gpt35-classifier", "rate-limiter", "context-chunker", "kafka-integration", "weekly-review-loop"]
+
+# What Made It Work
+breakthroughInsight: "Column-level vs schema-level classification eliminates over-restriction - half of schemas were marked Tier 1 because single sensitive table justified maximum classification, unnecessarily locking down non-sensitive data; automated LLM tagging enables granular governance at petabyte scale where manual classification infeasible (2 minutes per entity × 20K+ entities); structured JSON output with explicit 'None' tags for ambiguous cases + few-shot learning ensures reliable predictions; 80% user satisfaction with <1 tag changed on average validates LLM aligns with data owner expectations"
+
+criticalConstraints:
+  - "petabyte-scale-data"
+  - "20k-plus-entities"
+  - "manual-classification-infeasible"
+  - "schema-level-over-classification"
+  - "inconsistent-policy-interpretation"
+  - "4k-token-context-limits"
+  - "240k-tokens-per-minute-quota"
+  - "cost-efficiency-required"
+
+antiPatterns:
+  - "schema-level-classification: Half of schemas marked Tier 1 due to single sensitive table, unnecessarily restricting non-sensitive data - column-level granularity essential for petabyte-scale governance"
+  - "manual-column-level-at-scale: 2 minutes per entity × 20K+ entities = 360 man-days annually - infeasible without automation at petabyte scale"
+  - "unstructured-llm-output: Free-form responses create downstream integration issues - JSON structured output with DTOs ensures consistent format for governance systems"
+  - "no-review-feedback-loop: LLM predictions improve through iteration - weekly user review with corrections feeds back to improve future accuracy"
+
+# Tech Stack
+techStack:
+  framework: "custom-orchestration"
+  llmProvider: "GPT-3.5-Azure-OpenAI"
+  knowledgeRetrieval: "schema-context"
+  otherTools: ["message-queue", "Kafka", "JSON-DTOs", "few-shot-learning", "rate-limiting", "context-chunking"]
+
+# Scale
+scale:
+  volume: "20,000+ data entities scanned first month, 300-400 daily throughput, petabyte-scale data infrastructure"
+  latency: "2 minutes manual → seconds automated per entity, 360 man-days saved annually, 80% user satisfaction, <1 tag changed on average, extremely affordable cost"
 ---
 
 # Grab LLM-Powered Data Classification

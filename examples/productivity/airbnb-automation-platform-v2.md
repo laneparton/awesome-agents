@@ -1,10 +1,53 @@
 ---
 title: "Airbnb Automation Platform v2 - LLM-Powered Conversational AI"
-category: "Productivity & Automation"
 company: "Airbnb"
 author: "Chutian Wang, Zhiheng Xu, Paul Lou, Ziyi Wang, Jiayu Lou, Liuming Zhang, Jingwen Qiang, Clint Kelly, Lei Shi, Dan Zhao, Xu Hu, Jianqi Liao, Zecheng Xu, Tong Chen"
 source: "https://medium.com/airbnb-engineering/automation-platform-v2-improving-conversational-ai-at-airbnb-d86c9386e0cb"
-date: "October 28, 2024"
+date: "2024-10-28"
+category: "productivity"
+tags: ["conversational-ai", "chain-of-thought", "customer-support", "guardrails", "context-management", "tool-management", "hybrid-architecture", "production", "developer-platform"]
+description: "Hybrid platform combining Chain of Thought LLM reasoning with traditional workflows-as-tools serving millions - flexible natural dialogue for nuanced queries while maintaining deterministic workflows for sensitive data/strict validations"
+
+# Problem Classification
+problemPattern: "workflow-automation"
+problemComplexity: "complex"
+
+# Architecture
+architecture:
+  type: "hybrid"
+  pattern: "chain-of-thought-with-workflow-tools"
+  rationale: "Hybrid approach combines LLM-powered Chain of Thought for natural dialogue/adaptive reasoning with traditional workflows as tools for sensitive data/strict validations; reusing v1 workflows as tools provides unified interface and managed execution; LLM acts as reasoning engine determining which tools to use and in what order; critical context management and guardrails framework ensure quality decisions and safe responses"
+  components: ["chain-of-thought-workflow", "tool-manager", "context-manager", "guardrails-framework", "llm-adapter", "cot-io-handler", "playground"]
+
+# What Made It Work
+breakthroughInsight: "Hybrid approach essential at current LLM maturity - traditional workflows for sensitive data/strict validations/deterministic processes, LLM for natural dialogue/nuanced understanding/open-ended questions; reusing v1 actions/workflows as Chain of Thought tools provides unified interface and managed execution; guardrails non-negotiable for production (hallucinations, jailbreaks); comprehensive context (history, intent, trip info) critical for LLM decision quality"
+
+criticalConstraints:
+  - "v1-predefined-workflows-inflexible"
+  - "manual-workflow-creation-time-consuming"
+  - "sensitive-data-handling-required"
+  - "strict-validation-needs"
+  - "millions-of-customers-scale"
+  - "llm-hallucination-risks"
+  - "developer-productivity-essential"
+
+antiPatterns:
+  - "pure-llm-without-workflows: Too early to fully rely on LLMs for large-scale diverse experiences - sensitive data and strict validations better suited for traditional deterministic workflows; hybrid approach leverages strengths of both"
+  - "no-guardrails-production: LLM hallucinations and jailbreaks unacceptable in production - robust guardrails framework essential for monitoring communications, ensuring helpful/relevant/ethical responses"
+  - "insufficient-context: LLM quality depends on comprehensive contextual information - must provide history, intent, trip info, relevant help articles for best decision-making"
+  - "pure-predefined-workflows: V1 approach too rigid and inflexible - couldn't handle natural dialogue, open-ended questions, or nuanced information from conversations; manual creation didn't scale"
+
+# Tech Stack
+techStack:
+  framework: "custom-hybrid-platform"
+  llmProvider: "LLM-based"
+  knowledgeRetrieval: "context-management"
+  otherTools: ["Chain-of-Thought", "Guardrails-framework", "Tool-manager", "Context-loader", "LLM-adapter", "Playground", "Observability"]
+
+# Scale
+scale:
+  volume: "Production system serving millions of Airbnb customers"
+  latency: "More efficient support, better resolutions, quicker responses with LLM assistance"
 ---
 
 # Airbnb Automation Platform v2 - LLM-Powered Conversational AI
