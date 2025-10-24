@@ -34,9 +34,10 @@ antiPatterns:
 
 # Tech Stack
 techStack:
-  framework: "custom"
+  framework: "custom-event-driven-state-machine"
   llmProvider: ["OpenAI", "Anthropic"]
   knowledgeRetrieval: "context-management"
+  otherTools: ["ID-aliasing", "MapReduce-summarization", "progressive-context-reduction", "error-handling-self-correction", "tool-dispatcher", "conversational-interface"]
 
 # Scale
 scale:

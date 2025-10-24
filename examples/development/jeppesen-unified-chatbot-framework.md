@@ -41,8 +41,8 @@ techStack:
 
 # Scale
 scale:
-  users: 11
-  volume: "10-11 production products"
+  volume: "10-11 production products, 11 teams using framework, saved 1,792 collective hours with projections of ~4,900 hours saved annually post-global rollout"
+  latency: "512 hours → 64 hours per agent (87% reduction), ~50 lines of code + JSON config file per agent, built-in enterprise compliance and security"
 ---
 
 # Unified Chatbot Framework at Jeppesen (Boeing)
